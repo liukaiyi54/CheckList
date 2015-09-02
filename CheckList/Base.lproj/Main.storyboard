@@ -36,14 +36,11 @@
                     <navigationItem key="navigationItem" title="Checklists" id="TGX-AH-eB4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cjj-tF-oIN">
                             <connections>
-                                <segue destination="qCd-ER-6eo" kind="modal" id="fEC-FO-1bu"/>
+                                <segue destination="qCd-ER-6eo" kind="presentation" id="fEC-FO-1bu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="addItem" destination="Cjj-tF-oIN" id="NvW-bL-g47"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGE-QC-b3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
