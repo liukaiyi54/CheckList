@@ -7,8 +7,11 @@
 //
 
 #import "AddItemViewController.h"
+#import "ChecklistItem.h"
 
-@interface AddItemViewController ()
+@interface AddItemViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
@@ -24,18 +27,32 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.textField becomeFirstResponder];
 }
-
 #pragma mark - Table view data source
+
+#pragma mark - EventHandlers
 - (IBAction)cancel:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate addItemViewControllerDidCancel:self];
 }
 
 - (IBAction)done:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    ChecklistItem *item = [[ChecklistItem alloc] init];
+    item.text = self.textField.text;
+    item.checked = NO;
+    
+    [self.delegate addItemViewController:self didFinishAddingItem:item];
+}
+
+#pragma mark - UITextFieldDelegate 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *newText = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    self.doneButton.enabled = ([newText length] > 0);
+    
+    return YES;
 }
 
 @end

@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "ChecklistItem.h"
+#import "AddItemViewController.h"
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *addItem;
+@interface ViewController ()<AddItemViewControllerDelegate>
 
 @end
 
@@ -98,6 +98,21 @@
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+#pragma mark - AddItemViewControllerDelegate
+- (void)addItemViewControllerDidCancel:(AddItemViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addItemViewController:(AddItemViewController *)controller didFinishAddingItem:(ChecklistItem *)item {
+    NSInteger newRowIndex = [_items count];
+    [_items addObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    NSArray *indexPaths = @[indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - private
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item {
     if (item.checked) {
@@ -112,6 +127,13 @@
     label.text = item.text;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"AddItem"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
+        controller.delegate = self;
+    }
+}
 #pragma mark - eventhandlers
 
 @end

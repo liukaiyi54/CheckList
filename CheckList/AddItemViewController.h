@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddItemViewController : UITableViewController
+@class AddItemViewController;
+@class ChecklistItem;
 
+@protocol AddItemViewControllerDelegate <NSObject>
+
+- (void)addItemViewControllerDidCancel:(AddItemViewController *)controller;
+- (void)addItemViewController:(AddItemViewController *)controller didFinishAddingItem:(ChecklistItem *)item;
+
+@end
+
+@interface AddItemViewController : UITableViewController
+@property (nonatomic, weak) id<AddItemViewControllerDelegate> delegate;
 @end
