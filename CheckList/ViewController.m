@@ -99,7 +99,6 @@
 }
 
 #pragma mark - private
-
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item {
     if (item.checked) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -114,19 +113,5 @@
 }
 
 #pragma mark - eventhandlers
-- (IBAction)addItem:(id)sender {
-    NSInteger newRowIndex = [_items count];
-    
-    ChecklistItem *item = [[ChecklistItem alloc] init];
-    
-    item.text = @"i'm rookie, take care of yourself";
-    item.checked = NO;
-    [_items addObject:item];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
-    NSArray *indexPaths = @[indexPath];
-    
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-}
 
 @end
