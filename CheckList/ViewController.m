@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "ChecklistItem.h"
-#import "AddItemViewController.h"
+#import "ItemDetailViewController.h"
 
-@interface ViewController ()<AddItemViewControllerDelegate>
+@interface ViewController ()<ItemDetailViewControllerDelegate>
 
 @end
 
@@ -21,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"文件夹的目录是：%@", [self documentsDirectory]);
+    NSLog(@"数据文件的最终路径是：%@", [self dataFilePath]);
     
     _items = [[NSMutableArray alloc] initWithCapacity:20];
     ChecklistItem *item;
@@ -51,6 +54,17 @@
     
 }
 
+- (NSString *)documentsDirectory {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths firstObject];
+    
+    return documentsDirectory;
+}
+
+- (NSString *)dataFilePath {
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"CheckList.plist"];
+}
+
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_items count];
@@ -60,10 +74,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChecklistItem"];
 
     ChecklistItem *item = _items[indexPath.row];
+    UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];
     if (item.checked) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        checkMarkLabel.text = @"√";
     } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        checkMarkLabel.text = @"";
     }
     
     UILabel *label = (UILabel*)[cell viewWithTag:1000];
@@ -98,12 +113,12 @@
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-#pragma mark - AddItemViewControllerDelegate
-- (void)addItemViewControllerDidCancel:(AddItemViewController *)controller {
+#pragma mark - ItemDetailViewControllerDelegate
+- (void)ItemDetailViewControllerDidCancel:(ItemDetailViewController *)controller {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)addItemViewController:(AddItemViewController *)controller didFinishAddingItem:(ChecklistItem *)item {
+- (void)ItemDetailViewController:(ItemDetailViewController *)controller didFinishAddingItem:(ChecklistItem *)item {
     NSInteger newRowIndex = [_items count];
     [_items addObject:item];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
@@ -113,12 +128,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)ItemDetailViewController:(ItemDetailViewController *)controller didFinishEditingItem:(ChecklistItem *)item {
+    NSInteger index = [_items indexOfObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [self configureTextForCell:cell withChecklistItem:item];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - private
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item {
+    UILabel *label = (UILabel *)[cell viewWithTag:1001];
+    
     if (item.checked) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        label.text = @"√";
     } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        label.text = @"";
     }
 }
 
@@ -130,8 +157,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"AddItem"]) {
         UINavigationController *navigationController = segue.destinationViewController;
-        AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
+        ItemDetailViewController *controller = (ItemDetailViewController *)navigationController.topViewController;
         controller.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"EditItem"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        ItemDetailViewController *controller = (ItemDetailViewController *)navigationController.topViewController;
+        controller.delegate = self;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        controller.itemToEdit = _items[indexPath.row];
     }
 }
 #pragma mark - eventhandlers

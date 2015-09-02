@@ -1,30 +1,30 @@
 //
-//  AddItemViewController.m
+//  ItemDetailViewController.m
 //  CheckList
 //
 //  Created by Michael on 9/2/15.
 //  Copyright (c) 2015 Michael's None-Exist Company. All rights reserved.
 //
 
-#import "AddItemViewController.h"
+#import "ItemDetailViewController.h"
 #import "ChecklistItem.h"
 
-@interface AddItemViewController ()<UITextFieldDelegate>
+@interface ItemDetailViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
-@implementation AddItemViewController
+@implementation ItemDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (self.itemToEdit != nil) {
+        self.title = @"Edit Item";
+        self.textField.text = self.itemToEdit.text;
+        self.doneButton.enabled = YES;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,15 +36,21 @@
 
 #pragma mark - EventHandlers
 - (IBAction)cancel:(id)sender {
-    [self.delegate addItemViewControllerDidCancel:self];
+    [self.delegate ItemDetailViewControllerDidCancel:self];
 }
 
 - (IBAction)done:(id)sender {
-    ChecklistItem *item = [[ChecklistItem alloc] init];
-    item.text = self.textField.text;
-    item.checked = NO;
-    
-    [self.delegate addItemViewController:self didFinishAddingItem:item];
+    if (self.itemToEdit == nil) {
+        ChecklistItem *item = [[ChecklistItem alloc] init];
+        item.text = self.textField.text;
+        item.checked = NO;
+        
+        [self.delegate ItemDetailViewController:self didFinishAddingItem:item];
+    } else {
+        self.itemToEdit.text = self.textField.text;
+        [self.delegate ItemDetailViewController:self didFinishEditingItem:self.itemToEdit];
+    }
+
 }
 
 #pragma mark - UITextFieldDelegate 
