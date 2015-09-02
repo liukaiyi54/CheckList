@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AddItemViewController.h
 //  CheckList
 //
 //  Created by Michael on 9/2/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
-
+@interface AddItemViewController : UITableViewController
 
 @end
-

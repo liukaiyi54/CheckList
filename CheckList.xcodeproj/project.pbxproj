@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0E5D6F1B96E79900948BCC /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E5D6E1B96E79900948BCC /* AddItemViewController.m */; };
 		4C8DCF911B96AABC00E4C208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF901B96AABC00E4C208 /* main.m */; };
 		4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF931B96AABC00E4C208 /* AppDelegate.m */; };
 		4C8DCF971B96AABC00E4C208 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF961B96AABC00E4C208 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		4C8DCF9C1B96AABC00E4C208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */; };
 		4C8DCF9F1B96AABC00E4C208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */; };
 		4C8DCFAB1B96AABC00E4C208 /* CheckListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */; };
+		4C8DCFB61B96D20D00E4C208 /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCFB51B96D20D00E4C208 /* ChecklistItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0E5D6D1B96E79900948BCC /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		4C0E5D6E1B96E79900948BCC /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		4C8DCF8B1B96AABC00E4C208 /* CheckList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCF8F1B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCF901B96AABC00E4C208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		4C8DCFA41B96AABC00E4C208 /* CheckListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCFA91B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListTests.m; sourceTree = "<group>"; };
+		4C8DCFB41B96D20D00E4C208 /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
+		4C8DCFB51B96D20D00E4C208 /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +92,10 @@
 				4C8DCF951B96AABC00E4C208 /* ViewController.h */,
 				4C8DCF961B96AABC00E4C208 /* ViewController.m */,
 				4C8DCF981B96AABC00E4C208 /* Main.storyboard */,
-				4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */,
-				4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */,
+				4C8DCFB41B96D20D00E4C208 /* ChecklistItem.h */,
+				4C8DCFB51B96D20D00E4C208 /* ChecklistItem.m */,
+				4C0E5D6D1B96E79900948BCC /* AddItemViewController.h */,
+				4C0E5D6E1B96E79900948BCC /* AddItemViewController.m */,
 				4C8DCF8E1B96AABC00E4C208 /* Supporting Files */,
 			);
 			path = CheckList;
@@ -96,6 +104,8 @@
 		4C8DCF8E1B96AABC00E4C208 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */,
+				4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */,
 				4C8DCF8F1B96AABC00E4C208 /* Info.plist */,
 				4C8DCF901B96AABC00E4C208 /* main.m */,
 			);
@@ -222,6 +232,8 @@
 				4C8DCF971B96AABC00E4C208 /* ViewController.m in Sources */,
 				4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */,
 				4C8DCF911B96AABC00E4C208 /* main.m in Sources */,
+				4C0E5D6F1B96E79900948BCC /* AddItemViewController.m in Sources */,
+				4C8DCFB61B96D20D00E4C208 /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +428,7 @@
 				4C8DCFB01B96AABC00E4C208 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C8DCFB11B96AABC00E4C208 /* Build configuration list for PBXNativeTarget "CheckListTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				4C8DCFB31B96AABC00E4C208 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
