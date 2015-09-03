@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ChecklistItem.h"
 #import "ItemDetailViewController.h"
+#import "Checklist.h"
 
 @interface ViewController ()<ItemDetailViewControllerDelegate>
 
@@ -30,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.checklist.name;
 }
 
 #pragma mark - UITableViewDelegate

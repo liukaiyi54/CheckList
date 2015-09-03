@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Checklist;
+
 @interface ViewController : UITableViewController
 
+@property (nonatomic, strong) Checklist *checklist;
 
 @end
 
