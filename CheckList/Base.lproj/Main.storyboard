@@ -87,7 +87,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MXE-ng-WbE">
             <objects>
-                <navigationController id="Lvj-fE-ove" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ListNavigationController" id="Lvj-fE-ove" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4ei-tJ-4Ub">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
