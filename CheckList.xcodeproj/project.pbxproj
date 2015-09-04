@@ -10,9 +10,10 @@
 		4C0E5D6F1B96E79900948BCC /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E5D6E1B96E79900948BCC /* ItemDetailViewController.m */; };
 		4C0E5D721B988C9500948BCC /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E5D711B988C9500948BCC /* AllListsViewController.m */; };
 		4C0E5D751B9894D200948BCC /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E5D741B9894D200948BCC /* Checklist.m */; };
+		4C0E5D781B99278500948BCC /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E5D771B99278500948BCC /* ListDetailViewController.m */; };
 		4C8DCF911B96AABC00E4C208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF901B96AABC00E4C208 /* main.m */; };
 		4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF931B96AABC00E4C208 /* AppDelegate.m */; };
-		4C8DCF971B96AABC00E4C208 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF961B96AABC00E4C208 /* ViewController.m */; };
+		4C8DCF971B96AABC00E4C208 /* ChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF961B96AABC00E4C208 /* ChecklistViewController.m */; };
 		4C8DCF9A1B96AABC00E4C208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF981B96AABC00E4C208 /* Main.storyboard */; };
 		4C8DCF9C1B96AABC00E4C208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */; };
 		4C8DCF9F1B96AABC00E4C208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */; };
@@ -37,13 +38,15 @@
 		4C0E5D711B988C9500948BCC /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
 		4C0E5D731B9894D200948BCC /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checklist.h; sourceTree = "<group>"; };
 		4C0E5D741B9894D200948BCC /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checklist.m; sourceTree = "<group>"; };
+		4C0E5D761B99278500948BCC /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
+		4C0E5D771B99278500948BCC /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
 		4C8DCF8B1B96AABC00E4C208 /* CheckList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCF8F1B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCF901B96AABC00E4C208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C8DCF921B96AABC00E4C208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C8DCF931B96AABC00E4C208 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4C8DCF951B96AABC00E4C208 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C8DCF961B96AABC00E4C208 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C8DCF951B96AABC00E4C208 /* ChecklistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChecklistViewController.h; sourceTree = "<group>"; };
+		4C8DCF961B96AABC00E4C208 /* ChecklistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistViewController.m; sourceTree = "<group>"; };
 		4C8DCF991B96AABC00E4C208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C8DCF9E1B96AABC00E4C208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -95,8 +98,8 @@
 			children = (
 				4C8DCF921B96AABC00E4C208 /* AppDelegate.h */,
 				4C8DCF931B96AABC00E4C208 /* AppDelegate.m */,
-				4C8DCF951B96AABC00E4C208 /* ViewController.h */,
-				4C8DCF961B96AABC00E4C208 /* ViewController.m */,
+				4C8DCF951B96AABC00E4C208 /* ChecklistViewController.h */,
+				4C8DCF961B96AABC00E4C208 /* ChecklistViewController.m */,
 				4C8DCF981B96AABC00E4C208 /* Main.storyboard */,
 				4C8DCFB41B96D20D00E4C208 /* ChecklistItem.h */,
 				4C8DCFB51B96D20D00E4C208 /* ChecklistItem.m */,
@@ -106,6 +109,8 @@
 				4C0E5D711B988C9500948BCC /* AllListsViewController.m */,
 				4C0E5D731B9894D200948BCC /* Checklist.h */,
 				4C0E5D741B9894D200948BCC /* Checklist.m */,
+				4C0E5D761B99278500948BCC /* ListDetailViewController.h */,
+				4C0E5D771B99278500948BCC /* ListDetailViewController.m */,
 				4C8DCF8E1B96AABC00E4C208 /* Supporting Files */,
 			);
 			path = CheckList;
@@ -239,9 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8DCF971B96AABC00E4C208 /* ViewController.m in Sources */,
+				4C8DCF971B96AABC00E4C208 /* ChecklistViewController.m in Sources */,
 				4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */,
 				4C0E5D721B988C9500948BCC /* AllListsViewController.m in Sources */,
+				4C0E5D781B99278500948BCC /* ListDetailViewController.m in Sources */,
 				4C8DCF911B96AABC00E4C208 /* main.m in Sources */,
 				4C0E5D6F1B96E79900948BCC /* ItemDetailViewController.m in Sources */,
 				4C8DCFB61B96D20D00E4C208 /* ChecklistItem.m in Sources */,

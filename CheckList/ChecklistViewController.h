@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ChecklistViewController.h
 //  CheckList
 //
 //  Created by Michael on 9/2/15.
@@ -10,7 +10,7 @@
 
 @class Checklist;
 
-@interface ViewController : UITableViewController
+@interface ChecklistViewController : UITableViewController
 
 @property (nonatomic, strong) Checklist *checklist;
 
