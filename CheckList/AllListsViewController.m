@@ -8,9 +8,10 @@
 
 #import "AllListsViewController.h"
 #import "Checklist.h"
-#import "ViewController.h"
+#import "ChecklistViewController.h"
+#import "ListDetailViewController.h"
 
-@interface AllListsViewController (){
+@interface AllListsViewController ()<listDetailViewControllerDelegate> {
     NSMutableArray *_lists;
 }
 
@@ -39,7 +40,7 @@
     return self;
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view data source & delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -69,11 +70,52 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_lists removeObjectAtIndex:indexPath.row];
+    NSArray *indexPaths = @[indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+#pragma mark - ListDetailViewControllerDelegate
+- (void)listDetailViewControllerDidCancel:(ListDetailViewController *)controller {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)listDetailViewController:(ListDetailViewController *)controller didFinishEditingChecklist:(Checklist *)checklist {
+    NSInteger index = [_lists indexOfObject:checklist];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.text = checklist.name;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)listDetailViewController:(ListDetailViewController *)controller didFinishAddingChecklist:(Checklist *)checkList {
+    NSInteger newRowIndex = [_lists count];
+    [_lists addObject:checkList];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    NSArray *indexPaths = @[indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowChecklist"]) {
-        ViewController *vc = segue.destinationViewController;
+        ChecklistViewController *vc = segue.destinationViewController;
         vc.checklist = sender;
+    } else if ([segue.identifier isEqualToString:@"AddChecklist"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        ListDetailViewController *vc = (ListDetailViewController *)navigationController.topViewController;
+        
+        vc.delegate = self;
+        vc.checkListToEdit = nil;
     }
 }
 @end
