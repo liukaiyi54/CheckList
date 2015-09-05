@@ -10,6 +10,7 @@
 #import "Checklist.h"
 #import "ChecklistViewController.h"
 #import "ListDetailViewController.h"
+#import "ChecklistItem.h"
 
 @interface AllListsViewController ()<listDetailViewControllerDelegate> {
     NSMutableArray *_lists;
@@ -19,23 +20,44 @@
 
 @implementation AllListsViewController
 
+#pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
+- (NSString *)documentsDirectory {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths firstObject];
+    return documentsDirectory;
+}
+
+- (NSString *)dataFilePath {
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"Checklists.plist"];
+}
+
+- (void)saveChecklists {
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    [archiver encodeObject:_lists forKey:@"Checklists"];
+    [archiver finishEncoding];
+    [data writeToFile:[self dataFilePath] atomically:YES];
+}
+
+- (void)loadChecklists {
+    NSString *path = [self dataFilePath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        _lists = [unarchiver decodeObjectForKey:@"Checklists"];
+        [unarchiver finishDecoding];
+    } else {
+        _lists = [[NSMutableArray alloc] initWithCapacity:20];
+    }
+}
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _lists = [[NSMutableArray alloc] initWithCapacity:20];
-        Checklist *list;
-        
-        list = [[Checklist alloc] init];
-        list.name = @"娱乐";
-        [_lists addObject:list];
-        
-        list = [[Checklist alloc] init];
-        list.name = @"工作";
-        [_lists addObject:list];
+        [self loadChecklists];
     }
     return self;
 }
@@ -128,4 +150,5 @@
         vc.checkListToEdit = nil;
     }
 }
+
 @end
