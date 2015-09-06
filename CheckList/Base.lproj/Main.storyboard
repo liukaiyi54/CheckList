@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kap-pk-jZO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Checklists-->
@@ -237,10 +238,18 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlQ-es-2SG">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dlQ-es-2SG">
                                                     <rect key="frame" x="298" y="4" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="Gdg-Qu-ebe"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dlQ-es-2SG" secondAttribute="bottom" constant="-4.5" id="BNb-O8-5wf"/>
+                                                <constraint firstItem="dlQ-es-2SG" firstAttribute="top" secondItem="J0i-PM-VQM" secondAttribute="topMargin" constant="-4" id="Is5-TN-iuB"/>
+                                                <constraint firstItem="dlQ-es-2SG" firstAttribute="trailing" secondItem="J0i-PM-VQM" secondAttribute="trailingMargin" id="hfe-H2-m7o"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="IZ9-bt-08Z" kind="show" identifier="PickIcon" id="vac-Be-dZR"/>
@@ -316,4 +325,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="DKU-Z0-Fiw"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.015686274509803921" green="0.66274509803921566" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -42,6 +42,8 @@
 
     ChecklistItem *item = self.checklist.items[indexPath.row];
     UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];
+    checkMarkLabel.textColor = self.view.tintColor;
+    
     if (item.checked) {
         checkMarkLabel.text = @"√";
     } else {
