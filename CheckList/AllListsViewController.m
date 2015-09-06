@@ -35,6 +35,11 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
 #pragma mark - Table view data source & delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -50,11 +55,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Identifier];
     }
-    cell.textLabel.text = [self.dataModel.lists[indexPath.row] name];
+    Checklist *checklist = self.dataModel.lists[indexPath.row];
+    cell.textLabel.text = checklist.name;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
+    NSInteger count = [checklist countUncheckedItems];
+    if ([checklist.items count] == 0) {
+        cell.detailTextLabel.text = @"(No Items)";
+    } else if (count == 0) {
+        cell.detailTextLabel.text = @"All Done!";
+    } else {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld Remaining", [checklist countUncheckedItems]];
+    }
     return cell;
 }
 
