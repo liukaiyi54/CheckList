@@ -8,10 +8,10 @@
         <scene sceneID="zrn-mU-nak">
             <objects>
                 <tableViewController id="ahg-h2-oEa" customClass="AllListsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eM9-DK-6Xa">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eM9-DK-6Xa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="ahg-h2-oEa" id="8WY-QO-NcP"/>
                             <outlet property="delegate" destination="ahg-h2-oEa" id="4kc-9a-D9y"/>
@@ -37,10 +37,10 @@
         <scene sceneID="3Ma-QI-Rlm">
             <objects>
                 <tableViewController id="sjc-e0-JYR" customClass="ChecklistViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1Bz-9K-Yyk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1Bz-9K-Yyk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="3b4-rj-APW">
                                 <autoresizingMask key="autoresizingMask"/>

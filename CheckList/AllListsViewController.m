@@ -41,6 +41,13 @@
     [self.tableView reloadData];
 }
 #pragma mark - Table view data source & delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -67,7 +74,7 @@
     } else if (count == 0) {
         cell.detailTextLabel.text = @"All Done!";
     } else {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld Remaining", [checklist countUncheckedItems]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld Remaining", (long)[checklist countUncheckedItems]];
     }
     return cell;
 }
