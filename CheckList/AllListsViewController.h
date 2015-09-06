@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ListDetailViewController.h"
+
+@class DataModel;
+
 @interface AllListsViewController : UITableViewController
 
-- (void)saveChecklists;
+@property (nonatomic, strong) DataModel *dataModel;
 
 @end
