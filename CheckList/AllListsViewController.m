@@ -76,6 +76,9 @@
     } else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld Remaining", (long)[checklist countUncheckedItems]];
     }
+    
+    cell.imageView.image = [UIImage imageNamed:checklist.iconName];
+    
     return cell;
 }
 
@@ -109,7 +112,7 @@
 
 #pragma mark - ListDetailViewControllerDelegate
 - (void)listDetailViewControllerDidCancel:(ListDetailViewController *)controller {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)listDetailViewController:(ListDetailViewController *)controller didFinishEditingChecklist:(Checklist *)checklist {
@@ -126,6 +129,7 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 #pragma mark - UINavigationControllerDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self) {
