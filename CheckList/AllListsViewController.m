@@ -13,7 +13,7 @@
 #import "ChecklistItem.h"
 #import "DataModel.h"
 
-@interface AllListsViewController ()<listDetailViewControllerDelegate>
+@interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -22,6 +22,17 @@
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.navigationController.delegate = self;
+    
+    NSInteger index = [self.dataModel indexOfSelectedChecklist];
+    if (index != -1) {
+        Checklist *checklist = self.dataModel.lists[index];
+        [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
+    }
 }
 
 #pragma mark - Table view data source & delegate
@@ -48,6 +59,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.dataModel setIndexOfSelectedChecklist:indexPath.row];
     Checklist *checklist = self.dataModel.lists[indexPath.row];
     [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
     
@@ -97,6 +109,12 @@
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (viewController == self) {
+        [self.dataModel setIndexOfSelectedChecklist:-1];
+    }
 }
 
 #pragma mark - Segue

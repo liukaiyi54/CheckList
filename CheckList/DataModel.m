@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         [self loadChecklists];
+        [self registerDefaults];
     }
     return self;
 }
@@ -38,15 +39,27 @@
 
 - (void)loadChecklists {
     NSString *path = [self dataFilePath];
-    if ([[NSFileManager defaultManager] fileSystemRepresentationWithPath:path]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
         NSData *data = [[NSData alloc] initWithContentsOfFile:path];
         NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-        
         self.lists = [unarchiver decodeObjectForKey:@"CheckList"];
         [unarchiver finishDecoding];
     } else {
         self.lists = [[NSMutableArray alloc] initWithCapacity:20];
     }
+}
+
+- (void)registerDefaults {
+    NSDictionary *dictionary = @{@"ChecklistIndex": @-1};
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+}
+
+- (NSInteger)indexOfSelectedChecklist {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"ChecklistIndex"];
+}
+
+- (void)setIndexOfSelectedChecklist:(NSInteger)index {
+    [[NSUserDefaults standardUserDefaults] setInteger:index forKey:@"ChecklistIndex"];
 }
 
 @end
