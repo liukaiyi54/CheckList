@@ -78,6 +78,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1853BD1B9C1763004125AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DCFB41B96D20D00E4C208 /* ChecklistItem.h */,
+				4C8DCFB51B96D20D00E4C208 /* ChecklistItem.m */,
+				4C0E5D731B9894D200948BCC /* Checklist.h */,
+				4C0E5D741B9894D200948BCC /* Checklist.m */,
+				4C1853BA1B9BD84C004125AA /* DataModel.h */,
+				4C1853BB1B9BD84C004125AA /* DataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C1853BE1B9C1781004125AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DCF951B96AABC00E4C208 /* ChecklistViewController.h */,
+				4C8DCF961B96AABC00E4C208 /* ChecklistViewController.m */,
+				4C0E5D6D1B96E79900948BCC /* ItemDetailViewController.h */,
+				4C0E5D6E1B96E79900948BCC /* ItemDetailViewController.m */,
+				4C0E5D701B988C9500948BCC /* AllListsViewController.h */,
+				4C0E5D711B988C9500948BCC /* AllListsViewController.m */,
+				4C0E5D761B99278500948BCC /* ListDetailViewController.h */,
+				4C0E5D771B99278500948BCC /* ListDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		4C8DCF821B96AABC00E4C208 = {
 			isa = PBXGroup;
 			children = (
@@ -101,21 +129,9 @@
 			children = (
 				4C8DCF921B96AABC00E4C208 /* AppDelegate.h */,
 				4C8DCF931B96AABC00E4C208 /* AppDelegate.m */,
-				4C8DCF951B96AABC00E4C208 /* ChecklistViewController.h */,
-				4C8DCF961B96AABC00E4C208 /* ChecklistViewController.m */,
+				4C1853BD1B9C1763004125AA /* Model */,
+				4C1853BE1B9C1781004125AA /* Controller */,
 				4C8DCF981B96AABC00E4C208 /* Main.storyboard */,
-				4C8DCFB41B96D20D00E4C208 /* ChecklistItem.h */,
-				4C8DCFB51B96D20D00E4C208 /* ChecklistItem.m */,
-				4C0E5D6D1B96E79900948BCC /* ItemDetailViewController.h */,
-				4C0E5D6E1B96E79900948BCC /* ItemDetailViewController.m */,
-				4C0E5D701B988C9500948BCC /* AllListsViewController.h */,
-				4C0E5D711B988C9500948BCC /* AllListsViewController.m */,
-				4C0E5D731B9894D200948BCC /* Checklist.h */,
-				4C0E5D741B9894D200948BCC /* Checklist.m */,
-				4C0E5D761B99278500948BCC /* ListDetailViewController.h */,
-				4C0E5D771B99278500948BCC /* ListDetailViewController.m */,
-				4C1853BA1B9BD84C004125AA /* DataModel.h */,
-				4C1853BB1B9BD84C004125AA /* DataModel.m */,
 				4C8DCF8E1B96AABC00E4C208 /* Supporting Files */,
 			);
 			path = CheckList;
