@@ -23,8 +23,10 @@
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@", [self dataFilePath]);
 }
 
+#pragma mark - Sandbox
 - (NSString *)documentsDirectory {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths firstObject];
@@ -32,13 +34,13 @@
 }
 
 - (NSString *)dataFilePath {
-    return [[self documentsDirectory] stringByAppendingPathComponent:@"Checklists.plist"];
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"CheckList.plist"];
 }
 
 - (void)saveChecklists {
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [archiver encodeObject:_lists forKey:@"Checklists"];
+    [archiver encodeObject:_lists forKey:@"CheckList"];
     [archiver finishEncoding];
     [data writeToFile:[self dataFilePath] atomically:YES];
 }
@@ -48,12 +50,13 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
         NSData *data = [[NSData alloc] initWithContentsOfFile:path];
         NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-        _lists = [unarchiver decodeObjectForKey:@"Checklists"];
+        _lists = [unarchiver decodeObjectForKey:@"CheckList"];
         [unarchiver finishDecoding];
     } else {
         _lists = [[NSMutableArray alloc] initWithCapacity:20];
     }
 }
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {

@@ -10,4 +10,6 @@
 
 @interface AllListsViewController : UITableViewController
 
+- (void)saveChecklists;
+
 @end
