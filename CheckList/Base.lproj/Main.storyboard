@@ -138,18 +138,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlg-qd-KQ8" id="Gm5-yh-Wp2">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-bN-A5l">
+                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGo-qI-TlX">
-                                                    <rect key="frame" x="16" y="11" width="88" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-bN-A5l">
-                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
-                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eGo-qI-TlX" firstAttribute="leading" secondItem="Gm5-yh-Wp2" secondAttribute="leadingMargin" constant="8" id="49Q-Jt-u1Y"/>
+                                                <constraint firstItem="eGo-qI-TlX" firstAttribute="leading" secondItem="Gm5-yh-Wp2" secondAttribute="leadingMargin" id="49Q-Jt-u1Y"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jgj-bN-A5l" secondAttribute="trailing" id="7dS-Oi-0UV"/>
                                                 <constraint firstItem="jgj-bN-A5l" firstAttribute="centerY" secondItem="eGo-qI-TlX" secondAttribute="centerY" id="GHh-9p-1Tk"/>
                                                 <constraint firstItem="eGo-qI-TlX" firstAttribute="centerY" secondItem="Gm5-yh-Wp2" secondAttribute="centerY" id="TUW-9q-Ggq"/>
