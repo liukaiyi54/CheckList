@@ -15,4 +15,5 @@
 @property (nonatomic, copy) NSString *iconName;
 
 - (NSInteger)countUncheckedItems;
+
 @end

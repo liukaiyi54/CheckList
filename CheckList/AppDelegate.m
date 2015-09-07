@@ -26,6 +26,7 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     AllListsViewController *controller = navigationController.viewControllers[0];
     controller.dataModel = _dataModel;
+    
     return YES;
 }
 
