@@ -49,6 +49,7 @@
     UILabel *dateLabel = (UILabel *)[cell viewWithTag:1002];
     if (item.shouldRemind) {
         dateLabel.text = [formatter stringFromDate:item.dueDate];
+        dateLabel.hidden = NO;
     } else {
         dateLabel.hidden = YES;
     }
