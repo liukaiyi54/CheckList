@@ -48,19 +48,43 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3b4-rj-APW" id="OQn-t2-Luu">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-Hh-6Te" userLabel="Checklist Item">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-Hh-6Te" userLabel="Checklist Item">
                                             <rect key="frame" x="40" y="11" width="260" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="260" id="iQH-nX-oWA"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JB-zg-g6M">
-                                            <rect key="frame" x="8" y="11" width="30" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JB-zg-g6M">
+                                            <rect key="frame" x="3" y="11" width="32" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-C1-MtR">
+                                            <rect key="frame" x="40" y="28" width="80" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="Aaq-wc-GGA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qGh-Hh-6Te" firstAttribute="bottom" secondItem="6JB-zg-g6M" secondAttribute="bottom" id="6N8-nH-JlA"/>
+                                        <constraint firstItem="qGh-Hh-6Te" firstAttribute="trailing" secondItem="OQn-t2-Luu" secondAttribute="trailingMargin" id="8zU-0l-SSb"/>
+                                        <constraint firstItem="6JB-zg-g6M" firstAttribute="centerY" secondItem="OQn-t2-Luu" secondAttribute="centerY" id="Okf-78-a73"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eh2-C1-MtR" secondAttribute="bottom" constant="-7.5" id="XMK-Vb-Z74"/>
+                                        <constraint firstItem="6JB-zg-g6M" firstAttribute="top" secondItem="OQn-t2-Luu" secondAttribute="topMargin" constant="3" id="h9m-rA-I9u"/>
+                                        <constraint firstItem="qGh-Hh-6Te" firstAttribute="leading" secondItem="6JB-zg-g6M" secondAttribute="trailing" constant="5" id="iOq-gL-EaW"/>
+                                        <constraint firstItem="6JB-zg-g6M" firstAttribute="leading" secondItem="OQn-t2-Luu" secondAttribute="leadingMargin" constant="-5" id="kdv-e5-4bt"/>
+                                        <constraint firstItem="qGh-Hh-6Te" firstAttribute="leading" secondItem="eh2-C1-MtR" secondAttribute="leading" id="sHa-o3-UU5"/>
+                                        <constraint firstItem="eh2-C1-MtR" firstAttribute="top" secondItem="OQn-t2-Luu" secondAttribute="topMargin" constant="20" id="woq-1x-wce"/>
+                                        <constraint firstItem="6JB-zg-g6M" firstAttribute="top" secondItem="qGh-Hh-6Te" secondAttribute="top" id="xvr-z4-lBC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="qCd-ER-6eo" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="DKU-Z0-Fiw"/>

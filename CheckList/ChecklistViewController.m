@@ -44,6 +44,15 @@
     UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];
     checkMarkLabel.textColor = self.view.tintColor;
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yy/MM/dd hh:mm";
+    UILabel *dateLabel = (UILabel *)[cell viewWithTag:1002];
+    if (item.shouldRemind) {
+        dateLabel.text = [formatter stringFromDate:item.dueDate];
+    } else {
+        dateLabel.hidden = YES;
+    }
+ 
     if (item.checked) {
         checkMarkLabel.text = @"√";
     } else {
@@ -93,7 +102,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
     NSArray *indexPaths = @[indexPath];
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -103,6 +112,7 @@
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
     [self configureTextForCell:cell withChecklistItem:item];
+    [self.tableView reloadData];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
