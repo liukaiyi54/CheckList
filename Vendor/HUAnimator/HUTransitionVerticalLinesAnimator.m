@@ -1,25 +1,31 @@
 //
-//  HUTransitionHorizontalLinesAnimator.m
+//  HUTransitionVerticalLinesAnimator.m
 //  EasyBeats
 //
 //  Created by Christian Inkster on 16/09/13.
 //
 //
 
-#import "HUTransitionHorizontalLinesAnimator.h"
+#import "HUTransitionVerticalLinesAnimator.h"
 
 
-@implementation HUTransitionHorizontalLinesAnimator
 
-#define HLANIMATION_TIME1 0.01
-#define HLANIMATION_TIME2 4.70
+@implementation HUTransitionVerticalLinesAnimator
+
+#define VLANIMATION_TIME1 0.01
+#define VLANIMATION_TIME2 1.0
 /// returns the duration of the verticalLinesAnimation
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
-    return HLANIMATION_TIME1+HLANIMATION_TIME2;
+    return VLANIMATION_TIME1+VLANIMATION_TIME2;
 }
 
 
-#define HLINEHEIGHT 4.0
+#define VLINEWIDTH 4.0
+/**
+ verticalLinesTransition
+ snapshots the outgoing view, slices it into vertical lines, then animates them at random rates off the screen.
+ @param transitionContext
+ */
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
@@ -30,7 +36,7 @@
     //lets get a snapshot of the outgoing view
     UIView *mainSnap = [fromVC.view snapshotViewAfterScreenUpdates:NO];
     //cut it into vertical slices
-    NSArray *outgoingLineViews = [self cutView:mainSnap intoSlicesOfHeight:HLINEHEIGHT yOffset:fromVC.view.frame.origin.y];
+    NSArray *outgoingLineViews = [self cutView:mainSnap intoSlicesOfWidth:VLINEWIDTH];
     
     //add the slices to the content view.
     for (UIView *v in outgoingLineViews) {
@@ -43,23 +49,22 @@
     [containerView addSubview:toView];
     
     
-    CGFloat toViewStartX = toView.frame.origin.x;
+    CGFloat toViewStartY = toView.frame.origin.y;
     toView.alpha = 0;
     fromVC.view.hidden = YES;
     
-    BOOL presenting = self.presenting;
     
-    [UIView animateWithDuration:HLANIMATION_TIME1 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:VLANIMATION_TIME1 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         //This is basically a hack to get the incoming view to render before I snapshot it.
     } completion:^(BOOL finished) {
         
         toVC.view.alpha = 1;
         UIView *mainInSnap = [toView snapshotViewAfterScreenUpdates:YES];
         //cut it into vertical slices
-        NSArray *incomingLineViews = [self cutView:mainInSnap intoSlicesOfHeight:HLINEHEIGHT yOffset:toView.frame.origin.y];
+        NSArray *incomingLineViews = [self cutView:mainInSnap intoSlicesOfWidth:VLINEWIDTH];
         
-        //move the slices in to start position (incoming comes from the right)
-        [self repositionViewSlices:incomingLineViews moveLeft:!presenting];
+        //move the slices in to start position (mess them up)
+        [self repositionViewSlices:incomingLineViews moveFirstFrameUp:NO];
         
         //add the slices to the content view.
         for (UIView *v in incomingLineViews) {
@@ -67,9 +72,9 @@
         }
         toView.hidden = YES;
         
-        [UIView animateWithDuration:HLANIMATION_TIME2 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            [self repositionViewSlices:outgoingLineViews moveLeft:presenting];
-            [self resetViewSlices:incomingLineViews toXOrigin:toViewStartX];
+        [UIView animateWithDuration:VLANIMATION_TIME2 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [self repositionViewSlices:outgoingLineViews moveFirstFrameUp:YES];
+            [self resetViewSlices:incomingLineViews toYOrigin:toViewStartY];
         } completion:^(BOOL finished) {
             fromVC.view.hidden = NO;
             toView.hidden = NO;
@@ -88,24 +93,23 @@
 }
 
 /**
- cuts a \a view into an array of smaller views of \a height
+ cuts a \a view into an array of smaller views of \a width
  @param view the view to be sliced up
- @param height The height of each slice
+ @param width The width of each slice
  @returns A mutable array of the sliced views with their frames representative of their position in the sliced view.
  */
--(NSMutableArray *)cutView:(UIView *)view intoSlicesOfHeight:(float)height yOffset:(float)yOffset{
+-(NSMutableArray *)cutView:(UIView *)view intoSlicesOfWidth:(float)width{
     
-    CGFloat lineWidth = CGRectGetWidth(view.frame);
+    CGFloat lineHeight = CGRectGetHeight(view.frame);
     
     NSMutableArray *lineViews = [NSMutableArray array];
     
-    for (int y=0; y<CGRectGetHeight(view.frame); y+=height) {
-        CGRect subrect = CGRectMake(0, y, lineWidth, height);
+    for (int x=0; x<CGRectGetWidth(view.frame); x+=width) {
+        CGRect subrect = CGRectMake(x, 0, width, lineHeight);
         
         
         UIView *subsnapshot;
         subsnapshot = [view resizableSnapshotViewFromRect:subrect afterScreenUpdates:NO withCapInsets:UIEdgeInsetsZero];
-        subrect.origin.y += yOffset;
         subsnapshot.frame = subrect;
         
         [lineViews addObject:subsnapshot];
@@ -115,38 +119,40 @@
 }
 
 /**
- repositions an array of \a views to the left or right by their frames width
+ repositions an array of \a views alternatively up and down by their frames height
  @param views The array of views to reposition
- @param left should the frames be moved to the left
+ @param startUp start with the first view moving up (YES) or down (NO)
  */
--(void)repositionViewSlices:(NSArray *)views moveLeft:(BOOL)left{
+-(void)repositionViewSlices:(NSArray *)views moveFirstFrameUp:(BOOL)startUp{
     
-
+    BOOL up = startUp;
     CGRect frame;
-    float width;
+    float height;
     for (UIView *line in views) {
         frame = line.frame;
-        width = CGRectGetWidth(frame) * RANDOM_FLOAT(1.0, 8.0);
+        height = CGRectGetHeight(frame) * RANDOM_FLOAT(1.0, 4.0);
         
-        frame.origin.x += (left)?-width:width;
+        frame.origin.y += (up)?-height:height;
         
         //save the new position
         line.frame = frame;
+        
+        up = !up;
     }
 }
 
 /**
- resets the views back to a specified x origin.
+ resets the views back to a specified y origin.
  @param views The array of uiview objects to reposition
- @param x The x origin to set all the views frames to.
+ @param y The y origin to set all the views frames to.
  */
--(void)resetViewSlices:(NSArray *)views toXOrigin:(CGFloat)x{
+-(void)resetViewSlices:(NSArray *)views toYOrigin:(CGFloat)y{
     
     CGRect frame;
     for (UIView *line in views) {
         frame = line.frame;
         
-        frame.origin.x = x;
+        frame.origin.y = y;
         
         //save the new position
         line.frame = frame;

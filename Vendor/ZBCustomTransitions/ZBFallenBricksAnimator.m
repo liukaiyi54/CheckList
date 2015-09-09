@@ -11,7 +11,7 @@ static NSInteger const column = 5;
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-	return 2.0;
+	return 1.0;
 }
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
