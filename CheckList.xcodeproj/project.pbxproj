@@ -15,12 +15,12 @@
 		4C3EB31F1B9E8136006925C1 /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB31A1B9E8136006925C1 /* Checklist.m */; };
 		4C3EB3201B9E8136006925C1 /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB31C1B9E8136006925C1 /* ChecklistItem.m */; };
 		4C3EB3211B9E8136006925C1 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB31E1B9E8136006925C1 /* DataModel.m */; };
-		4C3EB3351B9E851D006925C1 /* HUTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB32E1B9E851D006925C1 /* HUTransitionAnimator.m */; };
-		4C3EB3361B9E851D006925C1 /* HUTransitionGhostAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3301B9E851D006925C1 /* HUTransitionGhostAnimator.m */; };
-		4C3EB3371B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3321B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.m */; };
-		4C3EB3381B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3341B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.m */; };
-		4C3EB33E1B9E8CE1006925C1 /* UIViewController+Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB33B1B9E8CE1006925C1 /* UIViewController+Animator.m */; };
-		4C3EB33F1B9E8CE1006925C1 /* ZBFallenBricksAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB33D1B9E8CE1006925C1 /* ZBFallenBricksAnimator.m */; };
+		4C3EB37A1B9EC9AD006925C1 /* HUTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB36E1B9EC9AD006925C1 /* HUTransitionAnimator.m */; };
+		4C3EB37B1B9EC9AD006925C1 /* HUTransitionGhostAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3701B9EC9AD006925C1 /* HUTransitionGhostAnimator.m */; };
+		4C3EB37C1B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3721B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.m */; };
+		4C3EB37D1B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3741B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m */; };
+		4C3EB37E1B9EC9AD006925C1 /* UIViewController+Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3771B9EC9AD006925C1 /* UIViewController+Animator.m */; };
+		4C3EB37F1B9EC9AD006925C1 /* ZBFallenBricksAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB3791B9EC9AD006925C1 /* ZBFallenBricksAnimator.m */; };
 		4C8DCF911B96AABC00E4C208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF901B96AABC00E4C208 /* main.m */; };
 		4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCF931B96AABC00E4C208 /* AppDelegate.m */; };
 		4C8DCF9A1B96AABC00E4C208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF981B96AABC00E4C208 /* Main.storyboard */; };
@@ -56,18 +56,18 @@
 		4C3EB31C1B9E8136006925C1 /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChecklistItem.m; path = Model/ChecklistItem.m; sourceTree = "<group>"; };
 		4C3EB31D1B9E8136006925C1 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataModel.h; path = Model/DataModel.h; sourceTree = "<group>"; };
 		4C3EB31E1B9E8136006925C1 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataModel.m; path = Model/DataModel.m; sourceTree = "<group>"; };
-		4C3EB32D1B9E851D006925C1 /* HUTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionAnimator.h; sourceTree = "<group>"; };
-		4C3EB32E1B9E851D006925C1 /* HUTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionAnimator.m; sourceTree = "<group>"; };
-		4C3EB32F1B9E851D006925C1 /* HUTransitionGhostAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionGhostAnimator.h; sourceTree = "<group>"; };
-		4C3EB3301B9E851D006925C1 /* HUTransitionGhostAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionGhostAnimator.m; sourceTree = "<group>"; };
-		4C3EB3311B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionHorizontalLinesAnimator.h; sourceTree = "<group>"; };
-		4C3EB3321B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionHorizontalLinesAnimator.m; sourceTree = "<group>"; };
-		4C3EB3331B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionVerticalLinesAnimator.h; sourceTree = "<group>"; };
-		4C3EB3341B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionVerticalLinesAnimator.m; sourceTree = "<group>"; };
-		4C3EB33A1B9E8CE1006925C1 /* UIViewController+Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Animator.h"; sourceTree = "<group>"; };
-		4C3EB33B1B9E8CE1006925C1 /* UIViewController+Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Animator.m"; sourceTree = "<group>"; };
-		4C3EB33C1B9E8CE1006925C1 /* ZBFallenBricksAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFallenBricksAnimator.h; sourceTree = "<group>"; };
-		4C3EB33D1B9E8CE1006925C1 /* ZBFallenBricksAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFallenBricksAnimator.m; sourceTree = "<group>"; };
+		4C3EB36D1B9EC9AD006925C1 /* HUTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionAnimator.h; sourceTree = "<group>"; };
+		4C3EB36E1B9EC9AD006925C1 /* HUTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionAnimator.m; sourceTree = "<group>"; };
+		4C3EB36F1B9EC9AD006925C1 /* HUTransitionGhostAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionGhostAnimator.h; sourceTree = "<group>"; };
+		4C3EB3701B9EC9AD006925C1 /* HUTransitionGhostAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionGhostAnimator.m; sourceTree = "<group>"; };
+		4C3EB3711B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionHorizontalLinesAnimator.h; sourceTree = "<group>"; };
+		4C3EB3721B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionHorizontalLinesAnimator.m; sourceTree = "<group>"; };
+		4C3EB3731B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUTransitionVerticalLinesAnimator.h; sourceTree = "<group>"; };
+		4C3EB3741B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUTransitionVerticalLinesAnimator.m; sourceTree = "<group>"; };
+		4C3EB3761B9EC9AD006925C1 /* UIViewController+Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Animator.h"; sourceTree = "<group>"; };
+		4C3EB3771B9EC9AD006925C1 /* UIViewController+Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Animator.m"; sourceTree = "<group>"; };
+		4C3EB3781B9EC9AD006925C1 /* ZBFallenBricksAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFallenBricksAnimator.h; sourceTree = "<group>"; };
+		4C3EB3791B9EC9AD006925C1 /* ZBFallenBricksAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFallenBricksAnimator.m; sourceTree = "<group>"; };
 		4C8DCF8B1B96AABC00E4C208 /* CheckList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCF8F1B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCF901B96AABC00E4C208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,45 +129,45 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		4C3EB3241B9E8328006925C1 /* Vendor */ = {
+		4C3EB36B1B9EC9AD006925C1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				4C3EB3401B9E8CE8006925C1 /* ZBCustomTransitions */,
-				4C3EB3391B9E8527006925C1 /* HUAnimator */,
+				4C3EB36C1B9EC9AD006925C1 /* HUAnimator */,
+				4C3EB3751B9EC9AD006925C1 /* ZBCustomTransitions */,
 			);
-			name = Vendor;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
-		4C3EB3391B9E8527006925C1 /* HUAnimator */ = {
+		4C3EB36C1B9EC9AD006925C1 /* HUAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				4C3EB32D1B9E851D006925C1 /* HUTransitionAnimator.h */,
-				4C3EB32E1B9E851D006925C1 /* HUTransitionAnimator.m */,
-				4C3EB32F1B9E851D006925C1 /* HUTransitionGhostAnimator.h */,
-				4C3EB3301B9E851D006925C1 /* HUTransitionGhostAnimator.m */,
-				4C3EB3311B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.h */,
-				4C3EB3321B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.m */,
-				4C3EB3331B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.h */,
-				4C3EB3341B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.m */,
+				4C3EB36D1B9EC9AD006925C1 /* HUTransitionAnimator.h */,
+				4C3EB36E1B9EC9AD006925C1 /* HUTransitionAnimator.m */,
+				4C3EB36F1B9EC9AD006925C1 /* HUTransitionGhostAnimator.h */,
+				4C3EB3701B9EC9AD006925C1 /* HUTransitionGhostAnimator.m */,
+				4C3EB3711B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.h */,
+				4C3EB3721B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.m */,
+				4C3EB3731B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.h */,
+				4C3EB3741B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m */,
 			);
-			name = HUAnimator;
+			path = HUAnimator;
 			sourceTree = "<group>";
 		};
-		4C3EB3401B9E8CE8006925C1 /* ZBCustomTransitions */ = {
+		4C3EB3751B9EC9AD006925C1 /* ZBCustomTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				4C3EB33A1B9E8CE1006925C1 /* UIViewController+Animator.h */,
-				4C3EB33B1B9E8CE1006925C1 /* UIViewController+Animator.m */,
-				4C3EB33C1B9E8CE1006925C1 /* ZBFallenBricksAnimator.h */,
-				4C3EB33D1B9E8CE1006925C1 /* ZBFallenBricksAnimator.m */,
+				4C3EB3761B9EC9AD006925C1 /* UIViewController+Animator.h */,
+				4C3EB3771B9EC9AD006925C1 /* UIViewController+Animator.m */,
+				4C3EB3781B9EC9AD006925C1 /* ZBFallenBricksAnimator.h */,
+				4C3EB3791B9EC9AD006925C1 /* ZBFallenBricksAnimator.m */,
 			);
-			name = ZBCustomTransitions;
+			path = ZBCustomTransitions;
 			sourceTree = "<group>";
 		};
 		4C8DCF821B96AABC00E4C208 = {
 			isa = PBXGroup;
 			children = (
-				4C3EB3241B9E8328006925C1 /* Vendor */,
+				4C3EB36B1B9EC9AD006925C1 /* Vendor */,
 				4C8DCF8D1B96AABC00E4C208 /* CheckList */,
 				4C8DCFA71B96AABC00E4C208 /* CheckListTests */,
 				4C8DCF8C1B96AABC00E4C208 /* Products */,
@@ -326,18 +326,18 @@
 			files = (
 				4C3EB31F1B9E8136006925C1 /* Checklist.m in Sources */,
 				4C3EB3211B9E8136006925C1 /* DataModel.m in Sources */,
-				4C3EB3351B9E851D006925C1 /* HUTransitionAnimator.m in Sources */,
 				4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */,
-				4C3EB3381B9E851D006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */,
-				4C3EB3361B9E851D006925C1 /* HUTransitionGhostAnimator.m in Sources */,
 				4C3EB3201B9E8136006925C1 /* ChecklistItem.m in Sources */,
-				4C3EB3371B9E851D006925C1 /* HUTransitionHorizontalLinesAnimator.m in Sources */,
+				4C3EB37D1B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */,
+				4C3EB37A1B9EC9AD006925C1 /* HUTransitionAnimator.m in Sources */,
 				4C3EB3171B9E80D3006925C1 /* ItemDetailViewController.m in Sources */,
-				4C3EB33E1B9E8CE1006925C1 /* UIViewController+Animator.m in Sources */,
-				4C3EB33F1B9E8CE1006925C1 /* ZBFallenBricksAnimator.m in Sources */,
+				4C3EB37B1B9EC9AD006925C1 /* HUTransitionGhostAnimator.m in Sources */,
 				4C3EB3181B9E80D3006925C1 /* ListDetailViewController.m in Sources */,
+				4C3EB37E1B9EC9AD006925C1 /* UIViewController+Animator.m in Sources */,
+				4C3EB37F1B9EC9AD006925C1 /* ZBFallenBricksAnimator.m in Sources */,
 				4C3EB3141B9E80D3006925C1 /* AllListsViewController.m in Sources */,
 				4C3EB3161B9E80D3006925C1 /* IconPickerViewController.m in Sources */,
+				4C3EB37C1B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.m in Sources */,
 				4C3EB3151B9E80D3006925C1 /* ChecklistViewController.m in Sources */,
 				4C8DCF911B96AABC00E4C208 /* main.m in Sources */,
 			);

@@ -15,7 +15,6 @@
 #import "ZBFallenBricksAnimator.h"
 
 typedef enum {
-    TransitionTypeNormal,
     TransitionTypeVerticalLines,
     TransitionTypeHorizontalLines,
     TransitionTypeGravity,
@@ -36,7 +35,7 @@ typedef enum {
     
     self.title = self.checklist.name;
     
-    type = TransitionTypeGravity;
+    type = arc4random() % 3;
     
     self.navigationController.delegate = self;
 }
