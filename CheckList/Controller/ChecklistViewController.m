@@ -165,27 +165,27 @@ typedef enum {
 }
 
 #pragma mark - animation
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-    NSObject <UIViewControllerAnimatedTransitioning> *animator;
-
-    switch (type) {
-        case TransitionTypeVerticalLines:
-            animator = [[HUTransitionVerticalLinesAnimator alloc] init];
-            [(HUTransitionAnimator *)animator setPresenting:NO];
-            break;
-        case TransitionTypeHorizontalLines:
-            animator = [[HUTransitionHorizontalLinesAnimator alloc] init];
-            [(HUTransitionAnimator *)animator setPresenting:NO];
-            break;
-        case TransitionTypeGravity:
-            animator = [[ZBFallenBricksAnimator alloc] init];
-            break;
-        default:
-            animator = nil;
-            break;
-    }
-    
-    return animator;
-}
+//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+//    NSObject <UIViewControllerAnimatedTransitioning> *animator;
+//
+//    switch (type) {
+//        case TransitionTypeVerticalLines:
+//            animator = [[HUTransitionVerticalLinesAnimator alloc] init];
+//            [(HUTransitionAnimator *)animator setPresenting:NO];
+//            break;
+//        case TransitionTypeHorizontalLines:
+//            animator = [[HUTransitionHorizontalLinesAnimator alloc] init];
+//            [(HUTransitionAnimator *)animator setPresenting:NO];
+//            break;
+//        case TransitionTypeGravity:
+//            animator = [[ZBFallenBricksAnimator alloc] init];
+//            break;
+//        default:
+//            animator = nil;
+//            break;
+//    }
+//    
+//    return animator;
+//}
 
 @end
