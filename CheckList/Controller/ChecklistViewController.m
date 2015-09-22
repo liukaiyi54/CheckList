@@ -11,22 +11,11 @@
 #import "ItemDetailViewController.h"
 #import "Checklist.h"
 
-#import "HUTransitionAnimator.h"
-#import "ZBFallenBricksAnimator.h"
-
-typedef enum {
-    TransitionTypeVerticalLines,
-    TransitionTypeHorizontalLines,
-    TransitionTypeGravity,
-} TransitionType;
-
-@interface ChecklistViewController ()<ItemDetailViewControllerDelegate, UINavigationControllerDelegate>
+@interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
 
 @end
 
-@implementation ChecklistViewController {
-    TransitionType type;
-}
+@implementation ChecklistViewController
 
 
 #pragma mark - LifeCycle
@@ -34,10 +23,6 @@ typedef enum {
     [super viewDidLoad];
     
     self.title = self.checklist.name;
-    
-    type = arc4random() % 3;
-    
-    self.navigationController.delegate = self;
 }
 
 #pragma mark - UITableViewDelegate
@@ -163,29 +148,5 @@ typedef enum {
         controller.itemToEdit = self.checklist.items[indexPath.row];
     }
 }
-
-#pragma mark - animation
-//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-//    NSObject <UIViewControllerAnimatedTransitioning> *animator;
-//
-//    switch (type) {
-//        case TransitionTypeVerticalLines:
-//            animator = [[HUTransitionVerticalLinesAnimator alloc] init];
-//            [(HUTransitionAnimator *)animator setPresenting:NO];
-//            break;
-//        case TransitionTypeHorizontalLines:
-//            animator = [[HUTransitionHorizontalLinesAnimator alloc] init];
-//            [(HUTransitionAnimator *)animator setPresenting:NO];
-//            break;
-//        case TransitionTypeGravity:
-//            animator = [[ZBFallenBricksAnimator alloc] init];
-//            break;
-//        default:
-//            animator = nil;
-//            break;
-//    }
-//    
-//    return animator;
-//}
 
 @end
