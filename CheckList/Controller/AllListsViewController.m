@@ -60,10 +60,13 @@
     NSInteger count = [checklist countUncheckedItems];
     if ([checklist.items count] == 0) {
         cell.detailTextLabel.text = @"(No Items)";
+        cell.detailTextLabel.textColor = [UIColor orangeColor];
     } else if (count == 0) {
         cell.detailTextLabel.text = @"All Done!";
+        cell.detailTextLabel.textColor = [UIColor greenColor];
     } else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld Remaining", (long)[checklist countUncheckedItems]];
+        cell.detailTextLabel.textColor = [UIColor redColor];
     }
     
     cell.imageView.image = [UIImage imageNamed:checklist.iconName];
