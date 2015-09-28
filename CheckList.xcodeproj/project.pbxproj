@@ -125,6 +125,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		4C211D931BB926B10032A0FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C8DCF981B96AABC00E4C208 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4C3EB3091B9E80BB006925C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,9 +209,9 @@
 		4C8DCF8D1B96AABC00E4C208 /* CheckList */ = {
 			isa = PBXGroup;
 			children = (
+				4C211D931BB926B10032A0FA /* View */,
 				4C3EB3091B9E80BB006925C1 /* Controller */,
 				4C1853BD1B9C1763004125AA /* Model */,
-				4C8DCF981B96AABC00E4C208 /* Main.storyboard */,
 				4C8DCF8E1B96AABC00E4C208 /* Supporting Files */,
 			);
 			path = CheckList;
@@ -427,6 +435,7 @@
 				4C8DCF991B96AABC00E4C208 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */ = {

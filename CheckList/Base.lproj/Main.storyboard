@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kap-pk-jZO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kap-pk-jZO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -22,6 +22,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="GHl-te-ek7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yh6-Y4-r29">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="Lvj-fE-ove" kind="presentation" identifier="AddChecklist" id="idl-Oa-vQl"/>
                             </connections>
@@ -108,6 +109,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="TGX-AH-eB4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cjj-tF-oIN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="qCd-ER-6eo" kind="presentation" identifier="AddItem" id="fEC-FO-1bu"/>
                             </connections>
@@ -128,6 +130,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.15686274510000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="EWm-JW-KU4" kind="relationship" relationship="rootViewController" id="EoY-2Y-y9q"/>
@@ -242,11 +248,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Item" id="pGF-mc-HST">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="A0L-pk-kUy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancel:" destination="GWd-I5-Avl" id="i8A-Jk-eki"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="8rD-SP-0FF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="done:" destination="GWd-I5-Avl" id="1aW-Yf-NDu"/>
                             </connections>
@@ -274,6 +282,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.15686274509803921" green="0.57647058823529407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -293,6 +305,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.15686274510000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -384,11 +397,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Checklist" id="jvg-eC-Zae">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GJi-fS-gav">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancel:" destination="EWm-JW-KU4" id="Ht3-Ut-nK2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="sWG-8Z-5oW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="done:" destination="EWm-JW-KU4" id="DgR-2n-Kg1"/>
                             </connections>
@@ -449,7 +464,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DKU-Z0-Fiw"/>
+        <segue reference="fEC-FO-1bu"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.015686274509803921" green="0.66274509803921566" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
 </document>
