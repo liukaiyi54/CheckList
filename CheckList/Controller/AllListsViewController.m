@@ -13,7 +13,7 @@
 #import "ChecklistItem.h"
 #import "DataModel.h"
 
-@interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate>
+@interface AllListsViewController ()<listDetailViewControllerDelegate>
 
 @end
 
@@ -22,11 +22,6 @@
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.navigationController.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
