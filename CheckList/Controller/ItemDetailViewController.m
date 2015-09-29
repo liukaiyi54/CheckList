@@ -37,6 +37,8 @@
         _dueDate = [NSDate date];
     }
     
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     [self updateDueDateLabel];
 }
 
