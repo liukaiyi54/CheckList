@@ -55,7 +55,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JB-zg-g6M">
-                                            <rect key="frame" x="3" y="11" width="20" height="21"/>
+                                            <rect key="frame" x="16" y="11" width="20" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="JDW-CA-FEd"/>
@@ -65,7 +65,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-Hh-6Te" userLabel="Checklist Item">
-                                            <rect key="frame" x="27" y="11" width="260" height="21"/>
+                                            <rect key="frame" x="40" y="11" width="260" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="260" id="1aO-2P-sWd"/>
@@ -75,7 +75,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-C1-MtR">
-                                            <rect key="frame" x="27" y="30" width="80" height="13"/>
+                                            <rect key="frame" x="40" y="30" width="80" height="13"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="cMy-hW-0Oe"/>
@@ -87,7 +87,7 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="6JB-zg-g6M" firstAttribute="leading" secondItem="OQn-t2-Luu" secondAttribute="leadingMargin" constant="-5" id="4je-tv-q4Y"/>
+                                        <constraint firstItem="6JB-zg-g6M" firstAttribute="leading" secondItem="OQn-t2-Luu" secondAttribute="leadingMargin" constant="8" id="4je-tv-q4Y"/>
                                         <constraint firstAttribute="centerY" secondItem="qGh-Hh-6Te" secondAttribute="centerY" constant="0.25" id="ADc-W0-jkB"/>
                                         <constraint firstItem="eh2-C1-MtR" firstAttribute="leading" secondItem="qGh-Hh-6Te" secondAttribute="leading" id="RdV-S8-lVg"/>
                                         <constraint firstItem="qGh-Hh-6Te" firstAttribute="leading" secondItem="6JB-zg-g6M" secondAttribute="trailing" constant="4" id="VrM-p5-Ctw"/>
@@ -192,7 +192,7 @@
                                                     <animations/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGo-qI-TlX">
-                                                    <rect key="frame" x="8" y="11" width="86" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="86" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -201,7 +201,7 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="eGo-qI-TlX" firstAttribute="leading" secondItem="Gm5-yh-Wp2" secondAttribute="leadingMargin" id="49Q-Jt-u1Y"/>
+                                                <constraint firstItem="eGo-qI-TlX" firstAttribute="leading" secondItem="Gm5-yh-Wp2" secondAttribute="leadingMargin" constant="7" id="49Q-Jt-u1Y"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jgj-bN-A5l" secondAttribute="trailing" id="7dS-Oi-0UV"/>
                                                 <constraint firstItem="jgj-bN-A5l" firstAttribute="centerY" secondItem="eGo-qI-TlX" secondAttribute="centerY" id="GHh-9p-1Tk"/>
                                                 <constraint firstItem="eGo-qI-TlX" firstAttribute="centerY" secondItem="Gm5-yh-Wp2" secondAttribute="centerY" id="TUW-9q-Ggq"/>
