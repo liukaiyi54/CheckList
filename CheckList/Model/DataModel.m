@@ -31,6 +31,7 @@
     return [[self documentsDirectory] stringByAppendingPathComponent:@"CheckList.plist"];
 }
 
+//存储数据到plist
 - (void)saveChecklists {
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
@@ -39,6 +40,7 @@
     [data writeToFile:[self dataFilePath] atomically:YES];
 }
 
+//从plist读取数据
 - (void)loadChecklists {
     NSString *path = [self dataFilePath];
     if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
@@ -76,7 +78,7 @@
 }
 
 - (void)sortChecklists {
-    [self.lists sortUsingSelector:@selector(compare:)];
+    [self.lists sortUsingSelector:@selector(compare:)];//按字母排序
 }
 
 + (NSInteger)nextChecklistItemId {
