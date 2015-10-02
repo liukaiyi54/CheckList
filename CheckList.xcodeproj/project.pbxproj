@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0132471BBE55E50069129D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132461BBE55E50069129D /* User.m */; settings = {ASSET_TAGS = (); }; };
+		4C01324A1BBE57280069129D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132491BBE57280069129D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4C01324D1BBE5F010069129D /* AppDelegate+LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */; settings = {ASSET_TAGS = (); }; };
+		4C0132541BBE64C80069129D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0132531BBE64C80069129D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		4C3EB3141B9E80D3006925C1 /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30B1B9E80D3006925C1 /* AllListsViewController.m */; };
 		4C3EB3151B9E80D3006925C1 /* ChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30D1B9E80D3006925C1 /* ChecklistViewController.m */; };
 		4C3EB3161B9E80D3006925C1 /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30F1B9E80D3006925C1 /* IconPickerViewController.m */; };
@@ -43,6 +47,13 @@
 /* Begin PBXFileReference section */
 		1FFA9DA9C4C4AC8524457E03 /* Pods-CheckList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckList/Pods-CheckList.debug.xcconfig"; sourceTree = "<group>"; };
 		2EC1842D190EEA4288F9C0AD /* libPods-CheckList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheckList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0132451BBE55E50069129D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		4C0132461BBE55E50069129D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		4C0132481BBE57280069129D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controller/LoginViewController.h; sourceTree = "<group>"; };
+		4C0132491BBE57280069129D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controller/LoginViewController.m; sourceTree = "<group>"; };
+		4C01324B1BBE5F010069129D /* AppDelegate+LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LockView.h"; sourceTree = "<group>"; };
+		4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LockView.m"; sourceTree = "<group>"; };
+		4C0132531BBE64C80069129D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Controller/LoginViewController.xib; sourceTree = "<group>"; };
 		4C3EB30A1B9E80D3006925C1 /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllListsViewController.h; path = Controller/AllListsViewController.h; sourceTree = "<group>"; };
 		4C3EB30B1B9E80D3006925C1 /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllListsViewController.m; path = Controller/AllListsViewController.m; sourceTree = "<group>"; };
 		4C3EB30C1B9E80D3006925C1 /* ChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChecklistViewController.h; path = Controller/ChecklistViewController.h; sourceTree = "<group>"; };
@@ -121,6 +132,8 @@
 				4C3EB31C1B9E8136006925C1 /* ChecklistItem.m */,
 				4C3EB31D1B9E8136006925C1 /* DataModel.h */,
 				4C3EB31E1B9E8136006925C1 /* DataModel.m */,
+				4C0132451BBE55E50069129D /* User.h */,
+				4C0132461BBE55E50069129D /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -146,6 +159,9 @@
 				4C3EB3111B9E80D3006925C1 /* ItemDetailViewController.m */,
 				4C3EB3121B9E80D3006925C1 /* ListDetailViewController.h */,
 				4C3EB3131B9E80D3006925C1 /* ListDetailViewController.m */,
+				4C0132481BBE57280069129D /* LoginViewController.h */,
+				4C0132491BBE57280069129D /* LoginViewController.m */,
+				4C0132531BBE64C80069129D /* LoginViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -226,6 +242,8 @@
 				4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */,
 				4C8DCF8F1B96AABC00E4C208 /* Info.plist */,
 				4C8DCF901B96AABC00E4C208 /* main.m */,
+				4C01324B1BBE5F010069129D /* AppDelegate+LockView.h */,
+				4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -338,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0132541BBE64C80069129D /* LoginViewController.xib in Resources */,
 				4C8DCF9A1B96AABC00E4C208 /* Main.storyboard in Resources */,
 				4C8DCF9F1B96AABC00E4C208 /* LaunchScreen.xib in Resources */,
 				4C8DCF9C1B96AABC00E4C208 /* Images.xcassets in Resources */,
@@ -395,6 +414,7 @@
 				4C3EB3211B9E8136006925C1 /* DataModel.m in Sources */,
 				4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */,
 				4C3EB3201B9E8136006925C1 /* ChecklistItem.m in Sources */,
+				4C0132471BBE55E50069129D /* User.m in Sources */,
 				4C3EB37D1B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */,
 				4C3EB37A1B9EC9AD006925C1 /* HUTransitionAnimator.m in Sources */,
 				4C3EB3171B9E80D3006925C1 /* ItemDetailViewController.m in Sources */,
@@ -404,6 +424,8 @@
 				4C3EB37F1B9EC9AD006925C1 /* ZBFallenBricksAnimator.m in Sources */,
 				4C3EB3141B9E80D3006925C1 /* AllListsViewController.m in Sources */,
 				4C3EB3161B9E80D3006925C1 /* IconPickerViewController.m in Sources */,
+				4C01324A1BBE57280069129D /* LoginViewController.m in Sources */,
+				4C01324D1BBE5F010069129D /* AppDelegate+LockView.m in Sources */,
 				4C3EB37C1B9EC9AD006925C1 /* HUTransitionHorizontalLinesAnimator.m in Sources */,
 				4C3EB3151B9E80D3006925C1 /* ChecklistViewController.m in Sources */,
 				4C8DCF911B96AABC00E4C208 /* main.m in Sources */,

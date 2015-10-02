@@ -12,6 +12,8 @@
 #import "ListDetailViewController.h"
 #import "ChecklistItem.h"
 #import "DataModel.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate>
 
@@ -27,6 +29,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    if(![(AppDelegate*)[[UIApplication sharedApplication] delegate] authenticated]) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        LoginViewController *initView =  (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"initialView"];
+        [initView setModalPresentationStyle:UIModalPresentationFullScreen];
+        [self presentViewController:initView animated:NO completion:nil];
+    } else{
+        // proceed with the profile view
+    }
     
     [self.tableView reloadData];
 }
