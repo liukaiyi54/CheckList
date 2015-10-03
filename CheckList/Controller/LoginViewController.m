@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -22,9 +23,11 @@
 }
 
 - (IBAction)didTapLogin:(id)sender {
-    AllListsViewController *vc = [[AllListsViewController alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginActionFinished:) name:@"loginActionFinished" object:vc];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self.textField.text isEqualToString:@"1"]) {
+        AllListsViewController *vc = [[AllListsViewController alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginActionFinished:) name:@"loginActionFinished" object:vc];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 -(void)loginActionFinished:(NSNotification*)notification {

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="textField" destination="tie-sw-DFX" id="fxx-Mq-1zZ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="FGC-6A-2e9"/>
             </connections>
         </placeholder>
@@ -16,19 +17,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-Mh-BnT">
-                    <rect key="frame" x="164" y="319" width="46" height="30"/>
+                    <rect key="frame" x="168" y="319" width="38" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Login"/>
                     <connections>
                         <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="Xqa-Zf-N6B"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tie-sw-DFX">
+                    <rect key="frame" x="139" y="281" width="97" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewD-gH-mUI">
+                    <rect key="frame" x="128" y="221" width="118.5" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.47128888540000002" green="0.71754213499999997" blue="0.98700817929999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="ewD-gH-mUI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2pz-Ff-QIA"/>
+                <constraint firstItem="tie-sw-DFX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="139" id="7hZ-ff-ERm"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HTk-Pg-HUR"/>
+                <constraint firstItem="vMs-Mh-BnT" firstAttribute="top" secondItem="tie-sw-DFX" secondAttribute="bottom" constant="8" symbolic="YES" id="d76-Hh-tY6"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gXF-bw-NeG"/>
+                <constraint firstItem="tie-sw-DFX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="m7z-OV-TUc"/>
+                <constraint firstItem="ewD-gH-mUI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="221" id="u0M-SH-w8S"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
