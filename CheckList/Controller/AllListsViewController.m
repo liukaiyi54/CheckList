@@ -7,15 +7,18 @@
 //
 
 #import "AllListsViewController.h"
-#import "Checklist.h"
 #import "ChecklistViewController.h"
 #import "ListDetailViewController.h"
+#import "LoginViewController.h"
+#import "SWRevealViewController.h"
+
 #import "ChecklistItem.h"
 #import "DataModel.h"
-#import "LoginViewController.h"
+#import "Checklist.h"
 #import "AppDelegate.h"
 
 @interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end
 
@@ -25,6 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.delegate = self;
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

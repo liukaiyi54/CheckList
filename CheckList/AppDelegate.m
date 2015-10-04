@@ -11,6 +11,7 @@
 #import "DataModel.h"
 #import "User.h"
 #import "AppDelegate+LockView.h"
+#import "SWRevealViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,8 +26,13 @@
     // Override point for customization after application launch.
     _dataModel = [[DataModel alloc] init];
     
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    AllListsViewController *controller = navigationController.viewControllers[0];
+//    controller.dataModel = _dataModel;
+    SWRevealViewController *revealViewController = (SWRevealViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = (UINavigationController *)revealViewController.frontViewController;
     AllListsViewController *controller = navigationController.viewControllers[0];
+    
     controller.dataModel = _dataModel;
     
     User *user = [[User alloc] init];
