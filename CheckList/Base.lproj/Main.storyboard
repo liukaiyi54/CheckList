@@ -21,7 +21,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="GHl-te-ek7">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="AYH-zG-jXX">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon" id="AYH-zG-jXX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yh6-Y4-r29">
@@ -546,6 +546,9 @@
             <point key="canvasLocation" x="501.5" y="-5.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reveal-icon" width="22" height="17"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fEC-FO-1bu"/>
     </inferredMetricsTieBreakers>
