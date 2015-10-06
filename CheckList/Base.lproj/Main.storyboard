@@ -324,7 +324,7 @@
             </objects>
             <point key="canvasLocation" x="-1054.5" y="-1031.5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Setting-->
         <scene sceneID="c69-Fa-zGZ">
             <objects>
                 <tableViewController id="vwh-wU-3hF" sceneMemberID="viewController">
@@ -350,7 +350,7 @@
                             <outlet property="delegate" destination="vwh-wU-3hF" id="ZwF-Xv-sHm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wq7-7d-hM1"/>
+                    <navigationItem key="navigationItem" title="Setting" id="wq7-7d-hM1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENz-Eh-fau" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,6 +366,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.15686274510000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="vwh-wU-3hF" kind="relationship" relationship="rootViewController" id="6KE-Ox-3XG"/>

@@ -37,7 +37,9 @@
     myNavigationController.navigationBar.barTintColor = UIColorFromRGB(0x2893FF);
     [myNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
-    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:nil frontViewController:myNavigationController];
+    UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
+    
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rear frontViewController:myNavigationController];
     self.window.rootViewController = revealController;
     
     User *user = [[User alloc] init];
