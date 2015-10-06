@@ -12,6 +12,7 @@
 #import "User.h"
 #import "AppDelegate+LockView.h"
 #import "SWRevealViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,14 +27,15 @@
     // Override point for customization after application launch.
     _dataModel = [[DataModel alloc] init];
     
-//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-//    AllListsViewController *controller = navigationController.viewControllers[0];
-//    controller.dataModel = _dataModel;
-    SWRevealViewController *revealViewController = (SWRevealViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = (UINavigationController *)revealViewController.frontViewController;
-    AllListsViewController *controller = navigationController.viewControllers[0];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    AllListsViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"AllListsViewController"];
     
     controller.dataModel = _dataModel;
+
+    UINavigationController *myNavigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:nil frontViewController:myNavigationController];
+    self.window.rootViewController = revealController;
     
     User *user = [[User alloc] init];
     self.authenticated = [user userAuthenticated];
