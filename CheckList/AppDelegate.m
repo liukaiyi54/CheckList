@@ -13,6 +13,7 @@
 #import "AppDelegate+LockView.h"
 #import "SWRevealViewController.h"
 #import "LoginViewController.h"
+#import "UIColorMacros.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,8 @@
     controller.dataModel = _dataModel;
 
     UINavigationController *myNavigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    myNavigationController.navigationBar.barTintColor = UIColorFromRGB(0x2893FF);
+    [myNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:nil frontViewController:myNavigationController];
     self.window.rootViewController = revealController;

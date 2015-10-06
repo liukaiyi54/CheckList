@@ -96,6 +96,7 @@
 		4C8DCFA41B96AABC00E4C208 /* CheckListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCFA91B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListTests.m; sourceTree = "<group>"; };
+		4CF204DC1BC365E200FAD11D /* UIColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIColorMacros.h; path = ../UIColorMacros.h; sourceTree = "<group>"; };
 		554AC2739414469538EEA2FB /* Pods-CheckList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckList/Pods-CheckList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +182,7 @@
 		4C3EB36B1B9EC9AD006925C1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4CF204DC1BC365E200FAD11D /* UIColorMacros.h */,
 				4C0132551BBFD9080069129D /* SWRevealViewController */,
 				4C3EB36C1B9EC9AD006925C1 /* HUAnimator */,
 				4C3EB3751B9EC9AD006925C1 /* ZBCustomTransitions */,
