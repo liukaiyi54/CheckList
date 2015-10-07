@@ -137,7 +137,6 @@
     
         [self.delegate itemDetailViewController:self didFinishEditingItem:self.itemToEdit];
     }
-
 }
 
 #pragma mark - UITextFieldDelegate 
@@ -203,7 +202,6 @@
         [self.tableView deleteRowsAtIndexPaths:@[indexPathDatePicker] withRowAnimation:UITableViewRowAnimationFade];
         
         [self.tableView endUpdates];
-        
     }
 }
 @end

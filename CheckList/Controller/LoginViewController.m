@@ -39,14 +39,7 @@
 }
 
 - (void)dismissLoginAndShowProfile {
-//    [self dismissViewControllerAnimated:NO completion:^{
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        UITabBarController *tabView = [storyboard instantiateViewControllerWithIdentifier:@"profileView"];
-//        [self presentViewController:tabView animated:YES completion:nil];
-//    }];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
-
 
 @end
