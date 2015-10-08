@@ -76,7 +76,7 @@
 //        // proceed with the profile view
 //    }
 //    
-//    [self.tableView reloadData];
+    [self.tableView reloadData];
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [tempAppDelegate.leftVC setPanEnabled:NO];
 }
