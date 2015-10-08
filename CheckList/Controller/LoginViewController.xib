@@ -24,26 +24,28 @@
                         <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="Xqa-Zf-N6B"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tie-sw-DFX">
-                    <rect key="frame" x="139" y="281" width="97" height="30"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewD-gH-mUI">
-                    <rect key="frame" x="128" y="221" width="118.5" height="20.5"/>
+                    <rect key="frame" x="128" y="221" width="119" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.47128888540000002" green="0.71754213499999997" blue="0.98700817929999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tie-sw-DFX">
+                    <rect key="frame" x="128" y="281" width="120" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="Q2w-ZG-BI7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ewD-gH-mUI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2pz-Ff-QIA"/>
                 <constraint firstItem="tie-sw-DFX" firstAttribute="top" secondItem="ewD-gH-mUI" secondAttribute="bottom" constant="39.5" id="57S-1u-Tny"/>
-                <constraint firstItem="tie-sw-DFX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="139" id="7hZ-ff-ERm"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HTk-Pg-HUR"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="top" secondItem="tie-sw-DFX" secondAttribute="bottom" constant="8" symbolic="YES" id="d76-Hh-tY6"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gXF-bw-NeG"/>
