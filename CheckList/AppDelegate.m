@@ -30,7 +30,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     AllListsViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"AllListsViewController"];
-    
+
     controller.dataModel = _dataModel;
 
     UINavigationController *myNavigationController = [[UINavigationController alloc] initWithRootViewController:controller];
@@ -38,9 +38,12 @@
     [myNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
     UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
+
+//    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rear frontViewController:myNavigationController];
+//    self.window.rootViewController = revealController;
     
-    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rear frontViewController:myNavigationController];
-    self.window.rootViewController = revealController;
+    self.leftVC = [[LeftSlideViewController alloc] initWithLeftView:rear andMainView:myNavigationController];
+    self.window.rootViewController = self.leftVC;
     
     User *user = [[User alloc] init];
     self.authenticated = [user userAuthenticated];

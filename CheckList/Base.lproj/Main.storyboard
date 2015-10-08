@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="ahg-h2-oEa" id="8WY-QO-NcP"/>
                             <outlet property="delegate" destination="ahg-h2-oEa" id="4kc-9a-D9y"/>
@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="3b4-rj-APW">
                                 <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
@@ -199,7 +199,7 @@
                                                     <rect key="frame" x="15" y="11" width="86" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -226,7 +226,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tpn-a3-Hpy">
@@ -324,43 +324,10 @@
             </objects>
             <point key="canvasLocation" x="-1054.5" y="-1031.5"/>
         </scene>
-        <!--Setting-->
-        <scene sceneID="c69-Fa-zGZ">
-            <objects>
-                <tableViewController id="vwh-wU-3hF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y8k-m7-0FQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tCA-Ng-M5Y">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tCA-Ng-M5Y" id="Lfa-iE-nV9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vwh-wU-3hF" id="quZ-SN-wd1"/>
-                            <outlet property="delegate" destination="vwh-wU-3hF" id="ZwF-Xv-sHm"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Setting" id="wq7-7d-hM1"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ENz-Eh-fau" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1046.5" y="-188.5"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="zJk-i1-oQv">
             <objects>
-                <navigationController storyboardIdentifier="Rear" id="rjS-LP-Xhx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Rear" navigationBarHidden="YES" id="rjS-LP-Xhx" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ocO-Cf-VjZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -372,12 +339,45 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="vwh-wU-3hF" kind="relationship" relationship="rootViewController" id="6KE-Ox-3XG"/>
+                        <segue destination="cUa-xd-2U7" kind="relationship" relationship="rootViewController" id="x4s-3V-wbG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDv-gv-DuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1516.5" y="-188.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NZ3-rA-Rl8">
+            <objects>
+                <viewController id="cUa-xd-2U7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rCx-86-waK"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWh-eF-GqL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7e3-yH-0fh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftbackiamge" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-g0-7UW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Edc-g0-7UW" firstAttribute="leading" secondItem="7e3-yH-0fh" secondAttribute="leading" id="2mn-7E-Xrl"/>
+                            <constraint firstItem="Edc-g0-7UW" firstAttribute="top" secondItem="rCx-86-waK" secondAttribute="bottom" constant="-20" id="AAj-Yv-4Td"/>
+                            <constraint firstItem="VWh-eF-GqL" firstAttribute="top" secondItem="Edc-g0-7UW" secondAttribute="bottom" id="T9w-rf-cHe"/>
+                            <constraint firstAttribute="trailing" secondItem="Edc-g0-7UW" secondAttribute="trailing" id="WQG-Q4-GIa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="R9k-Nl-Sbq"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhI-LH-DR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1089.5" y="-188.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZdX-M4-Tod">
@@ -447,7 +447,7 @@
                                                     <rect key="frame" x="8" y="11" width="34" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dlQ-es-2SG">
@@ -525,7 +525,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -547,6 +547,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="leftbackiamge" width="640" height="1096"/>
         <image name="reveal-icon" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
