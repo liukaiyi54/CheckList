@@ -42,12 +42,12 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ewD-gH-mUI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2pz-Ff-QIA"/>
+                <constraint firstItem="tie-sw-DFX" firstAttribute="top" secondItem="ewD-gH-mUI" secondAttribute="bottom" constant="39.5" id="57S-1u-Tny"/>
                 <constraint firstItem="tie-sw-DFX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="139" id="7hZ-ff-ERm"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HTk-Pg-HUR"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="top" secondItem="tie-sw-DFX" secondAttribute="bottom" constant="8" symbolic="YES" id="d76-Hh-tY6"/>
                 <constraint firstItem="vMs-Mh-BnT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gXF-bw-NeG"/>
                 <constraint firstItem="tie-sw-DFX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="m7z-OV-TUc"/>
-                <constraint firstItem="ewD-gH-mUI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="221" id="u0M-SH-w8S"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
