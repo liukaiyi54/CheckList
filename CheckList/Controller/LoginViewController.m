@@ -24,7 +24,7 @@
 }
 
 - (IBAction)didTapLogin:(id)sender {
-    if ([self.textField.text isEqualToString:@"1"]) {
+    if ([self.textField.text isEqualToString:@"👻"]) {
         AllListsViewController *vc = [[AllListsViewController alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginActionFinished:) name:@"loginActionFinished" object:vc];
         [self dismissViewControllerAnimated:YES completion:nil];
