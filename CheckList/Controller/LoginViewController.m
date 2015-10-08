@@ -23,6 +23,11 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.textField resignFirstResponder];
+}
+
 - (IBAction)didTapLogin:(id)sender {
     if ([self.textField.text isEqualToString:@"👻"]) {
         AllListsViewController *vc = [[AllListsViewController alloc] init];
