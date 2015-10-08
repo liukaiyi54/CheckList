@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.textField becomeFirstResponder];
     // Do any additional setup after loading the view.
 }
 
