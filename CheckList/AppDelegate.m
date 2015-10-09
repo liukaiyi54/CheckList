@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "AllListsViewController.h"
 #import "DataModel.h"
-#import "User.h"
 #import "AppDelegate+LockView.h"
 #import "SWRevealViewController.h"
 #import "LoginViewController.h"
@@ -38,15 +37,9 @@
     [myNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
     UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
-
-//    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rear frontViewController:myNavigationController];
-//    self.window.rootViewController = revealController;
     
     self.leftVC = [[LeftSlideViewController alloc] initWithLeftView:rear andMainView:myNavigationController];
     self.window.rootViewController = self.leftVC;
-    
-    User *user = [[User alloc] init];
-    self.authenticated = [user userAuthenticated];
     
     return YES;
 }

@@ -30,22 +30,8 @@
 
 - (IBAction)didTapLogin:(id)sender {
     if ([self.textField.text isEqualToString:@"👻"]) {
-        AllListsViewController *vc = [[AllListsViewController alloc] init];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginActionFinished:) name:@"loginActionFinished" object:vc];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-}
-
--(void)loginActionFinished:(NSNotification*)notification {
-    
-    AppDelegate *authObj = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    authObj.authenticated = YES;
-    
-    [self dismissLoginAndShowProfile];
-}
-
-- (void)dismissLoginAndShowProfile {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

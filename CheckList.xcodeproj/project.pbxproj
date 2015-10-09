@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0132471BBE55E50069129D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132461BBE55E50069129D /* User.m */; settings = {ASSET_TAGS = (); }; };
 		4C01324A1BBE57280069129D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132491BBE57280069129D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4C01324D1BBE5F010069129D /* AppDelegate+LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */; settings = {ASSET_TAGS = (); }; };
 		4C0132541BBE64C80069129D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0132531BBE64C80069129D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -50,8 +49,6 @@
 /* Begin PBXFileReference section */
 		1FFA9DA9C4C4AC8524457E03 /* Pods-CheckList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckList/Pods-CheckList.debug.xcconfig"; sourceTree = "<group>"; };
 		2EC1842D190EEA4288F9C0AD /* libPods-CheckList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheckList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C0132451BBE55E50069129D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
-		4C0132461BBE55E50069129D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
 		4C0132481BBE57280069129D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controller/LoginViewController.h; sourceTree = "<group>"; };
 		4C0132491BBE57280069129D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controller/LoginViewController.m; sourceTree = "<group>"; };
 		4C01324B1BBE5F010069129D /* AppDelegate+LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LockView.h"; sourceTree = "<group>"; };
@@ -151,8 +148,6 @@
 				4C3EB31C1B9E8136006925C1 /* ChecklistItem.m */,
 				4C3EB31D1B9E8136006925C1 /* DataModel.h */,
 				4C3EB31E1B9E8136006925C1 /* DataModel.m */,
-				4C0132451BBE55E50069129D /* User.h */,
-				4C0132461BBE55E50069129D /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -447,7 +442,6 @@
 				4C3EB3211B9E8136006925C1 /* DataModel.m in Sources */,
 				4C8DCF941B96AABC00E4C208 /* AppDelegate.m in Sources */,
 				4C3EB3201B9E8136006925C1 /* ChecklistItem.m in Sources */,
-				4C0132471BBE55E50069129D /* User.m in Sources */,
 				4C3EB37D1B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */,
 				4C3EB37A1B9EC9AD006925C1 /* HUTransitionAnimator.m in Sources */,
 				4C0132581BBFF72D0069129D /* SWRevealViewController.m in Sources */,
