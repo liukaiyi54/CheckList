@@ -77,7 +77,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DatePickerCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
-            UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
+            UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 216)];
             datePicker.tag = 100;
             [cell.contentView addSubview:datePicker];
             
