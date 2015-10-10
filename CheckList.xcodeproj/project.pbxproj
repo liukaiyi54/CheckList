@@ -99,7 +99,7 @@
 		4C8DCFA41B96AABC00E4C208 /* CheckListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCFA91B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListTests.m; sourceTree = "<group>"; };
-		4CF204DC1BC365E200FAD11D /* UIColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIColorMacros.h; path = ../UIColorMacros.h; sourceTree = "<group>"; };
+		4CBDE33D1BC8BCA600B29D71 /* UIColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorMacros.h; sourceTree = "<group>"; };
 		554AC2739414469538EEA2FB /* Pods-CheckList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckList/Pods-CheckList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,15 +191,16 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		4C3EB36B1B9EC9AD006925C1 /* Vendor */ = {
+		4C3EB36B1B9EC9AD006925C1 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4CBDE33D1BC8BCA600B29D71 /* UIColorMacros.h */,
 				4C1E518E1BC60A210049AF90 /* LeftSlideViewController */,
-				4CF204DC1BC365E200FAD11D /* UIColorMacros.h */,
 				4C0132551BBFD9080069129D /* SWRevealViewController */,
 				4C3EB36C1B9EC9AD006925C1 /* HUAnimator */,
 				4C3EB3751B9EC9AD006925C1 /* ZBCustomTransitions */,
 			);
+			name = ThirdParty;
 			path = Vendor;
 			sourceTree = "<group>";
 		};
@@ -232,7 +233,7 @@
 		4C8DCF821B96AABC00E4C208 = {
 			isa = PBXGroup;
 			children = (
-				4C3EB36B1B9EC9AD006925C1 /* Vendor */,
+				4C3EB36B1B9EC9AD006925C1 /* ThirdParty */,
 				4C8DCF8D1B96AABC00E4C208 /* CheckList */,
 				4C8DCFA71B96AABC00E4C208 /* CheckListTests */,
 				4C8DCF8C1B96AABC00E4C208 /* Products */,
