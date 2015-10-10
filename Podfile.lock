@@ -1,10 +1,13 @@
 PODS:
   - FDFullscreenPopGesture (1.1)
+  - KKGestureLockView (1.0.0)
 
 DEPENDENCIES:
   - FDFullscreenPopGesture (= 1.1)
+  - KKGestureLockView
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  KKGestureLockView: b27a33d2fe7995cd3c5e548dab1a8db7947322b8
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

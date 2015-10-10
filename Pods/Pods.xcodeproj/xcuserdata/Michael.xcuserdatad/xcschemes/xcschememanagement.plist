@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KKGestureLockView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CheckList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5FAB9040980CB7F09EE96378B25E3FA8</key>
+		<key>252E34E3BC6D9744DBB1D6B629988EAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5024B32B4EB7FEF5D672BCA43B5ABE6</key>
+		<key>2C71DE0FB8A6E5BB6EAF9FB037D799CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55CBF47F0760B9F88BB64D5D8CD66CD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

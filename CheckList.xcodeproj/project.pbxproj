@@ -314,6 +314,7 @@
 				4C8DCF881B96AABC00E4C208 /* Frameworks */,
 				4C8DCF891B96AABC00E4C208 /* Resources */,
 				AC3E645C5A218F71374F0171 /* Copy Pods Resources */,
+				657DADFDBF83FB6F20DD97A6 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,6 +415,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		657DADFDBF83FB6F20DD97A6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckList/Pods-CheckList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC3E645C5A218F71374F0171 /* Copy Pods Resources */ = {
