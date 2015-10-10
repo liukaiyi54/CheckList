@@ -7,15 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol LoginViewDelegate <NSObject>
-
-- (void)dismissLoginView;
-
-@end
+#import "KKGestureLockView.h"
 
 @interface LoginViewController : UIViewController
 
-@property (nonatomic, weak) id <LoginViewDelegate> delegate;
+@property (strong, nonatomic) IBOutlet KKGestureLockView *lockView;
 
 @end

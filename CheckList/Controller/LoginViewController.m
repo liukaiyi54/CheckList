@@ -7,11 +7,8 @@
 //
 
 #import "LoginViewController.h"
-#import "AllListsViewController.h"
-#import "AppDelegate.h"
 
-@interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@interface LoginViewController () <KKGestureLockViewDelegate>
 
 @end
 
@@ -19,17 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.textField becomeFirstResponder];
-    // Do any additional setup after loading the view.
+    
+    self.lockView.normalGestureNodeImage = [UIImage imageNamed:@"gesture_node_normal"];
+    self.lockView.selectedGestureNodeImage = [UIImage imageNamed:@"gesture_node_selected"];
+    self.lockView.lineColor = [[UIColor orangeColor] colorWithAlphaComponent:0.3];
+    self.lockView.lineWidth = 12;
+    self.lockView.delegate = self;
+    self.lockView.contentInsets = UIEdgeInsetsMake(250, 40, 100, 40);
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.textField resignFirstResponder];
-}
-
-- (IBAction)didTapLogin:(id)sender {
-    if ([self.textField.text isEqualToString:@"👻"]) {
+- (void)gestureLockView:(KKGestureLockView *)gestureLockView didEndWithPasscode:(NSString *)passcode {
+    if ([passcode isEqualToString:@"1,4,7,8"]) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
