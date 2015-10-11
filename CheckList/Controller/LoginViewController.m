@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 
-#define mainSize    [UIScreen mainScreen].bounds.size
+#define mainSize            [UIScreen mainScreen].bounds.size
 
 #define offsetLeftHand      60
 
@@ -55,12 +55,11 @@
     imgRightHand.image = [UIImage imageNamed:@"owl-login-arm-right"];
     [imgLogin addSubview:imgRightHand];
     
-    UIView* vLogin = [[UIView alloc] initWithFrame:CGRectMake(15, 200, mainSize.width - 30, 160)];
+    UIView* vLogin = [[UIView alloc] initWithFrame:CGRectMake(15, 200, mainSize.width - 30, 10)];
     vLogin.layer.borderWidth = 0.5;
     vLogin.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    vLogin.backgroundColor = [UIColor whiteColor];
+    vLogin.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:vLogin];
-    vLogin.hidden = YES;
     
     imgLeftHandGone = [[UIImageView alloc] initWithFrame:rectLeftHandGone];
     imgLeftHandGone.image = [UIImage imageNamed:@"icon_hand"];
@@ -86,45 +85,37 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     
-    if (showType != JxbLoginShowType_PASS)
-    {
+    if (showType != JxbLoginShowType_PASS){
         showType = JxbLoginShowType_USER;
         return;
     }
     showType = JxbLoginShowType_USER;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         imgLeftHand.frame = CGRectMake(imgLeftHand.frame.origin.x - offsetLeftHand, imgLeftHand.frame.origin.y + 30, imgLeftHand.frame.size.width, imgLeftHand.frame.size.height);
         
         imgRightHand.frame = CGRectMake(imgRightHand.frame.origin.x + 48, imgRightHand.frame.origin.y + 30, imgRightHand.frame.size.width, imgRightHand.frame.size.height);
         
-        
         imgLeftHandGone.frame = CGRectMake(imgLeftHandGone.frame.origin.x - 70, imgLeftHandGone.frame.origin.y, 40, 40);
         
         imgRightHandGone.frame = CGRectMake(imgRightHandGone.frame.origin.x + 30, imgRightHandGone.frame.origin.y, 40, 40);
-        
-        
-    } completion:^(BOOL b) {
-    }];
+    } completion:^(BOOL b) {}];
 }
 
 - (void)gestureLockView:(KKGestureLockView *)gestureLockView didBeginWithPasscode:(NSString *)passcode {
-    if (showType == JxbLoginShowType_PASS)
-    {
+    if (showType == JxbLoginShowType_PASS){
         showType = JxbLoginShowType_PASS;
         return;
     }
     showType = JxbLoginShowType_PASS;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         imgLeftHand.frame = CGRectMake(imgLeftHand.frame.origin.x + offsetLeftHand, imgLeftHand.frame.origin.y - 30, imgLeftHand.frame.size.width, imgLeftHand.frame.size.height);
+ 
         imgRightHand.frame = CGRectMake(imgRightHand.frame.origin.x - 48, imgRightHand.frame.origin.y - 30, imgRightHand.frame.size.width, imgRightHand.frame.size.height);
-        
         
         imgLeftHandGone.frame = CGRectMake(imgLeftHandGone.frame.origin.x + 70, imgLeftHandGone.frame.origin.y, 0, 0);
         
         imgRightHandGone.frame = CGRectMake(imgRightHandGone.frame.origin.x - 30, imgRightHandGone.frame.origin.y, 0, 0);
-        
-    } completion:^(BOOL b) {
-    }];
+    } completion:^(BOOL b) {}];
 }
 
 @end
