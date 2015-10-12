@@ -78,7 +78,7 @@
 //    
     [self.tableView reloadData];
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate.leftVC setPanEnabled:NO];
+    [tempAppDelegate.leftVC setPanEnabled:YES];
 }
 #pragma mark - Table view data source & delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
