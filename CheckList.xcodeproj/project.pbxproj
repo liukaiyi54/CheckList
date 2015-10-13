@@ -33,6 +33,7 @@
 		4C8DCF9C1B96AABC00E4C208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */; };
 		4C8DCF9F1B96AABC00E4C208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */; };
 		4C8DCFAB1B96AABC00E4C208 /* CheckListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */; };
+		4CBA3F251BCB4A7800E286DB /* LeftSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA3F241BCB4A7800E286DB /* LeftSideViewController.m */; settings = {ASSET_TAGS = (); }; };
 		521843761DB4680D898CA234 /* libPods-CheckList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC1842D190EEA4288F9C0AD /* libPods-CheckList.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		4C8DCFA41B96AABC00E4C208 /* CheckListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8DCFA91B96AABC00E4C208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListTests.m; sourceTree = "<group>"; };
+		4CBA3F231BCB4A7800E286DB /* LeftSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSideViewController.h; path = Controller/LeftSideViewController.h; sourceTree = "<group>"; };
+		4CBA3F241BCB4A7800E286DB /* LeftSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSideViewController.m; path = Controller/LeftSideViewController.m; sourceTree = "<group>"; };
 		4CBDE33D1BC8BCA600B29D71 /* UIColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorMacros.h; sourceTree = "<group>"; };
 		554AC2739414469538EEA2FB /* Pods-CheckList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckList/Pods-CheckList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +190,8 @@
 				4C0132481BBE57280069129D /* LoginViewController.h */,
 				4C0132491BBE57280069129D /* LoginViewController.m */,
 				4C0132531BBE64C80069129D /* LoginViewController.xib */,
+				4CBA3F231BCB4A7800E286DB /* LeftSideViewController.h */,
+				4CBA3F241BCB4A7800E286DB /* LeftSideViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -465,6 +470,7 @@
 				4C1E51931BC60A2D0049AF90 /* LeftSlideViewController.m in Sources */,
 				4C3EB3171B9E80D3006925C1 /* ItemDetailViewController.m in Sources */,
 				4C3EB37B1B9EC9AD006925C1 /* HUTransitionGhostAnimator.m in Sources */,
+				4CBA3F251BCB4A7800E286DB /* LeftSideViewController.m in Sources */,
 				4C1E51941BC60A2D0049AF90 /* UIView_extra.m in Sources */,
 				4C3EB3181B9E80D3006925C1 /* ListDetailViewController.m in Sources */,
 				4C3EB37E1B9EC9AD006925C1 /* UIViewController+Animator.m in Sources */,
