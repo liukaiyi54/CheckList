@@ -31,13 +31,6 @@
     
     [self.sidebarButton setTarget:self];
     [self.sidebarButton setAction:@selector(openOrCloseLeftList)];
-//    SWRevealViewController *revealViewController = self.revealViewController;
-//    if ( revealViewController )
-//    {
-//        [self.sidebarButton setTarget: self.revealViewController];
-//        [self.sidebarButton setAction: @selector( revealToggle: )];
-//        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-//    }
 }
 
 - (void) openOrCloseLeftList
@@ -64,18 +57,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-//    if(![(AppDelegate*)[[UIApplication sharedApplication] delegate] authenticated]) {
-//        
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        
-//        LoginViewController *initView =  (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"initialView"];
-//        [initView setModalPresentationStyle:UIModalPresentationFullScreen];
-//        [self presentViewController:initView animated:NO completion:nil];
-//    } else{
-//        // proceed with the profile view
-//    }
-//    
+  
     [self.tableView reloadData];
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [tempAppDelegate.leftVC setPanEnabled:YES];
