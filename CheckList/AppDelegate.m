@@ -10,7 +10,6 @@
 #import "AllListsViewController.h"
 #import "DataModel.h"
 #import "AppDelegate+LockView.h"
-#import "SWRevealViewController.h"
 #import "LoginViewController.h"
 #import "UIColorMacros.h"
 
