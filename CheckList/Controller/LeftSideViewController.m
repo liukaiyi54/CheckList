@@ -19,6 +19,8 @@
     [super viewDidLoad];
 
     [self readData];
+    
+    [self.loginViewSwitch addTarget:self action:@selector(swicherDidChangeValue:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -41,6 +43,15 @@
     BOOL willLoginViewAppear = [userDefaults boolForKey:@"loginViewStatus"];
     
     self.loginViewSwitch.on = willLoginViewAppear;
+}
+
+- (void)swicherDidChangeValue:(UISwitch *)sender {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL loginViewAppear = sender.on;
+    [userDefaults setBool:loginViewAppear forKey:@"loginViewStatus"];
+    
+    [userDefaults synchronize];
 }
 
 @end
