@@ -33,8 +33,7 @@
     [self.sidebarButton setAction:@selector(openOrCloseLeftList)];
 }
 
-- (void) openOrCloseLeftList
-{
+- (void)openOrCloseLeftList {
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     if (tempAppDelegate.leftVC.closed)
@@ -47,8 +46,7 @@
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -132,19 +130,19 @@
     Checklist *checklist = self.dataModel.lists[indexPath.row];
     controller.checkListToEdit = checklist;
     
-    [self presentViewController:navigationController animated:YES completion:nil];
+    [self.view.window.rootViewController presentViewController:navigationController animated:YES completion:nil];
 }
 
 #pragma mark - ListDetailViewControllerDelegate
 - (void)listDetailViewControllerDidCancel:(ListDetailViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)listDetailViewController:(ListDetailViewController *)controller didFinishEditingChecklist:(Checklist *)checklist {
     [self.dataModel sortChecklists];
     [self.tableView reloadData];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)listDetailViewController:(ListDetailViewController *)controller didFinishAddingChecklist:(Checklist *)checkList {
@@ -152,7 +150,7 @@
     [self.dataModel sortChecklists];
     [self.tableView reloadData];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UINavigationControllerDelegate
