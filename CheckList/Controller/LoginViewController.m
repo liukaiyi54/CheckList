@@ -26,7 +26,7 @@
     UIImageView* imgLeftHandGone;
     UIImageView* imgRightHandGone;
     
-    JxbLoginShowType showType;
+    LoginShowType showType;
 }
 
 @end
@@ -85,11 +85,11 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     
-    if (showType != JxbLoginShowType_PASS){
-        showType = JxbLoginShowType_USER;
+    if (showType != LoginShowType_PASS){
+        showType = LoginShowType_USER;
         return;
     }
-    showType = JxbLoginShowType_USER;
+    showType = LoginShowType_USER;
     [UIView animateWithDuration:0.3 animations:^{
         imgLeftHand.frame = CGRectMake(imgLeftHand.frame.origin.x - offsetLeftHand, imgLeftHand.frame.origin.y + 30, imgLeftHand.frame.size.width, imgLeftHand.frame.size.height);
         
@@ -102,11 +102,11 @@
 }
 
 - (void)gestureLockView:(KKGestureLockView *)gestureLockView didBeginWithPasscode:(NSString *)passcode {
-    if (showType == JxbLoginShowType_PASS){
-        showType = JxbLoginShowType_PASS;
+    if (showType == LoginShowType_PASS){
+        showType = LoginShowType_PASS;
         return;
     }
-    showType = JxbLoginShowType_PASS;
+    showType = LoginShowType_PASS;
     [UIView animateWithDuration:0.3 animations:^{
         imgLeftHand.frame = CGRectMake(imgLeftHand.frame.origin.x + offsetLeftHand, imgLeftHand.frame.origin.y - 30, imgLeftHand.frame.size.width, imgLeftHand.frame.size.height);
  

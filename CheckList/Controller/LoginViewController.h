@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "KKGestureLockView.h"
 
-typedef NS_ENUM(NSInteger, JxbLoginShowType) {
-    JxbLoginShowType_NONE,
-    JxbLoginShowType_USER,
-    JxbLoginShowType_PASS
+typedef NS_ENUM(NSInteger, LoginShowType) {
+    LoginShowType_NONE,
+    LoginShowType_USER,
+    LoginShowType_PASS
 };
 
 @interface LoginViewController : UIViewController

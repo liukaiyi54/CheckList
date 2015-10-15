@@ -36,12 +36,9 @@
 - (void)openOrCloseLeftList {
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    if (tempAppDelegate.leftVC.closed)
-    {
+    if (tempAppDelegate.leftVC.closed) {
         [tempAppDelegate.leftVC openLeftView];
-    }
-    else
-    {
+    } else {
         [tempAppDelegate.leftVC closeLeftView];
     }
 }
@@ -58,7 +55,7 @@
   
     [self.tableView reloadData];
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate.leftVC setPanEnabled:YES];
+    [tempAppDelegate.leftVC setPanEnabled:NO];
 }
 #pragma mark - Table view data source & delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
