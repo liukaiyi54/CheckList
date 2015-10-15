@@ -40,6 +40,8 @@
     self.leftVC = [[LeftSlideViewController alloc] initWithLeftView:rear andMainView:myNavigationController];
     self.window.rootViewController = self.leftVC;
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
