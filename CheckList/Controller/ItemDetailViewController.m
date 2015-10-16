@@ -78,6 +78,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 216)];
+            [datePicker setMinimumDate:[NSDate date]];
             datePicker.tag = 100;
             [cell.contentView addSubview:datePicker];
             
