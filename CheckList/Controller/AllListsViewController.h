@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ListDetailViewController.h"
-
 @class DataModel;
 
 @interface AllListsViewController : UITableViewController

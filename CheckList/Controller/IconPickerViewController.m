@@ -31,7 +31,6 @@
             @"Photos",
             @"Trips"
             ];
-
 }
 
 #pragma mark - Table view data source

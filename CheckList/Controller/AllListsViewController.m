@@ -9,8 +9,6 @@
 #import "AllListsViewController.h"
 #import "ChecklistViewController.h"
 #import "ListDetailViewController.h"
-#import "LoginViewController.h"
-#import "SWRevealViewController.h"
 
 #import "ChecklistItem.h"
 #import "DataModel.h"

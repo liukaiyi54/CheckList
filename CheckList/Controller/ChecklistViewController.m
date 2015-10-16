@@ -7,16 +7,16 @@
 //
 
 #import "ChecklistViewController.h"
-#import "ChecklistItem.h"
 #import "ItemDetailViewController.h"
+
 #import "Checklist.h"
+#import "ChecklistItem.h"
 
 @interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
 
 @end
 
 @implementation ChecklistViewController
-
 
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
