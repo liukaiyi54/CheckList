@@ -342,6 +342,13 @@
                                 <rect key="frame" x="163" y="318" width="51" height="31"/>
                                 <animations/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势解锁开关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHj-KS-1UX">
+                                <rect key="frame" x="16" y="324" width="102" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -350,8 +357,10 @@
                             <constraint firstItem="Edc-g0-7UW" firstAttribute="top" secondItem="rCx-86-waK" secondAttribute="bottom" constant="-20" id="AAj-Yv-4Td"/>
                             <constraint firstItem="cDq-yn-ap7" firstAttribute="centerY" secondItem="Edc-g0-7UW" secondAttribute="centerY" id="AoN-H1-K8E"/>
                             <constraint firstItem="cDq-yn-ap7" firstAttribute="centerX" secondItem="Edc-g0-7UW" secondAttribute="centerX" id="C40-EK-Anc"/>
+                            <constraint firstItem="WHj-KS-1UX" firstAttribute="centerY" secondItem="7e3-yH-0fh" secondAttribute="centerY" id="QIB-i4-suW"/>
                             <constraint firstItem="VWh-eF-GqL" firstAttribute="top" secondItem="Edc-g0-7UW" secondAttribute="bottom" id="T9w-rf-cHe"/>
                             <constraint firstAttribute="trailing" secondItem="Edc-g0-7UW" secondAttribute="trailing" id="WQG-Q4-GIa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WHj-KS-1UX" secondAttribute="leading" id="ei4-4M-bNf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R9k-Nl-Sbq"/>
