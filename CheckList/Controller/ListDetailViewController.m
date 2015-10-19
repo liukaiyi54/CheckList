@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
     if (self.checkListToEdit) {
         self.title = @"Edit Checklist";
         self.textField.text = self.checkListToEdit.name;
