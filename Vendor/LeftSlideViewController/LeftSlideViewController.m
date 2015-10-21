@@ -178,6 +178,9 @@
     }
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
 
 #pragma mark - 单击手势
 -(void)handeTap:(UITapGestureRecognizer *)tap{
