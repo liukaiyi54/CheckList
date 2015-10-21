@@ -38,7 +38,7 @@
 @property (nonatomic, strong) UITapGestureRecognizer *sideslipTapGes;
 
 //滑动手势控制器
-@property (nonatomic, strong) UIPanGestureRecognizer *pan;
+@property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *pan;
 
 //侧滑窗是否关闭(关闭时显示为主页)
 @property (nonatomic, assign) BOOL closed;

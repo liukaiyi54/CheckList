@@ -42,7 +42,9 @@
         self.mainVC = mainVC;
         
         //滑动手势
-        self.pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
+        self.pan = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
+        self.pan.edges = UIRectEdgeLeft;
+        
         [self.mainVC.view addGestureRecognizer:self.pan];
         
         [self.pan setCancelsTouchesInView:YES];
@@ -74,7 +76,6 @@
         
         [self.view addSubview:self.mainVC.view];
         self.closed = YES;//初始时侧滑窗关闭
-        
     }
     return self;
 }
@@ -88,7 +89,7 @@
 #pragma mark - 滑动手势
 
 //滑动手势
-- (void) handlePan: (UIPanGestureRecognizer *)rec{
+- (void) handlePan: (UIScreenEdgePanGestureRecognizer *)rec{
     
     CGPoint point = [rec translationInView:self.view];
     _scalef = (point.x * self.speedf + _scalef);
@@ -220,6 +221,8 @@
     
     [UIView commitAnimations];
     [self removeSingleTap];
+    
+    self.pan.edges = UIRectEdgeLeft;
 }
 
 /**
@@ -238,6 +241,8 @@
     
     [UIView commitAnimations];
     [self disableTapButton];
+    
+    self.pan.edges = UIRectEdgeRight;
 }
 
 #pragma mark - 行为收敛控制
