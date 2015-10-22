@@ -10,6 +10,8 @@
 #import "ChecklistViewController.h"
 #import "ListDetailViewController.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
 
 #import "ChecklistItem.h"
 #import "DataModel.h"
@@ -27,35 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.delegate = self;
-    
+
     [self.sidebarButton setTarget:self];
-    [self.sidebarButton setAction:@selector(openOrCloseLeftList)];
+    [self.sidebarButton setAction:@selector(didTapLeftButton:)];
 }
 
-- (void)openOrCloseLeftList {
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    if (tempAppDelegate.leftVC.closed) {
-        [tempAppDelegate.leftVC openLeftView];
-    } else {
-        [tempAppDelegate.leftVC closeLeftView];
-    }
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate.leftVC setPanEnabled:NO];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-  
-    [self.tableView reloadData];
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate.leftVC setPanEnabled:YES];
-}
 #pragma mark - Table view data source & delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
@@ -168,6 +146,11 @@
         vc.delegate = self;
         vc.checkListToEdit = nil;
     }
+}
+
+#pragma mark - event handler
+- (void)didTapLeftButton:(id)sender {
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 @end
