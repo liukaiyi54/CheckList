@@ -12,6 +12,7 @@
 #import "AppDelegate+LockView.h"
 #import "LoginViewController.h"
 #import "UIColorMacros.h"
+#import "MMDrawerController.h"
 
 @interface AppDelegate ()
 
@@ -37,8 +38,13 @@
 
     UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
     
-    self.leftVC = [[LeftSlideViewController alloc] initWithLeftView:rear andMainView:myNavigationController];
-    self.window.rootViewController = self.leftVC;
+    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:myNavigationController leftDrawerViewController:rear];
+    self.window.rootViewController = drawerController;
+    [drawerController setShowsShadow:NO];
+    [drawerController setMaximumRightDrawerWidth:300.0];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
