@@ -339,7 +339,7 @@
                                 <animations/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDq-yn-ap7">
-                                <rect key="frame" x="163" y="318" width="51" height="31"/>
+                                <rect key="frame" x="270" y="318" width="51" height="31"/>
                                 <animations/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势解锁开关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHj-KS-1UX">
@@ -356,7 +356,7 @@
                             <constraint firstItem="Edc-g0-7UW" firstAttribute="leading" secondItem="7e3-yH-0fh" secondAttribute="leading" id="2mn-7E-Xrl"/>
                             <constraint firstItem="Edc-g0-7UW" firstAttribute="top" secondItem="rCx-86-waK" secondAttribute="bottom" constant="-20" id="AAj-Yv-4Td"/>
                             <constraint firstItem="cDq-yn-ap7" firstAttribute="centerY" secondItem="Edc-g0-7UW" secondAttribute="centerY" id="AoN-H1-K8E"/>
-                            <constraint firstItem="cDq-yn-ap7" firstAttribute="centerX" secondItem="Edc-g0-7UW" secondAttribute="centerX" id="C40-EK-Anc"/>
+                            <constraint firstItem="cDq-yn-ap7" firstAttribute="centerX" secondItem="Edc-g0-7UW" secondAttribute="centerX" constant="107" id="C40-EK-Anc"/>
                             <constraint firstItem="WHj-KS-1UX" firstAttribute="centerY" secondItem="7e3-yH-0fh" secondAttribute="centerY" id="QIB-i4-suW"/>
                             <constraint firstItem="VWh-eF-GqL" firstAttribute="top" secondItem="Edc-g0-7UW" secondAttribute="bottom" id="T9w-rf-cHe"/>
                             <constraint firstAttribute="trailing" secondItem="Edc-g0-7UW" secondAttribute="trailing" id="WQG-Q4-GIa"/>
