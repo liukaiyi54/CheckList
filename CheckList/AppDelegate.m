@@ -42,10 +42,9 @@
     self.window.rootViewController = drawerController;
     [drawerController setShowsShadow:NO];
     [drawerController setMaximumRightDrawerWidth:300.0];
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
 
-    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;
