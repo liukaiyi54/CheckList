@@ -7,27 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A016DAFA010D30CB0BED7C6794FD0F4 /* KKGestureLockView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 747F7D886243CC777282437D7EBB66D4 /* KKGestureLockView-dummy.m */; };
-		1A53010DA2073D57DCAAD7E5DB204EDC /* KKGestureLockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 083C41F23A654DFCCB4EEBAFAF0B2082 /* KKGestureLockView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32380F58742F8BD254A757DB08793A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		45F2F9B6E484DA86FCF8619D22330AD0 /* Pods-CheckList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A3694C5A391DF6F6C0887BC9B1AA71 /* Pods-CheckList-dummy.m */; };
-		51BB560DB48D81C168E6ED4F066E4956 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D1EDCA6B57E2391013142E68FEB818 /* FDFullscreenPopGesture-dummy.m */; };
-		5DA382A8C741E1651E444BA7F5406C6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		7EB0DD10FF07F928FF4C1F457259DB3A /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DA9BB26C02F43390A0431E5530BFB8 /* UINavigationController+FDFullscreenPopGesture.m */; };
-		9CB516A3C8D18CA8264FB2C6926E16DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BFE3CFBE8B8A013EA8BFEFD3A1FC55 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDCB8488A4E76FF3C6B85C8832273B56 /* KKGestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ACC1DBAFE6E59979161577325F0138 /* KKGestureLockView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0A016DAFA010D30CB0BED7C6794FD0F4 /* KKGestureLockView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E4A453BAEF5B4DD60DC611B459254F /* KKGestureLockView-dummy.m */; };
+		19BD91B5A5ED8A4C820CB6BD33633C7C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 941702F40279548E356676B94717048B /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1A378C41991F5219E9959E3A250E9A03 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 728FD91B9134D5AF3201F31992FD397B /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A53010DA2073D57DCAAD7E5DB204EDC /* KKGestureLockView.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A910778BD43F1E1BB4989AC094EB81 /* KKGestureLockView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D8C79E70B7EEA9C8EB372CD5775A5C1 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BE8A49A3DC89A4EA68B2BCE483C49B /* MMDrawerController-dummy.m */; };
+		32380F58742F8BD254A757DB08793A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		51BB560DB48D81C168E6ED4F066E4956 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E45F3AF6FF5545E224CD18C75186592 /* FDFullscreenPopGesture-dummy.m */; };
+		579A1B0E910EF7BB4A3D44D2880570E9 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50480FCD04974B5BEF4313FE228F9E2 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5CD819353C30C805E53265229D515F63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		5DA382A8C741E1651E444BA7F5406C6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		62445D56D62979170E9966104FDFBFBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */; };
+		66549CC91863363861D818B68B136EB6 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A82D25CA84A927EAF389C42DF58A7D3 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		727AB99617D4A1BAB772017E5B485925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		75124CF1C7CFB4CA302B8979FCB5E71E /* Pods-CheckList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A3694C5A391DF6F6C0887BC9B1AA71 /* Pods-CheckList-dummy.m */; };
+		76D495DBB9B5D81BE4391E10299F938B /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05342FF2E3B389021B4BB4621E23FFD4 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7EB0DD10FF07F928FF4C1F457259DB3A /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D2C3107C6D86CCC9575406C138EC0 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		947575549E0193C1A5A2379EA9D95D46 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BCD63D7FEBA5481E857457C321B03BB /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		984DD4BA68A399F50B9D7849E72385F8 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D49E1FFDD1B06B1993E5559F0E3939B /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A7F170BE65EFFD69B5986DB55C1920A /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9D56DFFD5AE5F2305C6CF3404F1FEF /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915D537146CBB135CB9DA2504986824 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDCB8488A4E76FF3C6B85C8832273B56 /* KKGestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9B97E5BB1D4EFDCA09B6EA89FFB1B7 /* KKGestureLockView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F733730F57E794BCFB4B18DC00E2FF9B /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE28687DDD5CFB6DDB9791244F22646 /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E0FC7581F8F3594568F2E7B0759ED81 /* PBXContainerItemProxy */ = {
+		3C1B1B86AD1EC0C56B33066657738C45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 252E34E3BC6D9744DBB1D6B629988EAA;
 			remoteInfo = KKGestureLockView;
 		};
-		6FDF9AF26A37E67273210FBF6D627660 /* PBXContainerItemProxy */ = {
+		B0FDB9B54DB959E3833446E2159D6E53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 550F7EEAEEA17E3F92C873912E23B01C;
+			remoteInfo = MMDrawerController;
+		};
+		E17838ED2C004547744F571FBE07D90E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -37,44 +56,67 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		083C41F23A654DFCCB4EEBAFAF0B2082 /* KKGestureLockView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KKGestureLockView.h; path = KKGestureLockView/Source/KKGestureLockView.h; sourceTree = "<group>"; };
+		05342FF2E3B389021B4BB4621E23FFD4 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		0A82D25CA84A927EAF389C42DF58A7D3 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		0E9D56DFFD5AE5F2305C6CF3404F1FEF /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		129D2C3107C6D86CCC9575406C138EC0 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		163496F1FCEB1E5422A4CA46D7494550 /* KKGestureLockView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KKGestureLockView.xcconfig; sourceTree = "<group>"; };
 		185E5039468C86D419AF347C8964082A /* Pods-CheckList-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckList-resources.sh"; sourceTree = "<group>"; };
-		1DE5D70CED5990369C62691839E94ED0 /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1915D537146CBB135CB9DA2504986824 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		1E2A8377C4CB10A25605546B95F04E98 /* FDFullscreenPopGesture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.xcconfig; sourceTree = "<group>"; };
+		1E45F3AF6FF5545E224CD18C75186592 /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		26EFFE33D836B096720BDE6F6DDEBE5C /* Pods-CheckList-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckList-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		51329C7709DB89964FD56B10CDFEE7A1 /* FDFullscreenPopGesture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.xcconfig; sourceTree = "<group>"; };
+		2B8242B081E7097F821A1098EB717295 /* libMMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMDrawerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9B97E5BB1D4EFDCA09B6EA89FFB1B7 /* KKGestureLockView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KKGestureLockView.m; path = KKGestureLockView/Source/KKGestureLockView.m; sourceTree = "<group>"; };
+		35E4A453BAEF5B4DD60DC611B459254F /* KKGestureLockView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KKGestureLockView-dummy.m"; sourceTree = "<group>"; };
+		47E29A993209A6F7337A3F83221DC04A /* libKKGestureLockView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKKGestureLockView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE28687DDD5CFB6DDB9791244F22646 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
 		543F552804002F97D32CCE6EC40C8DFF /* Pods-CheckList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckList.debug.xcconfig"; sourceTree = "<group>"; };
-		59D60B5F6C18E41C6EEF5C7D9BEBEB0D /* libKKGestureLockView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKKGestureLockView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		62BFE3CFBE8B8A013EA8BFEFD3A1FC55 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
-		69DA9BB26C02F43390A0431E5530BFB8 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		747F7D886243CC777282437D7EBB66D4 /* KKGestureLockView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KKGestureLockView-dummy.m"; sourceTree = "<group>"; };
-		77DC505B50FA4B4F7E93AA933382F8C3 /* KKGestureLockView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKGestureLockView-prefix.pch"; sourceTree = "<group>"; };
+		65BFBE671E059A47F9BB12B9E99C11CE /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7130D69433FA8CA1D5923043EB2DB876 /* libPods-CheckList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheckList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		728FD91B9134D5AF3201F31992FD397B /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		8D49E1FFDD1B06B1993E5559F0E3939B /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		92E4C5DC95C1B291090FAD6C84BEDB69 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
 		9371A52896743090430B64D9AF88289D /* Pods-CheckList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckList.release.xcconfig"; sourceTree = "<group>"; };
 		93A3694C5A391DF6F6C0887BC9B1AA71 /* Pods-CheckList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckList-dummy.m"; sourceTree = "<group>"; };
-		99ACC1DBAFE6E59979161577325F0138 /* KKGestureLockView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KKGestureLockView.m; path = KKGestureLockView/Source/KKGestureLockView.m; sourceTree = "<group>"; };
+		941702F40279548E356676B94717048B /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		9BCD63D7FEBA5481E857457C321B03BB /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		A2A2F1BEB2BD089BB289A5A4B86C9ADF /* KKGestureLockView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKGestureLockView-prefix.pch"; sourceTree = "<group>"; };
 		AB6EB9EF1E163F2BBA1786ED3BEACBB1 /* Pods-CheckList-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckList-acknowledgements.plist"; sourceTree = "<group>"; };
+		B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D74B83C9A5FC4EEBB265A1D9F1B8134C /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
-		E2D1EDCA6B57E2391013142E68FEB818 /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		C50480FCD04974B5BEF4313FE228F9E2 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		D4BE8A49A3DC89A4EA68B2BCE483C49B /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		D56963ADFE7D2C689F261ECACAD219D1 /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
 		E7BE70A134889854EEAFD30E5DF211B2 /* Pods-CheckList-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckList-frameworks.sh"; sourceTree = "<group>"; };
-		F4BE18FA210383510C61C89EADE39E8F /* libPods-CheckList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheckList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F60C9EF9F819BBD1A98A061470C6DB56 /* KKGestureLockView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KKGestureLockView.xcconfig; sourceTree = "<group>"; };
+		E89B08654F46EA00F26F2A3CD1B90E32 /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
+		F3A910778BD43F1E1BB4989AC094EB81 /* KKGestureLockView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KKGestureLockView.h; path = KKGestureLockView/Source/KKGestureLockView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45BF7D64DBEC02507460903637A877C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CB516A3C8D18CA8264FB2C6926E16DE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF277CFF3871600623A9BD3DD9917447 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5DA382A8C741E1651E444BA7F5406C6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C81EA9947F4EA889C80E0571F51007C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD819353C30C805E53265229D515F63 /* Foundation.framework in Frameworks */,
+				62445D56D62979170E9966104FDFBFBE /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADBFD1FD12D9CCEEB78FE189FEEE9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727AB99617D4A1BAB772017E5B485925 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,34 +131,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21260EF3B81A2C70F6B0684A4D03C6A1 /* Pods */ = {
+		075743DA8729949DAAC5B0EF286B97F2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				38A78892B24352085AA6B5DE330B0361 /* FDFullscreenPopGesture */,
-				F8F6340B2B19AB4AF3846BD30AE798A3 /* KKGestureLockView */,
+				163496F1FCEB1E5422A4CA46D7494550 /* KKGestureLockView.xcconfig */,
+				35E4A453BAEF5B4DD60DC611B459254F /* KKGestureLockView-dummy.m */,
+				A2A2F1BEB2BD089BB289A5A4B86C9ADF /* KKGestureLockView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KKGestureLockView";
+			sourceTree = "<group>";
+		};
+		0E214C4FBFF0FDAF41212CB30D5CF837 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				92E4C5DC95C1B291090FAD6C84BEDB69 /* MMDrawerController.xcconfig */,
+				D4BE8A49A3DC89A4EA68B2BCE483C49B /* MMDrawerController-dummy.m */,
+				D56963ADFE7D2C689F261ECACAD219D1 /* MMDrawerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMDrawerController";
+			sourceTree = "<group>";
+		};
+		118919EC93B7F6D2884DC1B39F73A8B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8990A969B414E0B424DADE8C5B52807 /* FDFullscreenPopGesture */,
+				F1779B651E849B2257751F8C38CB0F73 /* KKGestureLockView */,
+				6476FEBECBC90B4935E7A87B44A73FE4 /* MMDrawerController */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		225C37098C96C8E6F305F70C967F7E9A /* Support Files */ = {
+		16EB187635ABE4591CDC377BE667444A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				51329C7709DB89964FD56B10CDFEE7A1 /* FDFullscreenPopGesture.xcconfig */,
-				E2D1EDCA6B57E2391013142E68FEB818 /* FDFullscreenPopGesture-dummy.m */,
-				D74B83C9A5FC4EEBB265A1D9F1B8134C /* FDFullscreenPopGesture-prefix.pch */,
+				1E2A8377C4CB10A25605546B95F04E98 /* FDFullscreenPopGesture.xcconfig */,
+				1E45F3AF6FF5545E224CD18C75186592 /* FDFullscreenPopGesture-dummy.m */,
+				E89B08654F46EA00F26F2A3CD1B90E32 /* FDFullscreenPopGesture-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FDFullscreenPopGesture";
 			sourceTree = "<group>";
 		};
-		38A78892B24352085AA6B5DE330B0361 /* FDFullscreenPopGesture */ = {
+		3926C638AD0708942C88C2BC89261735 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				62BFE3CFBE8B8A013EA8BFEFD3A1FC55 /* UINavigationController+FDFullscreenPopGesture.h */,
-				69DA9BB26C02F43390A0431E5530BFB8 /* UINavigationController+FDFullscreenPopGesture.m */,
-				225C37098C96C8E6F305F70C967F7E9A /* Support Files */,
+				258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */,
+				B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */,
 			);
-			path = FDFullscreenPopGesture;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		39A77DB7566BBA4D4F3FA3BEC01BF3C3 /* Targets Support Files */ = {
@@ -127,52 +191,74 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6D1314FB80A734F250828E7BA2BD1B8F /* Products */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1DE5D70CED5990369C62691839E94ED0 /* libFDFullscreenPopGesture.a */,
-				59D60B5F6C18E41C6EEF5C7D9BEBEB0D /* libKKGestureLockView.a */,
-				F4BE18FA210383510C61C89EADE39E8F /* libPods-CheckList.a */,
+				3926C638AD0708942C88C2BC89261735 /* iOS */,
 			);
-			name = Products;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D1119916130F086FF8376A8C1CA8B79 /* MMDrawerBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				0E9D56DFFD5AE5F2305C6CF3404F1FEF /* MMDrawerBarButtonItem.h */,
+				05342FF2E3B389021B4BB4621E23FFD4 /* MMDrawerBarButtonItem.m */,
+			);
+			name = MMDrawerBarButtonItem;
+			sourceTree = "<group>";
+		};
+		6476FEBECBC90B4935E7A87B44A73FE4 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				F4281CD8BB3B017EE1B3E4744F6196B3 /* Core */,
+				5D1119916130F086FF8376A8C1CA8B79 /* MMDrawerBarButtonItem */,
+				6814878513B6DD23A179AF2C00290B5E /* MMDrawerVisualStates */,
+				F7F0F4B465F35ACC44912E896B209A13 /* Subclass */,
+				0E214C4FBFF0FDAF41212CB30D5CF837 /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		6814878513B6DD23A179AF2C00290B5E /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				728FD91B9134D5AF3201F31992FD397B /* MMDrawerVisualState.h */,
+				941702F40279548E356676B94717048B /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				21260EF3B81A2C70F6B0684A4D03C6A1 /* Pods */,
-				6D1314FB80A734F250828E7BA2BD1B8F /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				118919EC93B7F6D2884DC1B39F73A8B0 /* Pods */,
+				C8F223496DECF61AE7E9843279660352 /* Products */,
 				39A77DB7566BBA4D4F3FA3BEC01BF3C3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B7A63F6DB8CA0776D1CF1E0DC607C984 /* Support Files */ = {
+		B8990A969B414E0B424DADE8C5B52807 /* FDFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
-				F60C9EF9F819BBD1A98A061470C6DB56 /* KKGestureLockView.xcconfig */,
-				747F7D886243CC777282437D7EBB66D4 /* KKGestureLockView-dummy.m */,
-				77DC505B50FA4B4F7E93AA933382F8C3 /* KKGestureLockView-prefix.pch */,
+				1915D537146CBB135CB9DA2504986824 /* UINavigationController+FDFullscreenPopGesture.h */,
+				129D2C3107C6D86CCC9575406C138EC0 /* UINavigationController+FDFullscreenPopGesture.m */,
+				16EB187635ABE4591CDC377BE667444A /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/KKGestureLockView";
+			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C8F223496DECF61AE7E9843279660352 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				65BFBE671E059A47F9BB12B9E99C11CE /* libFDFullscreenPopGesture.a */,
+				47E29A993209A6F7337A3F83221DC04A /* libKKGestureLockView.a */,
+				2B8242B081E7097F821A1098EB717295 /* libMMDrawerController.a */,
+				7130D69433FA8CA1D5923043EB2DB876 /* libPods-CheckList.a */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D3D8A557A29EAE1BD7A28033E72339CC /* Pods-CheckList */ = {
@@ -190,14 +276,33 @@
 			path = "Target Support Files/Pods-CheckList";
 			sourceTree = "<group>";
 		};
-		F8F6340B2B19AB4AF3846BD30AE798A3 /* KKGestureLockView */ = {
+		F1779B651E849B2257751F8C38CB0F73 /* KKGestureLockView */ = {
 			isa = PBXGroup;
 			children = (
-				083C41F23A654DFCCB4EEBAFAF0B2082 /* KKGestureLockView.h */,
-				99ACC1DBAFE6E59979161577325F0138 /* KKGestureLockView.m */,
-				B7A63F6DB8CA0776D1CF1E0DC607C984 /* Support Files */,
+				F3A910778BD43F1E1BB4989AC094EB81 /* KKGestureLockView.h */,
+				2B9B97E5BB1D4EFDCA09B6EA89FFB1B7 /* KKGestureLockView.m */,
+				075743DA8729949DAAC5B0EF286B97F2 /* Support Files */,
 			);
 			path = KKGestureLockView;
+			sourceTree = "<group>";
+		};
+		F4281CD8BB3B017EE1B3E4744F6196B3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4CE28687DDD5CFB6DDB9791244F22646 /* MMDrawerController.h */,
+				0A82D25CA84A927EAF389C42DF58A7D3 /* MMDrawerController.m */,
+				9BCD63D7FEBA5481E857457C321B03BB /* MMDrawerController+Subclass.h */,
+				8D49E1FFDD1B06B1993E5559F0E3939B /* UIViewController+MMDrawerController.h */,
+				C50480FCD04974B5BEF4313FE228F9E2 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		F7F0F4B465F35ACC44912E896B209A13 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +313,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B25487E91D6C44A5A7199EDA11CF451 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7F170BE65EFFD69B5986DB55C1920A /* MMDrawerBarButtonItem.h in Headers */,
+				947575549E0193C1A5A2379EA9D95D46 /* MMDrawerController+Subclass.h in Headers */,
+				F733730F57E794BCFB4B18DC00E2FF9B /* MMDrawerController.h in Headers */,
+				1A378C41991F5219E9959E3A250E9A03 /* MMDrawerVisualState.h in Headers */,
+				984DD4BA68A399F50B9D7849E72385F8 /* UIViewController+MMDrawerController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +353,7 @@
 			);
 			name = KKGestureLockView;
 			productName = KKGestureLockView;
-			productReference = 59D60B5F6C18E41C6EEF5C7D9BEBEB0D /* libKKGestureLockView.a */;
+			productReference = 47E29A993209A6F7337A3F83221DC04A /* libKKGestureLockView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */ = {
@@ -253,25 +370,43 @@
 			);
 			name = FDFullscreenPopGesture;
 			productName = FDFullscreenPopGesture;
-			productReference = 1DE5D70CED5990369C62691839E94ED0 /* libFDFullscreenPopGesture.a */;
+			productReference = 65BFBE671E059A47F9BB12B9E99C11CE /* libFDFullscreenPopGesture.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		55CBF47F0760B9F88BB64D5D8CD66CD1 /* Pods-CheckList */ = {
+		550F7EEAEEA17E3F92C873912E23B01C /* MMDrawerController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F85C665B9E03C6E9BE3474E5252B5F01 /* Build configuration list for PBXNativeTarget "Pods-CheckList" */;
+			buildConfigurationList = 6BCBDE524BD4EFDC051B5AD1A976D69B /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
 			buildPhases = (
-				177D49E20B4D9C88BA3CB0DC5A96AE60 /* Sources */,
-				45BF7D64DBEC02507460903637A877C4 /* Frameworks */,
+				BE1CF9CE4811645411026F952650D228 /* Sources */,
+				C81EA9947F4EA889C80E0571F51007C3 /* Frameworks */,
+				6B25487E91D6C44A5A7199EDA11CF451 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4EE1A9C0952D73C64DD68BD700178490 /* PBXTargetDependency */,
-				ACF383CAB0B7E37CD134AFA7F34AAAF9 /* PBXTargetDependency */,
+			);
+			name = MMDrawerController;
+			productName = MMDrawerController;
+			productReference = 2B8242B081E7097F821A1098EB717295 /* libMMDrawerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B1DAFC8AB47699330C192AD54D7EDA50 /* Pods-CheckList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54559BCEF2CF3CE9421AE522FC085ECC /* Build configuration list for PBXNativeTarget "Pods-CheckList" */;
+			buildPhases = (
+				110E8C6492D5E6009DDDDC085ACEC733 /* Sources */,
+				CADBFD1FD12D9CCEEB78FE189FEEE9DE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AEE46C23100515B4F19A52E652FD51B /* PBXTargetDependency */,
+				A400E32469BE2FB349EFBF66A8F775D2 /* PBXTargetDependency */,
+				87445F241778F70EB95E37305E59C852 /* PBXTargetDependency */,
 			);
 			name = "Pods-CheckList";
 			productName = "Pods-CheckList";
-			productReference = F4BE18FA210383510C61C89EADE39E8F /* libPods-CheckList.a */;
+			productReference = 7130D69433FA8CA1D5923043EB2DB876 /* libPods-CheckList.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -291,13 +426,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6D1314FB80A734F250828E7BA2BD1B8F /* Products */;
+			productRefGroup = C8F223496DECF61AE7E9843279660352 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */,
 				252E34E3BC6D9744DBB1D6B629988EAA /* KKGestureLockView */,
-				55CBF47F0760B9F88BB64D5D8CD66CD1 /* Pods-CheckList */,
+				550F7EEAEEA17E3F92C873912E23B01C /* MMDrawerController */,
+				B1DAFC8AB47699330C192AD54D7EDA50 /* Pods-CheckList */,
 			);
 		};
 /* End PBXProject section */
@@ -312,11 +448,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		177D49E20B4D9C88BA3CB0DC5A96AE60 /* Sources */ = {
+		110E8C6492D5E6009DDDDC085ACEC733 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F2F9B6E484DA86FCF8619D22330AD0 /* Pods-CheckList-dummy.m in Sources */,
+				75124CF1C7CFB4CA302B8979FCB5E71E /* Pods-CheckList-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,20 +465,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE1CF9CE4811645411026F952650D228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76D495DBB9B5D81BE4391E10299F938B /* MMDrawerBarButtonItem.m in Sources */,
+				2D8C79E70B7EEA9C8EB372CD5775A5C1 /* MMDrawerController-dummy.m in Sources */,
+				66549CC91863363861D818B68B136EB6 /* MMDrawerController.m in Sources */,
+				19BD91B5A5ED8A4C820CB6BD33633C7C /* MMDrawerVisualState.m in Sources */,
+				579A1B0E910EF7BB4A3D44D2880570E9 /* UIViewController+MMDrawerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4EE1A9C0952D73C64DD68BD700178490 /* PBXTargetDependency */ = {
+		7AEE46C23100515B4F19A52E652FD51B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FDFullscreenPopGesture;
 			target = 2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */;
-			targetProxy = 6FDF9AF26A37E67273210FBF6D627660 /* PBXContainerItemProxy */;
+			targetProxy = E17838ED2C004547744F571FBE07D90E /* PBXContainerItemProxy */;
 		};
-		ACF383CAB0B7E37CD134AFA7F34AAAF9 /* PBXTargetDependency */ = {
+		87445F241778F70EB95E37305E59C852 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMDrawerController;
+			target = 550F7EEAEEA17E3F92C873912E23B01C /* MMDrawerController */;
+			targetProxy = B0FDB9B54DB959E3833446E2159D6E53 /* PBXContainerItemProxy */;
+		};
+		A400E32469BE2FB349EFBF66A8F775D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KKGestureLockView;
 			target = 252E34E3BC6D9744DBB1D6B629988EAA /* KKGestureLockView */;
-			targetProxy = 6E0FC7581F8F3594568F2E7B0759ED81 /* PBXContainerItemProxy */;
+			targetProxy = 3C1B1B86AD1EC0C56B33066657738C45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -381,9 +535,44 @@
 			};
 			name = Release;
 		};
+		0B599344D0A4532B2730171262DF99F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E4C5DC95C1B291090FAD6C84BEDB69 /* MMDrawerController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		23099EA54F4DEE671E01FF7FEB876EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 543F552804002F97D32CCE6EC40C8DFF /* Pods-CheckList.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		411721AA35E818BB74A94DAEA24E6503 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51329C7709DB89964FD56B10CDFEE7A1 /* FDFullscreenPopGesture.xcconfig */;
+			baseConfigurationReference = 1E2A8377C4CB10A25605546B95F04E98 /* FDFullscreenPopGesture.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
@@ -401,7 +590,7 @@
 		};
 		65662BA41EE6B067CEF21C4F843FE953 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F60C9EF9F819BBD1A98A061470C6DB56 /* KKGestureLockView.xcconfig */;
+			baseConfigurationReference = 163496F1FCEB1E5422A4CA46D7494550 /* KKGestureLockView.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KKGestureLockView/KKGestureLockView-prefix.pch";
@@ -419,7 +608,7 @@
 		};
 		70136C3ABB1482402794C3F722EB6BFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F60C9EF9F819BBD1A98A061470C6DB56 /* KKGestureLockView.xcconfig */;
+			baseConfigurationReference = 163496F1FCEB1E5422A4CA46D7494550 /* KKGestureLockView.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KKGestureLockView/KKGestureLockView-prefix.pch";
@@ -435,26 +624,9 @@
 			};
 			name = Release;
 		};
-		827E69BBD1FAE0F29A480984E3E8DE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9371A52896743090430B64D9AF88289D /* Pods-CheckList.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		8922522E521157BFD68E0BAE801E5548 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51329C7709DB89964FD56B10CDFEE7A1 /* FDFullscreenPopGesture.xcconfig */;
+			baseConfigurationReference = 1E2A8377C4CB10A25605546B95F04E98 /* FDFullscreenPopGesture.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
@@ -509,14 +681,14 @@
 			};
 			name = Debug;
 		};
-		C94449074CEA19708865A967E65DA010 /* Debug */ = {
+		E251FB87021205701DA5801DEB22BB17 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 543F552804002F97D32CCE6EC40C8DFF /* Pods-CheckList.debug.xcconfig */;
+			baseConfigurationReference = 9371A52896743090430B64D9AF88289D /* Pods-CheckList.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -524,7 +696,25 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		F42D00DFFE5EB0CC2B3A5506FFD18D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E4C5DC95C1B291090FAD6C84BEDB69 /* MMDrawerController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -534,6 +724,24 @@
 			buildConfigurations = (
 				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
 				052A17875CB827423D627183396CEB60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54559BCEF2CF3CE9421AE522FC085ECC /* Build configuration list for PBXNativeTarget "Pods-CheckList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23099EA54F4DEE671E01FF7FEB876EBA /* Debug */,
+				E251FB87021205701DA5801DEB22BB17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BCBDE524BD4EFDC051B5AD1A976D69B /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B599344D0A4532B2730171262DF99F5 /* Debug */,
+				F42D00DFFE5EB0CC2B3A5506FFD18D59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -552,15 +760,6 @@
 			buildConfigurations = (
 				411721AA35E818BB74A94DAEA24E6503 /* Debug */,
 				8922522E521157BFD68E0BAE801E5548 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F85C665B9E03C6E9BE3474E5252B5F01 /* Build configuration list for PBXNativeTarget "Pods-CheckList" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C94449074CEA19708865A967E65DA010 /* Debug */,
-				827E69BBD1FAE0F29A480984E3E8DE7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
