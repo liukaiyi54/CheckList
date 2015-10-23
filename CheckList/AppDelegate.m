@@ -13,6 +13,7 @@
 #import "LoginViewController.h"
 #import "UIColorMacros.h"
 #import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
 
 @interface AppDelegate ()
 
@@ -44,6 +45,7 @@
     [drawerController setMaximumRightDrawerWidth:300.0];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
