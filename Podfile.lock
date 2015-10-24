@@ -1,27 +1,16 @@
 PODS:
   - FDFullscreenPopGesture (1.1)
   - KKGestureLockView (1.0.0)
-  - MMDrawerController (0.5.7):
-    - MMDrawerController/Core (= 0.5.7)
-    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
-    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
-    - MMDrawerController/Subclass (= 0.5.7)
-  - MMDrawerController/Core (0.5.7)
-  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
-    - MMDrawerController/Core
-  - MMDrawerController/MMDrawerVisualStates (0.5.7):
-    - MMDrawerController/Core
-  - MMDrawerController/Subclass (0.5.7):
-    - MMDrawerController/Core
+  - RESideMenu (4.0.7)
 
 DEPENDENCIES:
   - FDFullscreenPopGesture (= 1.1)
   - KKGestureLockView
-  - MMDrawerController (~> 0.5.7)
+  - RESideMenu (~> 4.0.7)
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   KKGestureLockView: b27a33d2fe7995cd3c5e548dab1a8db7947322b8
-  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
 COCOAPODS: 0.39.0

@@ -10,8 +10,7 @@
 #import "ChecklistViewController.h"
 #import "ListDetailViewController.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
-#import "MMDrawerBarButtonItem.h"
-#import "UIViewController+MMDrawerController.h"
+#import "RESideMenu.h"
 
 #import "ChecklistItem.h"
 #import "DataModel.h"
@@ -150,7 +149,7 @@
 
 #pragma mark - event handler
 - (void)didTapLeftButton:(id)sender {
-    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    [self.sideMenuViewController presentLeftMenuViewController];
 }
 
 @end

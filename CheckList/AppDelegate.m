@@ -12,8 +12,7 @@
 #import "AppDelegate+LockView.h"
 #import "LoginViewController.h"
 #import "UIColorMacros.h"
-#import "MMDrawerController.h"
-#import "MMDrawerVisualState.h"
+#import "RESideMenu.h"
 
 @interface AppDelegate ()
 
@@ -39,13 +38,17 @@
 
     UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
     
-    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:myNavigationController leftDrawerViewController:rear];
-    self.window.rootViewController = drawerController;
-    [drawerController setShowsShadow:NO];
-    [drawerController setMaximumRightDrawerWidth:300.0];
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
-    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+    RESideMenu *sideViewController = [[RESideMenu alloc] initWithContentViewController:myNavigationController leftMenuViewController:rear rightMenuViewController:nil];
+    self.window.rootViewController = sideViewController;
+    
+//    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:myNavigationController leftDrawerViewController:rear];
+//    self.window.rootViewController = drawerController;
+//    [drawerController setShowsShadow:NO];
+//    [drawerController setMaximumRightDrawerWidth:300.0];
+//    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
+//    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+//    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+    
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     

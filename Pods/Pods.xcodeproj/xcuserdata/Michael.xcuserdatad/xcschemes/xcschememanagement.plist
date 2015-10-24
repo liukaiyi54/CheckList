@@ -14,12 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MMDrawerController.xcscheme</key>
+		<key>Pods-CheckList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CheckList.xcscheme</key>
+		<key>RESideMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>279FC5788E40F441D7CC7DD8EAADA554</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2C71DE0FB8A6E5BB6EAF9FB037D799CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>550F7EEAEEA17E3F92C873912E23B01C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1DAFC8AB47699330C192AD54D7EDA50</key>
+		<key>2D45E11046CE7C58D9E31AB054B717A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
