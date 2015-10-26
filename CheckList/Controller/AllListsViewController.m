@@ -17,9 +17,14 @@
 #import "DataModel.h"
 #import "Checklist.h"
 #import "AppDelegate.h"
+#import "UIColorMacros.h"
 
-@interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) VBFPopFlatButton *flatRoundedButton;
+@interface AllListsViewController ()
+    <listDetailViewControllerDelegate,
+    UINavigationControllerDelegate,
+    UITableViewDataSource,
+    UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -31,19 +36,18 @@
     [super viewDidLoad];
     self.navigationController.delegate = self;
     
-    self.flatRoundedButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)
-                                                         buttonType:buttonMenuType
-                                                        buttonStyle:buttonPlainStyle
-                                              animateToInitialState:YES];
-    self.flatRoundedButton.roundBackgroundColor = [UIColor whiteColor];
-    self.flatRoundedButton.lineThickness = 1.5;
-    self.flatRoundedButton.tintColor = [UIColor whiteColor];
-    [self.flatRoundedButton addTarget:self
-                               action:@selector(flatRoundedButtonPressed)
-                     forControlEvents:UIControlEventTouchUpInside];
-
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:self.flatRoundedButton];
-    self.navigationItem.leftBarButtonItem = barButton;
+    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 25, CGRectGetHeight([UIScreen mainScreen].bounds) - 80, 30, 30);
+    
+    VBFPopFlatButton *addButton = [[VBFPopFlatButton alloc] initWithFrame:frame
+                                                               buttonType:buttonAddType
+                                                              buttonStyle:buttonRoundedStyle
+                                                    animateToInitialState:YES];
+    addButton.roundBackgroundColor = UIColorFromRGB(0x2893FF);
+    addButton.tintColor = [UIColor whiteColor];
+    [addButton addTarget:self action:@selector(didTapAddButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
+    
+    [self setupSideButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -165,9 +169,30 @@
     }
 }
 
+#pragma mark - pravite {
+- (void)setupSideButton {
+   VBFPopFlatButton *flatRoundedButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)
+                                                         buttonType:buttonMenuType
+                                                        buttonStyle:buttonPlainStyle
+                                              animateToInitialState:YES];
+    flatRoundedButton.roundBackgroundColor = [UIColor whiteColor];
+    flatRoundedButton.lineThickness = 1.5;
+    flatRoundedButton.tintColor = [UIColor whiteColor];
+    [flatRoundedButton addTarget:self
+                               action:@selector(flatRoundedButtonPressed)
+                     forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:flatRoundedButton];
+    self.navigationItem.leftBarButtonItem = barButton;
+}
+
 #pragma mark - event handler
 - (void)flatRoundedButtonPressed {
     [self.sideMenuViewController presentLeftMenuViewController];
+}
+
+- (void)didTapAddButton:(id)sender {
+    
 }
 
 @end
