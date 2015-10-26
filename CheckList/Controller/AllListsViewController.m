@@ -11,6 +11,7 @@
 #import "ListDetailViewController.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import "RESideMenu.h"
+#import "VBFPopFlatButton.h"
 
 #import "ChecklistItem.h"
 #import "DataModel.h"
@@ -28,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.delegate = self;
+    
 
     [self.sidebarButton setTarget:self];
     [self.sidebarButton setAction:@selector(didTapLeftButton:)];

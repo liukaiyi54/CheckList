@@ -5,6 +5,7 @@ target 'CheckList' do
 pod 'FDFullscreenPopGesture', '1.1'
 pod 'KKGestureLockView'
 pod 'RESideMenu', '~> 4.0.7'
+pod 'VBFPopFlatButton'
 end
 
 target 'CheckListTests' do
