@@ -10,7 +10,7 @@
 
 @class DataModel;
 
-@interface AllListsViewController : UITableViewController
+@interface AllListsViewController : UIViewController
 
 @property (nonatomic, strong) DataModel *dataModel;
 

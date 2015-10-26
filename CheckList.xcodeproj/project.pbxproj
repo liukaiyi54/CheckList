@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C01324A1BBE57280069129D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132491BBE57280069129D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C01324D1BBE5F010069129D /* AppDelegate+LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */; settings = {ASSET_TAGS = (); }; };
-		4C0132541BBE64C80069129D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0132531BBE64C80069129D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		4C0132581BBFF72D0069129D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132571BBFF72D0069129D /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C1E51931BC60A2D0049AF90 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E51901BC60A2D0049AF90 /* LeftSlideViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C1E51941BC60A2D0049AF90 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E51921BC60A2D0049AF90 /* UIView_extra.m */; settings = {ASSET_TAGS = (); }; };
+		4C01324A1BBE57280069129D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0132491BBE57280069129D /* LoginViewController.m */; };
+		4C01324D1BBE5F010069129D /* AppDelegate+LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */; };
+		4C0132541BBE64C80069129D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0132531BBE64C80069129D /* LoginViewController.xib */; };
+		4C1E51931BC60A2D0049AF90 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E51901BC60A2D0049AF90 /* LeftSlideViewController.m */; };
+		4C1E51941BC60A2D0049AF90 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E51921BC60A2D0049AF90 /* UIView_extra.m */; };
 		4C3EB3141B9E80D3006925C1 /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30B1B9E80D3006925C1 /* AllListsViewController.m */; };
 		4C3EB3151B9E80D3006925C1 /* ChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30D1B9E80D3006925C1 /* ChecklistViewController.m */; };
 		4C3EB3161B9E80D3006925C1 /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30F1B9E80D3006925C1 /* IconPickerViewController.m */; };
@@ -33,7 +32,7 @@
 		4C8DCF9C1B96AABC00E4C208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */; };
 		4C8DCF9F1B96AABC00E4C208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */; };
 		4C8DCFAB1B96AABC00E4C208 /* CheckListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DCFAA1B96AABC00E4C208 /* CheckListTests.m */; };
-		4CBA3F251BCB4A7800E286DB /* LeftSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA3F241BCB4A7800E286DB /* LeftSideViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4CBA3F251BCB4A7800E286DB /* LeftSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA3F241BCB4A7800E286DB /* LeftSideViewController.m */; };
 		521843761DB4680D898CA234 /* libPods-CheckList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC1842D190EEA4288F9C0AD /* libPods-CheckList.a */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +54,6 @@
 		4C01324B1BBE5F010069129D /* AppDelegate+LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LockView.h"; sourceTree = "<group>"; };
 		4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LockView.m"; sourceTree = "<group>"; };
 		4C0132531BBE64C80069129D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Controller/LoginViewController.xib; sourceTree = "<group>"; };
-		4C0132561BBFF72D0069129D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		4C0132571BBFF72D0069129D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4C1E518F1BC60A2D0049AF90 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
 		4C1E51901BC60A2D0049AF90 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
 		4C1E51911BC60A2D0049AF90 /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
@@ -133,15 +130,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C0132551BBFD9080069129D /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4C0132561BBFF72D0069129D /* SWRevealViewController.h */,
-				4C0132571BBFF72D0069129D /* SWRevealViewController.m */,
-			);
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		4C1853BD1B9C1763004125AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +189,6 @@
 			children = (
 				4CBDE33D1BC8BCA600B29D71 /* UIColorMacros.h */,
 				4C1E518E1BC60A210049AF90 /* LeftSlideViewController */,
-				4C0132551BBFD9080069129D /* SWRevealViewController */,
 				4C3EB36C1B9EC9AD006925C1 /* HUAnimator */,
 				4C3EB3751B9EC9AD006925C1 /* ZBCustomTransitions */,
 			);
@@ -466,7 +453,6 @@
 				4C3EB3201B9E8136006925C1 /* ChecklistItem.m in Sources */,
 				4C3EB37D1B9EC9AD006925C1 /* HUTransitionVerticalLinesAnimator.m in Sources */,
 				4C3EB37A1B9EC9AD006925C1 /* HUTransitionAnimator.m in Sources */,
-				4C0132581BBFF72D0069129D /* SWRevealViewController.m in Sources */,
 				4C1E51931BC60A2D0049AF90 /* LeftSlideViewController.m in Sources */,
 				4C3EB3171B9E80D3006925C1 /* ItemDetailViewController.m in Sources */,
 				4C3EB37B1B9EC9AD006925C1 /* HUTransitionGhostAnimator.m in Sources */,

@@ -18,8 +18,9 @@
 #import "Checklist.h"
 #import "AppDelegate.h"
 
-@interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@interface AllListsViewController ()<listDetailViewControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) VBFPopFlatButton *flatRoundedButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -30,9 +31,24 @@
     [super viewDidLoad];
     self.navigationController.delegate = self;
     
+    self.flatRoundedButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)
+                                                         buttonType:buttonMenuType
+                                                        buttonStyle:buttonPlainStyle
+                                              animateToInitialState:YES];
+    self.flatRoundedButton.roundBackgroundColor = [UIColor whiteColor];
+    self.flatRoundedButton.lineThickness = 1.5;
+    self.flatRoundedButton.tintColor = [UIColor whiteColor];
+    [self.flatRoundedButton addTarget:self
+                               action:@selector(flatRoundedButtonPressed)
+                     forControlEvents:UIControlEventTouchUpInside];
 
-    [self.sidebarButton setTarget:self];
-    [self.sidebarButton setAction:@selector(didTapLeftButton:)];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:self.flatRoundedButton];
+    self.navigationItem.leftBarButtonItem = barButton;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source & delegate
@@ -150,7 +166,7 @@
 }
 
 #pragma mark - event handler
-- (void)didTapLeftButton:(id)sender {
+- (void)flatRoundedButtonPressed {
     [self.sideMenuViewController presentLeftMenuViewController];
 }
 
