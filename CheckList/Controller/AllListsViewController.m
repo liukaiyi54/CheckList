@@ -36,7 +36,7 @@
     [super viewDidLoad];
     self.navigationController.delegate = self;
     
-    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 25, CGRectGetHeight([UIScreen mainScreen].bounds) - 80, 30, 30);
+    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 15, CGRectGetHeight([UIScreen mainScreen].bounds) - 80, 30, 30);
     
     VBFPopFlatButton *addButton = [[VBFPopFlatButton alloc] initWithFrame:frame
                                                                buttonType:buttonAddType
