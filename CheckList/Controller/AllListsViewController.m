@@ -192,7 +192,7 @@
 }
 
 - (void)didTapAddButton:(id)sender {
-    
+    [self performSegueWithIdentifier:@"AddChecklist" sender:nil];
 }
 
 @end
