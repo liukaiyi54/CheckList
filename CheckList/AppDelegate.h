@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LeftSlideViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, strong) LeftSlideViewController *leftVC;
 
 @end
 
