@@ -1,4 +1,7 @@
 PODS:
+  - ChameleonFramework (2.0.4):
+    - ChameleonFramework/Default (= 2.0.4)
+  - ChameleonFramework/Default (2.0.4)
   - FDFullscreenPopGesture (1.1)
   - KKGestureLockView (1.0.0)
   - pop (1.0.8)
@@ -7,12 +10,14 @@ PODS:
     - pop
 
 DEPENDENCIES:
+  - ChameleonFramework
   - FDFullscreenPopGesture (= 1.1)
   - KKGestureLockView
   - RESideMenu (~> 4.0.7)
   - VBFPopFlatButton
 
 SPEC CHECKSUMS:
+  ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   KKGestureLockView: b27a33d2fe7995cd3c5e548dab1a8db7947322b8
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57

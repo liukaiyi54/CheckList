@@ -9,7 +9,7 @@
 #import "AllListsViewController.h"
 #import "ChecklistViewController.h"
 #import "ListDetailViewController.h"
-#import <UINavigationController+FDFullscreenPopGesture.h>
+#import "UINavigationController+FDFullscreenPopGesture.h"
 #import "RESideMenu.h"
 #import "VBFPopFlatButton.h"
 

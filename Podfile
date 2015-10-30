@@ -6,6 +6,10 @@ pod 'FDFullscreenPopGesture', '1.1'
 pod 'KKGestureLockView'
 pod 'RESideMenu', '~> 4.0.7'
 pod 'VBFPopFlatButton'
+
+use_frameworks!
+pod 'ChameleonFramework'
+
 end
 
 target 'CheckListTests' do

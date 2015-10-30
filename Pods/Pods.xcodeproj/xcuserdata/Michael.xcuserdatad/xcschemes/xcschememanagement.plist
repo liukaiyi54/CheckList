@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FDFullscreenPopGesture.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06873F9A9CE24CB674E5AD11646CF675</key>
+		<key>023492F09630DF1CBD923284683E806F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>252E34E3BC6D9744DBB1D6B629988EAA</key>
+		<key>303B3AC6DD17B1EE7D98EF8BF8898BEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C71DE0FB8A6E5BB6EAF9FB037D799CC</key>
+		<key>49E18CA71988E39C02F669B9D12206EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>485BC8021E45ACF1FB973BAF62E35732</key>
+		<key>59A0C52286D680208602EBE33F4979AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7290046D8ED8D86EDF0EE0EBBEED95EF</key>
+		<key>6EB7743AA4898B0ECA565AB9D6848438</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F2E1C92FA11A245A4732B96B80760724</key>
+		<key>BAEA20C039F8CF342E656C2497F1DC22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0F52C2D222DA2428CA429A6D6F449EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -82,3 +82,20 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-CheckList/ChameleonFramework.framework"
+  install_framework "Pods-CheckList/FDFullscreenPopGesture.framework"
+  install_framework "Pods-CheckList/KKGestureLockView.framework"
+  install_framework "Pods-CheckList/RESideMenu.framework"
+  install_framework "Pods-CheckList/VBFPopFlatButton.framework"
+  install_framework "Pods-CheckList/pop.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-CheckList/ChameleonFramework.framework"
+  install_framework "Pods-CheckList/FDFullscreenPopGesture.framework"
+  install_framework "Pods-CheckList/KKGestureLockView.framework"
+  install_framework "Pods-CheckList/RESideMenu.framework"
+  install_framework "Pods-CheckList/VBFPopFlatButton.framework"
+  install_framework "Pods-CheckList/pop.framework"
+fi

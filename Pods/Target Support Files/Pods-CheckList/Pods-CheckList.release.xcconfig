@@ -1,5 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FDFullscreenPopGesture" "${PODS_ROOT}/Headers/Public/KKGestureLockView" "${PODS_ROOT}/Headers/Public/RESideMenu" "${PODS_ROOT}/Headers/Public/VBFPopFlatButton" "${PODS_ROOT}/Headers/Public/pop"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FDFullscreenPopGesture" -isystem "${PODS_ROOT}/Headers/Public/KKGestureLockView" -isystem "${PODS_ROOT}/Headers/Public/RESideMenu" -isystem "${PODS_ROOT}/Headers/Public/VBFPopFlatButton" -isystem "${PODS_ROOT}/Headers/Public/pop"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"FDFullscreenPopGesture" -l"KKGestureLockView" -l"RESideMenu" -l"VBFPopFlatButton" -l"c++" -l"pop" -framework "QuartzCore"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/ChameleonFramework.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/FDFullscreenPopGesture.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KKGestureLockView.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/RESideMenu.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/VBFPopFlatButton.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/pop.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "ChameleonFramework" -framework "FDFullscreenPopGesture" -framework "KKGestureLockView" -framework "RESideMenu" -framework "VBFPopFlatButton" -framework "pop"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-CheckList
 PODS_ROOT = ${SRCROOT}/Pods
