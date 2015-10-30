@@ -41,15 +41,6 @@
     RESideMenu *sideViewController = [[RESideMenu alloc] initWithContentViewController:myNavigationController leftMenuViewController:rear rightMenuViewController:nil];
     self.window.rootViewController = sideViewController;
     
-//    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:myNavigationController leftDrawerViewController:rear];
-//    self.window.rootViewController = drawerController;
-//    [drawerController setShowsShadow:NO];
-//    [drawerController setMaximumRightDrawerWidth:300.0];
-//    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
-//    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
-//    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
-    
-
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;
