@@ -8,6 +8,7 @@ PODS:
   - RESideMenu (4.0.7)
   - VBFPopFlatButton (0.0.6):
     - pop
+  - ZFDragableModalTransition (0.3)
 
 DEPENDENCIES:
   - ChameleonFramework
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - KKGestureLockView
   - RESideMenu (~> 4.0.7)
   - VBFPopFlatButton
+  - ZFDragableModalTransition
 
 SPEC CHECKSUMS:
   ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
@@ -23,5 +25,6 @@ SPEC CHECKSUMS:
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   VBFPopFlatButton: 782344da63f104c279a857d806e065117a7e1196
+  ZFDragableModalTransition: bab5238ec85728956acdb2cca19ca88247b76913
 
 COCOAPODS: 0.39.0

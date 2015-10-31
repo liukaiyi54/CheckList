@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'ECBE53E1098768C0B1117438'
+               BlueprintIdentifier = 'BE58EF83AF997A434E72DE54'
                BlueprintName = 'KKGestureLockView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'KKGestureLockView.framework'>
