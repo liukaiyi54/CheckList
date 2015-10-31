@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-CheckList/AMWaveTransition.framework"
   install_framework "Pods-CheckList/ChameleonFramework.framework"
   install_framework "Pods-CheckList/FDFullscreenPopGesture.framework"
   install_framework "Pods-CheckList/KKGestureLockView.framework"
@@ -93,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CheckList/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-CheckList/AMWaveTransition.framework"
   install_framework "Pods-CheckList/ChameleonFramework.framework"
   install_framework "Pods-CheckList/FDFullscreenPopGesture.framework"
   install_framework "Pods-CheckList/KKGestureLockView.framework"

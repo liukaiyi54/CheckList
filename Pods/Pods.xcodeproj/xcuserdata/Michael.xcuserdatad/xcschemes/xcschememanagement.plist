@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AMWaveTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,16 +52,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00DBD518FB534B8AB9BE63EF762CBA11</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1A9FE39E6A343647B2AC92B02AAF3731</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>303B3AC6DD17B1EE7D98EF8BF8898BEB</key>
 		<dict>
 			<key>primary</key>
@@ -67,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FE8D9FDDDE7A0F99DC583B070AB4BAC</key>
+		<key>646376D8149E3E317CA256F105143B2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F166A5C945B76B20FD3A3E222BD46AE0</key>
+		<key>8004BD72C14F3C786A3B1990FE84C94C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC32767A14DFBB326DAB4FF6FC197E8D</key>
+		<key>9A80AD89E24B32A29EFF18C490309B1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC9F50C536A6E64A824218C6114F46F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA9142961496C71A45B70CF6F5BC8A39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3E1311B8CE71CB332199A4C01A52EC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

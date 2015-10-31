@@ -7,6 +7,7 @@ pod 'KKGestureLockView'
 pod 'RESideMenu', '~> 4.0.7'
 pod 'VBFPopFlatButton'
 pod 'ZFDragableModalTransition'
+pod 'AMWaveTransition'
 
 use_frameworks!
 pod 'ChameleonFramework'

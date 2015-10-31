@@ -1,4 +1,5 @@
 PODS:
+  - AMWaveTransition (0.6.0)
   - ChameleonFramework (2.0.4):
     - ChameleonFramework/Default (= 2.0.4)
   - ChameleonFramework/Default (2.0.4)
@@ -11,6 +12,7 @@ PODS:
   - ZFDragableModalTransition (0.3)
 
 DEPENDENCIES:
+  - AMWaveTransition
   - ChameleonFramework
   - FDFullscreenPopGesture (= 1.1)
   - KKGestureLockView
@@ -19,6 +21,7 @@ DEPENDENCIES:
   - ZFDragableModalTransition
 
 SPEC CHECKSUMS:
+  AMWaveTransition: a00588006f144d289a390aabcfa1fa1e16bb9296
   ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   KKGestureLockView: b27a33d2fe7995cd3c5e548dab1a8db7947322b8
