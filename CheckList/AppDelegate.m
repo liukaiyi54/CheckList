@@ -13,6 +13,8 @@
 #import "LoginViewController.h"
 #import "UIColorMacros.h"
 #import "RESideMenu.h"
+#import <ChameleonFramework/Chameleon.h>
+
 
 @interface AppDelegate ()
 
@@ -33,7 +35,10 @@
     controller.dataModel = _dataModel;
 
     UINavigationController *myNavigationController = [[UINavigationController alloc] initWithRootViewController:controller];
-    myNavigationController.navigationBar.barTintColor = UIColorFromRGB(0x2893FF);
+    UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(myNavigationController.navigationBar.bounds), 64)
+                                           andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
+    myNavigationController.navigationBar.barTintColor = color;
     [myNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
     UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
