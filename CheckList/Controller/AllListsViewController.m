@@ -18,6 +18,7 @@
 #import "Checklist.h"
 #import "AppDelegate.h"
 #import "UIColorMacros.h"
+#import "ZFModalTransitionAnimator.h"
 
 @interface AllListsViewController ()
     <listDetailViewControllerDelegate,
@@ -26,6 +27,7 @@
     UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) ZFModalTransitionAnimator *animator;
 
 @end
 
@@ -160,9 +162,16 @@
     if ([segue.identifier isEqualToString:@"ShowChecklist"]) {
         ChecklistViewController *vc = segue.destinationViewController;
         vc.checklist = sender;
+        
     } else if ([segue.identifier isEqualToString:@"AddChecklist"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         ListDetailViewController *vc = (ListDetailViewController *)navigationController.topViewController;
+        
+        self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:navigationController];
+        self.animator.dragable = YES;
+        self.animator.direction = ZFModalTransitonDirectionRight;
+        navigationController.transitioningDelegate = self.animator;
+        navigationController.modalPresentationStyle = UIModalPresentationCustom;
         
         vc.delegate = self;
         vc.checkListToEdit = nil;
@@ -171,7 +180,7 @@
 
 #pragma mark - pravite {
 - (void)setupSideButton {
-   VBFPopFlatButton *flatRoundedButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)
+   VBFPopFlatButton *flatRoundedButton = [[VBFPopFlatButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)
                                                          buttonType:buttonMenuType
                                                         buttonStyle:buttonPlainStyle
                                               animateToInitialState:YES];
