@@ -51,7 +51,7 @@
 		4C0132491BBE57280069129D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controller/LoginViewController.m; sourceTree = "<group>"; };
 		4C01324B1BBE5F010069129D /* AppDelegate+LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LockView.h"; sourceTree = "<group>"; };
 		4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LockView.m"; sourceTree = "<group>"; };
-		4C0132531BBE64C80069129D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Controller/LoginViewController.xib; sourceTree = "<group>"; };
+		4C0132531BBE64C80069129D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../Controller/LoginViewController.xib; sourceTree = "<group>"; };
 		4C3EB30A1B9E80D3006925C1 /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllListsViewController.h; path = Controller/AllListsViewController.h; sourceTree = "<group>"; };
 		4C3EB30B1B9E80D3006925C1 /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllListsViewController.m; path = Controller/AllListsViewController.m; sourceTree = "<group>"; };
 		4C3EB30C1B9E80D3006925C1 /* ChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChecklistViewController.h; path = Controller/ChecklistViewController.h; sourceTree = "<group>"; };
@@ -140,7 +140,9 @@
 		4C211D931BB926B10032A0FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */,
 				4C8DCF981B96AABC00E4C208 /* Main.storyboard */,
+				4C0132531BBE64C80069129D /* LoginViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,7 +162,6 @@
 				4C3EB3131B9E80D3006925C1 /* ListDetailViewController.m */,
 				4C0132481BBE57280069129D /* LoginViewController.h */,
 				4C0132491BBE57280069129D /* LoginViewController.m */,
-				4C0132531BBE64C80069129D /* LoginViewController.xib */,
 				4CBA3F231BCB4A7800E286DB /* LeftSideViewController.h */,
 				4CBA3F241BCB4A7800E286DB /* LeftSideViewController.m */,
 			);
@@ -242,7 +243,6 @@
 				4C8DCF921B96AABC00E4C208 /* AppDelegate.h */,
 				4C8DCF931B96AABC00E4C208 /* AppDelegate.m */,
 				4C8DCF9B1B96AABC00E4C208 /* Images.xcassets */,
-				4C8DCF9D1B96AABC00E4C208 /* LaunchScreen.xib */,
 				4C8DCF8F1B96AABC00E4C208 /* Info.plist */,
 				4C8DCF901B96AABC00E4C208 /* main.m */,
 				4C01324B1BBE5F010069129D /* AppDelegate+LockView.h */,
@@ -485,6 +485,7 @@
 				4C8DCF9E1B96AABC00E4C208 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
