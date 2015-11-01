@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C4157E0BDD876891C95E8A8D'
+               BlueprintIdentifier = '7519AF2349C1CC88F3B7CB68'
                BlueprintName = 'AMWaveTransition'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AMWaveTransition.framework'>

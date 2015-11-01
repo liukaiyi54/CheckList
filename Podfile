@@ -8,6 +8,7 @@ pod 'RESideMenu', '~> 4.0.7'
 pod 'VBFPopFlatButton'
 pod 'ZFDragableModalTransition'
 pod 'AMWaveTransition'
+pod 'FlatUIKit'
 
 use_frameworks!
 pod 'ChameleonFramework'

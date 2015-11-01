@@ -4,6 +4,7 @@ PODS:
     - ChameleonFramework/Default (= 2.0.4)
   - ChameleonFramework/Default (2.0.4)
   - FDFullscreenPopGesture (1.1)
+  - FlatUIKit (1.6.2)
   - KKGestureLockView (1.0.0)
   - pop (1.0.8)
   - RESideMenu (4.0.7)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - AMWaveTransition
   - ChameleonFramework
   - FDFullscreenPopGesture (= 1.1)
+  - FlatUIKit
   - KKGestureLockView
   - RESideMenu (~> 4.0.7)
   - VBFPopFlatButton
@@ -24,6 +26,7 @@ SPEC CHECKSUMS:
   AMWaveTransition: a00588006f144d289a390aabcfa1fa1e16bb9296
   ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   KKGestureLockView: b27a33d2fe7995cd3c5e548dab1a8db7947322b8
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
