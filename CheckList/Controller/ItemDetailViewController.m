@@ -8,6 +8,8 @@
 
 #import "ItemDetailViewController.h"
 #import "ChecklistItem.h"
+#import <ChameleonFramework/Chameleon.h>
+
 
 @interface ItemDetailViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -36,6 +38,11 @@
         self.switchControl.on = NO;
         _dueDate = [NSDate date];
     }
+    
+    UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.navigationBar.bounds), 64)
+                                           andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
+    self.navigationController.navigationBar.barTintColor = color;
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     

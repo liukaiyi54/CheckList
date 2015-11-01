@@ -8,6 +8,7 @@
 
 #import "ListDetailViewController.h"
 #import "IconPickerViewController.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface ListDetailViewController ()<UITextFieldDelegate, IconPickerViewControllerDelegate>
 
@@ -26,6 +27,11 @@
     [super viewDidLoad];
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.navigationBar.bounds), 64)
+                                           andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
+    self.navigationController.navigationBar.barTintColor = color;
 
     if (self.checkListToEdit) {
         self.title = @"Edit Checklist";
