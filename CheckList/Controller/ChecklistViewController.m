@@ -11,6 +11,7 @@
 
 #import "Checklist.h"
 #import "ChecklistItem.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
 
@@ -41,6 +42,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChecklistItem"];
+    
+    cell.tintColor = [UIColor flatPurpleColor];
 
     ChecklistItem *item = self.checklist.items[indexPath.row];
     UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];

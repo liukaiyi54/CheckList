@@ -94,7 +94,7 @@
     Checklist *checklist = self.dataModel.lists[indexPath.row];
     cell.textLabel.text = checklist.name;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    cell.accessoryView.tintColor = [UIColor flatPurpleColor];
+    cell.tintColor = [UIColor flatPurpleColor];
     
     NSInteger count = [checklist countUncheckedItems];
     if ([checklist.items count] == 0) {
