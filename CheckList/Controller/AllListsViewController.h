@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMWaveViewController.h"
 
 @class DataModel;
 
-@interface AllListsViewController : UIViewController
+@interface AllListsViewController : AMWaveViewController
 
 @property (nonatomic, strong) DataModel *dataModel;
 

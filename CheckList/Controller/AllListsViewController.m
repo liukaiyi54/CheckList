@@ -19,6 +19,7 @@
 #import "AppDelegate.h"
 #import "UIColorMacros.h"
 #import "ZFModalTransitionAnimator.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface AllListsViewController ()
     <listDetailViewControllerDelegate,
@@ -44,12 +45,21 @@
                                                                buttonType:buttonAddType
                                                               buttonStyle:buttonRoundedStyle
                                                     animateToInitialState:YES];
-    addButton.roundBackgroundColor = UIColorFromRGB(0x2893FF);
+    addButton.roundBackgroundColor = [UIColor flatPinkColor];
     addButton.tintColor = [UIColor whiteColor];
     [addButton addTarget:self action:@selector(didTapAddButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
     
+    [self.navigationController setHidesNavigationBarHairline:YES];
+    
     [self setupSideButton];
+}
+
+- (UIColor *)color {
+    UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.navigationBar.bounds), 64)
+                                           andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
+    return color;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -84,6 +94,7 @@
     Checklist *checklist = self.dataModel.lists[indexPath.row];
     cell.textLabel.text = checklist.name;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessoryView.tintColor = [UIColor flatPurpleColor];
     
     NSInteger count = [checklist countUncheckedItems];
     if ([checklist.items count] == 0) {
@@ -127,6 +138,12 @@
     Checklist *checklist = self.dataModel.lists[indexPath.row];
     controller.checkListToEdit = checklist;
     
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:navigationController];
+    self.animator.dragable = YES;
+    self.animator.direction = ZFModalTransitonDirectionBottom;
+    navigationController.transitioningDelegate = self.animator;
+    navigationController.modalPresentationStyle = UIModalPresentationCustom;
+    
     [self.view.window.rootViewController presentViewController:navigationController animated:YES completion:nil];
 }
 
@@ -162,7 +179,6 @@
     if ([segue.identifier isEqualToString:@"ShowChecklist"]) {
         ChecklistViewController *vc = segue.destinationViewController;
         vc.checklist = sender;
-        
     } else if ([segue.identifier isEqualToString:@"AddChecklist"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         ListDetailViewController *vc = (ListDetailViewController *)navigationController.topViewController;
@@ -193,6 +209,10 @@
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:flatRoundedButton];
     self.navigationItem.leftBarButtonItem = barButton;
+}
+
+- (NSArray *)visibleCells {
+    return [self.tableView visibleCells];
 }
 
 #pragma mark - event handler
