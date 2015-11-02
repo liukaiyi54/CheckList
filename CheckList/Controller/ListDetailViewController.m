@@ -9,10 +9,12 @@
 #import "ListDetailViewController.h"
 #import "IconPickerViewController.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "FlatUIKit.h"
 
 @interface ListDetailViewController ()<UITextFieldDelegate, IconPickerViewControllerDelegate>
 
-@property (nonatomic, weak)IBOutlet UITextField *textField;
+
+@property (weak, nonatomic) IBOutlet FUITextField *textField;
 @property (nonatomic, weak)IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
 
@@ -25,6 +27,8 @@
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupTextField];
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
@@ -107,5 +111,15 @@
         controller.delegate = self;
     }
 }
+
+- (void)setupTextField {
+    self.textField.backgroundColor = [UIColor clearColor];
+    self.textField.edgeInsets = UIEdgeInsetsMake(4.0f, 15.0f, 4.0f, 15.0f);
+    self.textField.textFieldColor = [UIColor whiteColor];
+    self.textField.borderColor = [UIColor turquoiseColor];
+    self.textField.borderWidth = 2.0f;
+    self.textField.cornerRadius = 3.0f;
+}
+
 
 @end

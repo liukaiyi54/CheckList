@@ -9,10 +9,12 @@
 #import "ItemDetailViewController.h"
 #import "ChecklistItem.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "FlatUIKit.h"
 
 
 @interface ItemDetailViewController ()<UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (weak, nonatomic) IBOutlet FUITextField *textField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UISwitch *switchControl;
 @property (weak, nonatomic) IBOutlet UILabel *dueDateLabel;
@@ -26,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self setupTextField];
     
     if (self.itemToEdit != nil) {
         self.title = @"Edit Item";
@@ -218,4 +222,14 @@
         [self.tableView endUpdates];
     }
 }
+
+- (void)setupTextField {
+    self.textField.backgroundColor = [UIColor clearColor];
+    self.textField.edgeInsets = UIEdgeInsetsMake(4.0f, 15.0f, 4.0f, 15.0f);
+    self.textField.textFieldColor = [UIColor whiteColor];
+    self.textField.borderColor = [UIColor turquoiseColor];
+    self.textField.borderWidth = 2.0f;
+    self.textField.cornerRadius = 3.0f;
+}
+
 @end
