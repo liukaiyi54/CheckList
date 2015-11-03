@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UISwitch *switchControl;
 @property (weak, nonatomic) IBOutlet UILabel *dueDateLabel;
+@property (weak, nonatomic) IBOutlet FUISwitch *swicher;
 
 @end
 
@@ -30,16 +31,17 @@
     [super viewDidLoad];
 
     [self setupTextField];
+    [self setupSwitcher];
     
     if (self.itemToEdit != nil) {
         self.title = @"Edit Item";
         self.textField.text = self.itemToEdit.text;
         self.doneButton.enabled = YES;
         
-        self.switchControl.on = self.itemToEdit.shouldRemind;
+        self.swicher.on = self.itemToEdit.shouldRemind;
         _dueDate = self.itemToEdit.dueDate;
     } else {
-        self.switchControl.on = NO;
+        self.swicher.on = NO;
         _dueDate = [NSDate date];
     }
     
@@ -142,14 +144,14 @@
         ChecklistItem *item = [[ChecklistItem alloc] init];
         item.text = self.textField.text;
         item.checked = NO;
-        item.shouldRemind = self.switchControl.on;
+        item.shouldRemind = self.swicher.on;
         item.dueDate = _dueDate;
         [item scheduleNotification];
         
         [self.delegate itemDetailViewController:self didFinishAddingItem:item];
     } else {
         self.itemToEdit.text = self.textField.text;
-        self.itemToEdit.shouldRemind = self.switchControl.on;
+        self.itemToEdit.shouldRemind = self.swicher.on;
         self.itemToEdit.dueDate = _dueDate;
         [self.itemToEdit scheduleNotification];
     
@@ -227,9 +229,18 @@
     self.textField.backgroundColor = [UIColor clearColor];
     self.textField.edgeInsets = UIEdgeInsetsMake(4.0f, 15.0f, 4.0f, 15.0f);
     self.textField.textFieldColor = [UIColor whiteColor];
-    self.textField.borderColor = [UIColor turquoiseColor];
+    self.textField.borderColor = [UIColor flatPurpleColor];
     self.textField.borderWidth = 2.0f;
     self.textField.cornerRadius = 3.0f;
+}
+
+- (void)setupSwitcher {
+    self.swicher.onColor = [UIColor flatPinkColor];
+    self.swicher.offColor = [UIColor cloudsColor];
+    self.swicher.onBackgroundColor = [UIColor flatPurpleColor];
+    self.swicher.offBackgroundColor = [UIColor silverColor];
+    self.swicher.offLabel.font = [UIFont boldFlatFontOfSize:14];
+    self.swicher.onLabel.font = [UIFont boldFlatFontOfSize:14];
 }
 
 @end

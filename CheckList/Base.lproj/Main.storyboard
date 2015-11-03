@@ -9,7 +9,7 @@
         <!--CheckLists-->
         <scene sceneID="PoS-k2-gmA">
             <objects>
-                <viewController storyboardIdentifier="AllListsViewController" id="LGJ-GE-Fhu" customClass="AllListsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllListsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LGJ-GE-Fhu" customClass="AllListsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m4h-CI-VYd"/>
                         <viewControllerLayoutGuide type="bottom" id="6lm-1s-6Pm"/>
@@ -80,7 +80,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="3b4-rj-APW">
-                                <rect key="frame" x="0.0" y="114" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3b4-rj-APW" id="OQn-t2-Luu">
                                     <rect key="frame" x="0.0" y="0.0" width="308" height="44"/>
@@ -219,10 +219,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-bN-A5l">
-                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
-                                                    <animations/>
-                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGo-qI-TlX">
                                                     <rect key="frame" x="15" y="11" width="86" height="21"/>
                                                     <animations/>
@@ -230,14 +226,23 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2O-lU-4hw" customClass="FUISwitch">
+                                                    <rect key="frame" x="293" y="6" width="66" height="31"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="iKR-sS-24K"/>
+                                                        <constraint firstAttribute="width" constant="66" id="tl6-wI-9if"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="eGo-qI-TlX" firstAttribute="leading" secondItem="Gm5-yh-Wp2" secondAttribute="leadingMargin" constant="7" id="49Q-Jt-u1Y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jgj-bN-A5l" secondAttribute="trailing" id="7dS-Oi-0UV"/>
-                                                <constraint firstItem="jgj-bN-A5l" firstAttribute="centerY" secondItem="eGo-qI-TlX" secondAttribute="centerY" id="GHh-9p-1Tk"/>
+                                                <constraint firstItem="N2O-lU-4hw" firstAttribute="centerY" secondItem="Gm5-yh-Wp2" secondAttribute="centerY" id="4MS-ZX-akR"/>
                                                 <constraint firstItem="eGo-qI-TlX" firstAttribute="centerY" secondItem="Gm5-yh-Wp2" secondAttribute="centerY" id="TUW-9q-Ggq"/>
                                                 <constraint firstItem="eGo-qI-TlX" firstAttribute="top" secondItem="Gm5-yh-Wp2" secondAttribute="topMargin" constant="3" id="XJC-m2-OF6"/>
+                                                <constraint firstAttribute="trailing" secondItem="N2O-lU-4hw" secondAttribute="trailing" constant="16" id="q5R-ez-fIB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -296,7 +301,7 @@
                     <connections>
                         <outlet property="doneButton" destination="8rD-SP-0FF" id="Mjp-uK-r1v"/>
                         <outlet property="dueDateLabel" destination="Tpn-a3-Hpy" id="NUU-2A-PAY"/>
-                        <outlet property="switchControl" destination="jgj-bN-A5l" id="6AO-3H-VQ6"/>
+                        <outlet property="swicher" destination="N2O-lU-4hw" id="lo5-36-qF3"/>
                         <outlet property="textField" destination="3fQ-Yk-PDC" id="pOb-aC-226"/>
                     </connections>
                 </tableViewController>
@@ -307,7 +312,7 @@
         <!--Navigation Controller-->
         <scene sceneID="PIx-4n-mfa">
             <objects>
-                <navigationController storyboardIdentifier="Front" automaticallyAdjustsScrollViewInsets="NO" id="kap-pk-jZO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Front" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kap-pk-jZO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zz0-Ed-Afy">
@@ -366,11 +371,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDq-yn-ap7">
-                                <rect key="frame" x="213" y="318" width="51" height="31"/>
-                                <animations/>
-                                <color key="onTintColor" red="0.15686274510000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势解锁开关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHj-KS-1UX">
                                 <rect key="frame" x="16" y="323" width="102" height="21"/>
                                 <animations/>
@@ -378,13 +378,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVl-x2-msG" customClass="FUISwitch">
+                                <rect key="frame" x="174" y="317" width="93" height="33"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="LZH-rV-qW3"/>
+                                    <constraint firstAttribute="height" constant="33" id="u1p-Ao-gOY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cDq-yn-ap7" firstAttribute="centerX" secondItem="7e3-yH-0fh" secondAttribute="centerX" constant="50" id="Gqc-mF-r1Z"/>
                             <constraint firstItem="WHj-KS-1UX" firstAttribute="centerY" secondItem="7e3-yH-0fh" secondAttribute="centerY" id="QIB-i4-suW"/>
-                            <constraint firstItem="cDq-yn-ap7" firstAttribute="centerY" secondItem="WHj-KS-1UX" secondAttribute="centerY" id="cq9-Lc-WYc"/>
+                            <constraint firstItem="wVl-x2-msG" firstAttribute="leading" secondItem="WHj-KS-1UX" secondAttribute="trailing" constant="56" id="Xi5-kO-oAQ"/>
+                            <constraint firstItem="wVl-x2-msG" firstAttribute="centerY" secondItem="WHj-KS-1UX" secondAttribute="centerY" id="Yj9-fK-fpq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="WHj-KS-1UX" secondAttribute="leading" id="ei4-4M-bNf"/>
                             <constraint firstAttribute="trailing" secondItem="bkw-Kg-s1H" secondAttribute="trailing" id="iAn-Or-bcP"/>
                             <constraint firstItem="bkw-Kg-s1H" firstAttribute="leading" secondItem="7e3-yH-0fh" secondAttribute="leading" id="ifd-b6-4nB"/>
@@ -395,7 +404,7 @@
                     <navigationItem key="navigationItem" id="R9k-Nl-Sbq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="loginViewSwitch" destination="cDq-yn-ap7" id="9gc-cv-mZQ"/>
+                        <outlet property="loginViewSwitch" destination="wVl-x2-msG" id="RYI-wQ-yuB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhI-LH-DR1" userLabel="First Responder" sceneMemberID="firstResponder"/>

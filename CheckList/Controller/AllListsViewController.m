@@ -53,6 +53,8 @@
     [self.navigationController setHidesNavigationBarHairline:YES];
     
     [self setupSideButton];
+    
+    
 }
 
 - (UIColor *)color {
