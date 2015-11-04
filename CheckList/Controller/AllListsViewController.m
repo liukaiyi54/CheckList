@@ -164,6 +164,7 @@
 - (void)listDetailViewController:(ListDetailViewController *)controller didFinishAddingChecklist:(Checklist *)checkList {
     [self.dataModel.lists addObject:checkList];
     [self.dataModel sortChecklists];
+    [self.dataModel saveChecklists];
     [self.tableView reloadData];
     
     [controller dismissViewControllerAnimated:YES completion:nil];
