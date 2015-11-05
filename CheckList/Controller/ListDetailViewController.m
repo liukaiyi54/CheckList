@@ -116,7 +116,7 @@
     self.textField.backgroundColor = [UIColor clearColor];
     self.textField.edgeInsets = UIEdgeInsetsMake(4.0f, 15.0f, 4.0f, 15.0f);
     self.textField.textFieldColor = [UIColor whiteColor];
-    self.textField.borderColor = [UIColor turquoiseColor];
+    self.textField.borderColor = [UIColor flatPurpleColor];
     self.textField.borderWidth = 2.0f;
     self.textField.cornerRadius = 3.0f;
 }

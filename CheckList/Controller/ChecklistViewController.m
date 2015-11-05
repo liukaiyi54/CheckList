@@ -8,10 +8,12 @@
 
 #import "ChecklistViewController.h"
 #import "ItemDetailViewController.h"
+#import "RESideMenu.h"
 
 #import "Checklist.h"
 #import "ChecklistItem.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "FlatUIKit.h"
 
 @interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
 
@@ -44,7 +46,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChecklistItem"];
     
     cell.tintColor = [UIColor flatPurpleColor];
-
+    
     ChecklistItem *item = self.checklist.items[indexPath.row];
     UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];
     checkMarkLabel.textColor = self.view.tintColor;

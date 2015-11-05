@@ -10,6 +10,4 @@
 
 @interface LeftSideViewController : UIViewController
 
-- (void)saveLoginViewStatus;
-
 @end

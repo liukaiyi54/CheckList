@@ -53,8 +53,6 @@
     [self.navigationController setHidesNavigationBarHairline:YES];
     
     [self setupSideButton];
-    
-    
 }
 
 - (UIColor *)color {
@@ -187,7 +185,7 @@
         ListDetailViewController *vc = (ListDetailViewController *)navigationController.topViewController;
         
         self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:navigationController];
-        self.animator.dragable = YES;
+        self.animator.dragable = NO;
         self.animator.direction = ZFModalTransitonDirectionRight;
         navigationController.transitioningDelegate = self.animator;
         navigationController.modalPresentationStyle = UIModalPresentationCustom;
