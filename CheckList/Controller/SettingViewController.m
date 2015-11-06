@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "VBFPopFlatButton.h"
 #import "RESideMenu.h"
+#import "LoginViewController.h"
 
 #import "FlatUIKit.h"
 #import <ChameleonFramework/Chameleon.h>
@@ -23,8 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self readData];
-    
     [self setupSwitcher];
     [self setupSideButton];
     
@@ -32,6 +31,16 @@
     
     self.navigationController.navigationBar.barTintColor = [self color];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *password = [userDefaults valueForKey:@"password"];
+    self.switcher.on = password.length > 0;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -49,7 +58,9 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [super numberOfSectionsInTableView:tableView];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *password = [userDefaults valueForKey:@"password"];
+    return password.length > 0 ? 2 : 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -58,6 +69,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        vc.changePassword = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - private
@@ -81,21 +100,21 @@
     [userDefaults synchronize];
 }
 
-- (void)readData {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    BOOL willLoginViewAppear = [userDefaults boolForKey:@"loginViewStatus"];
-    
-    self.switcher.on = willLoginViewAppear;
-}
-
 - (void)swicherDidChangeValue:(UISwitch *)sender {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     BOOL loginViewAppear = sender.on;
     [userDefaults setBool:loginViewAppear forKey:@"loginViewStatus"];
-    
     [userDefaults synchronize];
+    
+    if (sender.on) {
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        vc.changePassword = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        [userDefaults setValue:@"" forKey:@"password"];
+        [self.tableView reloadData];
+    }
 }
 
 - (UIColor *)color {

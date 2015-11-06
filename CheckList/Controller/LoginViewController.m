@@ -29,15 +29,38 @@
     LoginShowType showType;
 }
 
+@property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *pass1;
+@property (nonatomic, strong) NSString *pass2;
+@property (nonatomic, weak) IBOutlet UILabel *messageLabel;
+
 @end
 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    [self readPassword];
     [self setupCartoon];
+
+    if (!self.changePassword) {
+        self.messageLabel.hidden = YES;
+    } else {
+        if (self.password.length == 0) {
+            [self changeMessageLabelStyle:@"Please enter a password" textColr:[UIColor blackColor]];
+
+        } else {
+            [self changeMessageLabelStyle:@"Please enter old password" textColr:[UIColor blackColor]];
+        }
+    }
     [self setupLockView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 #pragma mark - private
@@ -76,13 +99,66 @@
     self.lockView.lineColor = [[UIColor orangeColor] colorWithAlphaComponent:0.3];
     self.lockView.lineWidth = 12;
     self.lockView.delegate = self;
-    self.lockView.contentInsets = UIEdgeInsetsMake(250, 40, 80, 40);
+}
+
+- (void)createPassword:(NSString *)password {
+    if (password.length >= 7) {
+        if (self.pass1.length == 0) {
+            self.pass1 = password;
+            [self changeMessageLabelStyle:@"Again please" textColr:[UIColor blackColor]];
+        } else if (self.pass2.length == 0) {
+            self.pass2 = password;
+            if ([self.pass1 isEqualToString:self.pass2]) {
+                self.password = password;
+                [self savePassword];
+
+                [self.navigationController popViewControllerAnimated:YES];
+            } else {
+                //not equal
+                [self changeMessageLabelStyle:@"Not equal, again please" textColr:[UIColor redColor]];
+                self.pass2 = nil;
+            }
+        }
+    } else {
+        [self changeMessageLabelStyle:@"At least 4 nodes, please redraw" textColr:[UIColor redColor]];
+    }
+}
+
+- (void)savePassword {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setValue:self.password forKey:@"password"];
+    [userDefaults synchronize];
+}
+
+- (void)readPassword {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    self.password = [userDefaults valueForKey:@"password"];
+}
+
+- (void)changeMessageLabelStyle:(NSString *)text textColr:(UIColor *)color {
+    self.messageLabel.text = text;
+    self.messageLabel.textColor = color;
 }
 
 #pragma mark - gestureLockViewDelegate
 - (void)gestureLockView:(KKGestureLockView *)gestureLockView didEndWithPasscode:(NSString *)passcode {
-    if ([passcode isEqualToString:@"1,4,7,8"]) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.changePassword && self.password.length != 0) {
+        if ([passcode isEqualToString:self.password]) {
+            self.changePassword = NO;
+            self.password = nil;
+            [self changeMessageLabelStyle:@"Please enter a new password" textColr:[UIColor blackColor]];
+        } else {
+            [self changeMessageLabelStyle:@"Wrong" textColr:[UIColor redColor]];
+        }
+    } else {
+        if (self.password.length == 0) {
+            //create new one
+            [self createPassword:passcode];
+        } else {
+            if ([passcode isEqualToString:self.password]) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        }
     }
     
     if (showType != LoginShowType_PASS){
@@ -117,5 +193,7 @@
         imgRightHandGone.frame = CGRectMake(imgRightHandGone.frame.origin.x - 30, imgRightHandGone.frame.origin.y, 0, 0);
     } completion:^(BOOL b) {}];
 }
+
+#pragma mark - getters & settters
 
 @end

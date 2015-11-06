@@ -16,8 +16,6 @@
 #import "ChecklistItem.h"
 #import "DataModel.h"
 #import "Checklist.h"
-#import "AppDelegate.h"
-#import "UIColorMacros.h"
 #import "ZFModalTransitionAnimator.h"
 #import <ChameleonFramework/Chameleon.h>
 
@@ -53,13 +51,6 @@
     [self.navigationController setHidesNavigationBarHairline:YES];
     
     [self setupSideButton];
-}
-
-- (UIColor *)color {
-    UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
-                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.navigationBar.bounds), 64)
-                                           andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
-    return color;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

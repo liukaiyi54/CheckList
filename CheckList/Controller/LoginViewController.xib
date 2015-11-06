@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
                 <outlet property="lockView" destination="Nl1-kG-NQo" id="JRy-cl-ygZ"/>
+                <outlet property="messageLabel" destination="zFC-P9-oTW" id="8jg-Ls-mjM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="FGC-6A-2e9"/>
             </connections>
         </placeholder>
@@ -17,18 +18,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-kG-NQo" customClass="KKGestureLockView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="62" y="315" width="250" height="250"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="Cf0-uy-y5w"/>
+                        <constraint firstAttribute="width" constant="250" id="DBP-qQ-SgA"/>
+                    </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFC-P9-oTW">
+                    <rect key="frame" x="166" y="275" width="42" height="20"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Nl1-kG-NQo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2cT-rt-Ns9"/>
-                <constraint firstItem="Nl1-kG-NQo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ofh-96-dan"/>
-                <constraint firstAttribute="bottom" secondItem="Nl1-kG-NQo" secondAttribute="bottom" id="abF-w9-2Q7"/>
-                <constraint firstAttribute="trailing" secondItem="Nl1-kG-NQo" secondAttribute="trailing" id="lRj-nL-2OY"/>
+                <constraint firstItem="Nl1-kG-NQo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DqW-OV-5CJ"/>
+                <constraint firstItem="Nl1-kG-NQo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="106.5" id="K2O-jl-KH6"/>
+                <constraint firstItem="Nl1-kG-NQo" firstAttribute="top" secondItem="zFC-P9-oTW" secondAttribute="bottom" constant="20" id="M3n-GK-X0T"/>
+                <constraint firstItem="zFC-P9-oTW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vDN-1m-lpL"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="238.5" y="231.5"/>
