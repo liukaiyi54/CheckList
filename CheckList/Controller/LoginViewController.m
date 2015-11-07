@@ -144,6 +144,11 @@
 - (void)gestureLockView:(KKGestureLockView *)gestureLockView didEndWithPasscode:(NSString *)passcode {
     if (self.changePassword && self.password.length != 0) {
         if ([passcode isEqualToString:self.password]) {
+            if (self.closePassword) {
+                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                [userDefaults setValue:@"" forKey:@"password"];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
             self.changePassword = NO;
             self.password = nil;
             [self changeMessageLabelStyle:@"Please enter a new password" textColr:[UIColor blackColor]];

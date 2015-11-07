@@ -19,5 +19,6 @@ typedef NS_ENUM(NSInteger, LoginShowType) {
 
 @property (nonatomic, strong) IBOutlet KKGestureLockView *lockView;
 @property (nonatomic, assign) BOOL changePassword;
+@property (nonatomic, assign) BOOL closePassword;
 
 @end

@@ -112,8 +112,10 @@
         vc.changePassword = YES;
         [self.navigationController pushViewController:vc animated:YES];
     } else {
-        [userDefaults setValue:@"" forKey:@"password"];
-        [self.tableView reloadData];
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        vc.changePassword = YES;
+        vc.closePassword = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
