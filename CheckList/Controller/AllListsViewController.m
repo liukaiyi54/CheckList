@@ -37,20 +37,10 @@
     [super viewDidLoad];
     self.navigationController.delegate = self;
     
-    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 15, CGRectGetHeight([UIScreen mainScreen].bounds) - 80, 30, 30);
-    
-    VBFPopFlatButton *addButton = [[VBFPopFlatButton alloc] initWithFrame:frame
-                                                               buttonType:buttonAddType
-                                                              buttonStyle:buttonRoundedStyle
-                                                    animateToInitialState:YES];
-    addButton.roundBackgroundColor = [UIColor flatPinkColor];
-    addButton.tintColor = [UIColor whiteColor];
-    [addButton addTarget:self action:@selector(didTapAddButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:addButton];
-    
     [self.navigationController setHidesNavigationBarHairline:YES];
     
     [self setupSideButton];
+    [self setupAddButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -205,6 +195,19 @@
 
 - (NSArray *)visibleCells {
     return [self.tableView visibleCells];
+}
+
+- (void)setupAddButton {
+    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 15, CGRectGetHeight([UIScreen mainScreen].bounds) - 80, 30, 30);
+    
+    VBFPopFlatButton *addButton = [[VBFPopFlatButton alloc] initWithFrame:frame
+                                                               buttonType:buttonAddType
+                                                              buttonStyle:buttonRoundedStyle
+                                                    animateToInitialState:YES];
+    addButton.roundBackgroundColor = [UIColor flatPinkColor];
+    addButton.tintColor = [UIColor whiteColor];
+    [addButton addTarget:self action:@selector(didTapAddButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
 }
 
 #pragma mark - event handler
