@@ -12,6 +12,7 @@
 		4C01324D1BBE5F010069129D /* AppDelegate+LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01324C1BBE5F010069129D /* AppDelegate+LockView.m */; };
 		4C0132541BBE64C80069129D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0132531BBE64C80069129D /* LoginViewController.xib */; };
 		4C115A0B1BEA0A6C00C40A37 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C115A0A1BEA0A6C00C40A37 /* SettingViewController.m */; };
+		4C2ED5381BF0AB6600CD19A1 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2ED5371BF0AB6600CD19A1 /* UINavigationBar+Awesome.m */; };
 		4C3EB3141B9E80D3006925C1 /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30B1B9E80D3006925C1 /* AllListsViewController.m */; };
 		4C3EB3151B9E80D3006925C1 /* ChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30D1B9E80D3006925C1 /* ChecklistViewController.m */; };
 		4C3EB3161B9E80D3006925C1 /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB30F1B9E80D3006925C1 /* IconPickerViewController.m */; };
@@ -55,6 +56,8 @@
 		4C0132531BBE64C80069129D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../Controller/LoginViewController.xib; sourceTree = "<group>"; };
 		4C115A091BEA0A6C00C40A37 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controller/SettingViewController.h; sourceTree = "<group>"; };
 		4C115A0A1BEA0A6C00C40A37 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controller/SettingViewController.m; sourceTree = "<group>"; };
+		4C2ED5361BF0AB6600CD19A1 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		4C2ED5371BF0AB6600CD19A1 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		4C3EB30A1B9E80D3006925C1 /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllListsViewController.h; path = Controller/AllListsViewController.h; sourceTree = "<group>"; };
 		4C3EB30B1B9E80D3006925C1 /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllListsViewController.m; path = Controller/AllListsViewController.m; sourceTree = "<group>"; };
 		4C3EB30C1B9E80D3006925C1 /* ChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChecklistViewController.h; path = Controller/ChecklistViewController.h; sourceTree = "<group>"; };
@@ -150,6 +153,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4C2ED5351BF0AB5400CD19A1 /* LTNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				4C2ED5361BF0AB6600CD19A1 /* UINavigationBar+Awesome.h */,
+				4C2ED5371BF0AB6600CD19A1 /* UINavigationBar+Awesome.m */,
+			);
+			path = LTNavigationBar;
+			sourceTree = "<group>";
+		};
 		4C3EB3091B9E80BB006925C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 		4C3EB36B1B9EC9AD006925C1 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4C2ED5351BF0AB5400CD19A1 /* LTNavigationBar */,
 				4CBDE33D1BC8BCA600B29D71 /* UIColorMacros.h */,
 				4C3EB36C1B9EC9AD006925C1 /* HUAnimator */,
 				4C3EB3751B9EC9AD006925C1 /* ZBCustomTransitions */,
@@ -444,6 +457,7 @@
 				4C3EB37B1B9EC9AD006925C1 /* HUTransitionGhostAnimator.m in Sources */,
 				4CBA3F251BCB4A7800E286DB /* LeftSideViewController.m in Sources */,
 				4C3EB3181B9E80D3006925C1 /* ListDetailViewController.m in Sources */,
+				4C2ED5381BF0AB6600CD19A1 /* UINavigationBar+Awesome.m in Sources */,
 				4C3EB37E1B9EC9AD006925C1 /* UIViewController+Animator.m in Sources */,
 				4C3EB37F1B9EC9AD006925C1 /* ZBFallenBricksAnimator.m in Sources */,
 				4C3EB3141B9E80D3006925C1 /* AllListsViewController.m in Sources */,
