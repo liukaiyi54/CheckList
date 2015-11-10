@@ -12,12 +12,15 @@
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "RESideMenu.h"
 #import "VBFPopFlatButton.h"
+#import "UINavigationBar+Awesome.h"
 
 #import "ChecklistItem.h"
 #import "DataModel.h"
 #import "Checklist.h"
 #import "ZFModalTransitionAnimator.h"
 #import <ChameleonFramework/Chameleon.h>
+
+static NSUInteger const kNavBarChangePoint = 50;
 
 @interface AllListsViewController ()
     <listDetailViewControllerDelegate,
@@ -27,6 +30,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) ZFModalTransitionAnimator *animator;
+@property (assign, nonatomic) BOOL stillInThisView;
 
 @end
 
@@ -39,13 +43,28 @@
     
     [self.navigationController setHidesNavigationBarHairline:YES];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self setupSideButton];
     [self setupAddButton];
+    
+    self.edgesForExtendedLayout = UIRectEdgeTop;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    
+    self.stillInThisView = YES;
+
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar lt_reset];
+    
+    self.stillInThisView = NO;
 }
 
 #pragma mark - Table view data source & delegate
@@ -156,6 +175,18 @@
     }
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (self.stillInThisView) {
+        if (offsetY > kNavBarChangePoint) {
+            CGFloat alpha = MIN(1, 1 - ((kNavBarChangePoint + 64 - offsetY) / 64));
+            [self.navigationController.navigationBar lt_setBackgroundColor:[[self color] colorWithAlphaComponent:alpha]];
+        } else {
+            [self.navigationController.navigationBar lt_setBackgroundColor:[[self color] colorWithAlphaComponent:0]];
+        }
+    }
+}
+
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowChecklist"]) {
@@ -208,6 +239,13 @@
     addButton.tintColor = [UIColor whiteColor];
     [addButton addTarget:self action:@selector(didTapAddButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
+}
+
+- (UIColor *)color {
+    UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.navigationBar.bounds), 64)
+                                           andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
+    return color;
 }
 
 #pragma mark - event handler

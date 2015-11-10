@@ -22,9 +22,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="qOo-De-BTx">
+                                    <rect key="frame" x="0.0" y="64" width="375" height="190"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="919-zz-C5D">
+                                            <rect key="frame" x="0.0" y="-64" width="375" height="254"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="919-zz-C5D" firstAttribute="leading" secondItem="qOo-De-BTx" secondAttribute="leading" id="0RI-uC-qm8"/>
+                                        <constraint firstItem="919-zz-C5D" firstAttribute="top" secondItem="qOo-De-BTx" secondAttribute="top" constant="-64" id="4o1-RO-JYR"/>
+                                        <constraint firstAttribute="bottom" secondItem="919-zz-C5D" secondAttribute="bottom" id="aJD-kS-jxX"/>
+                                        <constraint firstAttribute="trailing" secondItem="919-zz-C5D" secondAttribute="trailing" id="alk-AR-N23"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ndy-vk-8JB">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="282" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ndy-vk-8JB" id="JEn-ts-8av">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
