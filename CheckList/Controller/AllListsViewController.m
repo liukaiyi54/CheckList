@@ -97,6 +97,7 @@ static NSUInteger const kNavBarChangePoint = 50;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     cell.tintColor = [UIColor whiteColor];
     cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSInteger count = [checklist countUncheckedItems];
     if ([checklist.items count] == 0) {
