@@ -48,7 +48,7 @@ static NSUInteger const kNavBarChangePoint = 50;
     [self setupSideButton];
     [self setupAddButton];
     
-    self.edgesForExtendedLayout = UIRectEdgeTop;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -93,8 +93,10 @@ static NSUInteger const kNavBarChangePoint = 50;
     }
     Checklist *checklist = self.dataModel.lists[indexPath.row];
     cell.textLabel.text = checklist.name;
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    cell.tintColor = [UIColor flatPurpleColor];
+    cell.tintColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     NSInteger count = [checklist countUncheckedItems];
     if ([checklist.items count] == 0) {
@@ -229,7 +231,7 @@ static NSUInteger const kNavBarChangePoint = 50;
 }
 
 - (void)setupAddButton {
-    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 15, CGRectGetHeight([UIScreen mainScreen].bounds) - 80, 30, 30);
+    CGRect frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2 - 15, CGRectGetHeight([UIScreen mainScreen].bounds) - 120, 30, 30);
     
     VBFPopFlatButton *addButton = [[VBFPopFlatButton alloc] initWithFrame:frame
                                                                buttonType:buttonAddType

@@ -23,9 +23,9 @@
                                 <animations/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-JO-mzh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ndy-vk-8JB">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="Xed-Zs-Wm0" firstAttribute="leading" secondItem="gab-cV-qMp" secondAttribute="leading" id="EZX-iV-coU"/>
                             <constraint firstAttribute="trailing" secondItem="Xed-Zs-Wm0" secondAttribute="trailing" id="MUu-fz-ipE"/>
                             <constraint firstItem="Xed-Zs-Wm0" firstAttribute="top" secondItem="m4h-CI-VYd" secondAttribute="bottom" constant="-64" id="PZ0-5l-yDZ"/>
-                            <constraint firstItem="Ggr-JO-mzh" firstAttribute="top" secondItem="gab-cV-qMp" secondAttribute="top" constant="64" id="UWk-Ec-t2y"/>
+                            <constraint firstItem="Ggr-JO-mzh" firstAttribute="top" secondItem="gab-cV-qMp" secondAttribute="top" id="UWk-Ec-t2y"/>
                             <constraint firstItem="6lm-1s-6Pm" firstAttribute="top" secondItem="Xed-Zs-Wm0" secondAttribute="bottom" id="lBh-AR-Q3M"/>
                             <constraint firstAttribute="trailing" secondItem="Ggr-JO-mzh" secondAttribute="trailing" id="zDm-Eu-O9A"/>
                         </constraints>
