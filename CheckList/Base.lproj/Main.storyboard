@@ -18,31 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-JO-mzh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-Zs-Wm0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-JO-mzh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="qOo-De-BTx">
-                                    <rect key="frame" x="0.0" y="64" width="375" height="190"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="919-zz-C5D">
-                                            <rect key="frame" x="0.0" y="-64" width="375" height="254"/>
-                                            <animations/>
-                                        </imageView>
-                                    </subviews>
-                                    <animations/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="919-zz-C5D" firstAttribute="leading" secondItem="qOo-De-BTx" secondAttribute="leading" id="0RI-uC-qm8"/>
-                                        <constraint firstItem="919-zz-C5D" firstAttribute="top" secondItem="qOo-De-BTx" secondAttribute="top" constant="-64" id="4o1-RO-JYR"/>
-                                        <constraint firstAttribute="bottom" secondItem="919-zz-C5D" secondAttribute="bottom" id="aJD-kS-jxX"/>
-                                        <constraint firstAttribute="trailing" secondItem="919-zz-C5D" secondAttribute="trailing" id="alk-AR-N23"/>
-                                    </constraints>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ndy-vk-8JB">
-                                        <rect key="frame" x="0.0" y="282" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ndy-vk-8JB" id="JEn-ts-8av">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -50,6 +36,7 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="sjc-e0-JYR" kind="show" identifier="ShowChecklist" id="GRy-rd-v4d"/>
                                         </connections>
@@ -66,7 +53,11 @@
                         <constraints>
                             <constraint firstItem="Ggr-JO-mzh" firstAttribute="leading" secondItem="gab-cV-qMp" secondAttribute="leading" id="56t-eb-sLC"/>
                             <constraint firstItem="Ggr-JO-mzh" firstAttribute="bottom" secondItem="6lm-1s-6Pm" secondAttribute="top" id="5Zr-tK-2cY"/>
-                            <constraint firstItem="Ggr-JO-mzh" firstAttribute="top" secondItem="gab-cV-qMp" secondAttribute="top" id="UWk-Ec-t2y"/>
+                            <constraint firstItem="Xed-Zs-Wm0" firstAttribute="leading" secondItem="gab-cV-qMp" secondAttribute="leading" id="EZX-iV-coU"/>
+                            <constraint firstAttribute="trailing" secondItem="Xed-Zs-Wm0" secondAttribute="trailing" id="MUu-fz-ipE"/>
+                            <constraint firstItem="Xed-Zs-Wm0" firstAttribute="top" secondItem="m4h-CI-VYd" secondAttribute="bottom" constant="-64" id="PZ0-5l-yDZ"/>
+                            <constraint firstItem="Ggr-JO-mzh" firstAttribute="top" secondItem="gab-cV-qMp" secondAttribute="top" constant="64" id="UWk-Ec-t2y"/>
+                            <constraint firstItem="6lm-1s-6Pm" firstAttribute="top" secondItem="Xed-Zs-Wm0" secondAttribute="bottom" id="lBh-AR-Q3M"/>
                             <constraint firstAttribute="trailing" secondItem="Ggr-JO-mzh" secondAttribute="trailing" id="zDm-Eu-O9A"/>
                         </constraints>
                     </view>
