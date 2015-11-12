@@ -10,7 +10,7 @@
 
 @class Checklist;
 
-@interface ChecklistViewController : UITableViewController
+@interface ChecklistViewController : UIViewController
 
 @property (nonatomic, strong) Checklist *checklist;
 

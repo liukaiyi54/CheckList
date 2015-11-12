@@ -16,6 +16,7 @@
 #import "FlatUIKit.h"
 
 @interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
