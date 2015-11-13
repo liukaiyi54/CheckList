@@ -14,6 +14,7 @@
 #import "ChecklistItem.h"
 #import <ChameleonFramework/Chameleon.h>
 #import "FlatUIKit.h"
+#import "NSString+Icons.h"
 
 @interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -63,9 +64,9 @@
     }
  
     if (item.checked) {
-        checkMarkLabel.text = @"√";
+        checkMarkLabel.text = @"👍";
     } else {
-        checkMarkLabel.text = @"";
+        checkMarkLabel.text = @" ";
     }
     
     UILabel *label = (UILabel*)[cell viewWithTag:1000];
@@ -131,9 +132,9 @@
     UILabel *label = (UILabel *)[cell viewWithTag:1001];
     
     if (item.checked) {
-        label.text = @"√";
+        label.text = @"👍";
     } else {
-        label.text = @"";
+        label.text = @" ";
     }
 }
 
