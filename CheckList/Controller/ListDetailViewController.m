@@ -15,7 +15,8 @@
 
 
 @property (weak, nonatomic) IBOutlet FUITextField *textField;
-@property (nonatomic, weak)IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UIView *iconPickView;
 
@@ -58,6 +59,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.textField becomeFirstResponder];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
