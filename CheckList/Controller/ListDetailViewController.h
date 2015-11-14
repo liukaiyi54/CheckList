@@ -19,7 +19,7 @@
 - (void)listDetailViewController:(ListDetailViewController *)controller didFinishEditingChecklist:(Checklist *)checklist;
 
 @end
-@interface ListDetailViewController : UITableViewController
+@interface ListDetailViewController : UIViewController
 
 @property (nonatomic, weak) id<listDetailViewControllerDelegate> delegate;
 
