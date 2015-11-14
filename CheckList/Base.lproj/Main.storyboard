@@ -602,7 +602,7 @@
                                             <action selector="cancel:" destination="u9d-7b-GqL" eventType="touchUpInside" id="cIi-QI-feB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-Zw-Itb">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-Zw-Itb">
                                         <rect key="frame" x="330" y="8" width="37" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Done"/>
