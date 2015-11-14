@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet FUITextField *textField;
 @property (nonatomic, weak)IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UIView *iconPickView;
 
 @end
 
@@ -29,6 +30,9 @@
     [super viewDidLoad];
     
     [self setupTextField];
+    [self setIconPickViewGesture];
+    
+    self.textField.delegate = self;
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
@@ -119,6 +123,16 @@
     self.textField.borderColor = [UIColor flatPurpleColor];
     self.textField.borderWidth = 2.0f;
     self.textField.cornerRadius = 3.0f;
+}
+
+- (void)setIconPickViewGesture {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(didTapIconPickView:)];
+    [self.iconPickView addGestureRecognizer:tap];
+}
+
+- (void)didTapIconPickView:(UITapGestureRecognizer *)tap {
+    [self performSegueWithIdentifier:@"PickIcon" sender:nil];
 }
 
 @end
