@@ -8,7 +8,6 @@
 
 #import "ChecklistViewController.h"
 #import "ItemDetailViewController.h"
-#import "RESideMenu.h"
 
 #import "Checklist.h"
 #import "ChecklistItem.h"
