@@ -58,9 +58,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.textField becomeFirstResponder];
-    
     self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.textField becomeFirstResponder];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
