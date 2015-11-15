@@ -65,6 +65,8 @@ static NSUInteger const kNavBarChangePoint = 50;
     [self.navigationController.navigationBar lt_reset];
     
     self.stillInThisView = NO;
+    
+    [self.dataModel saveChecklists];
 }
 
 #pragma mark - Table view data source & delegate
