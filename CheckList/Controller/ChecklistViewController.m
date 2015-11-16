@@ -49,23 +49,27 @@
     cell.tintColor = [UIColor flatPurpleColor];
     
     ChecklistItem *item = self.checklist.items[indexPath.row];
-    UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];
-    checkMarkLabel.textColor = self.view.tintColor;
+//    UILabel *checkMarkLabel = (UILabel *)[cell viewWithTag:1001];
+//    checkMarkLabel.textColor = self.view.tintColor;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yy/MM/dd hh:mm";
     UILabel *dateLabel = (UILabel *)[cell viewWithTag:1002];
+    
     if (item.shouldRemind) {
         dateLabel.text = [formatter stringFromDate:item.dueDate];
         dateLabel.hidden = NO;
     } else {
         dateLabel.hidden = YES;
     }
- 
+
+    UIImageView *checkMarkImage = (UIImageView *)[cell viewWithTag:1001];
     if (item.checked) {
-        checkMarkLabel.text = @"👍";
+//        checkMarkLabel.text = @"👍";
+        checkMarkImage.hidden = NO;
     } else {
-        checkMarkLabel.text = @" ";
+//        checkMarkLabel.text = @" ";
+        checkMarkImage.hidden = YES;
     }
     
     UILabel *label = (UILabel*)[cell viewWithTag:1000];
@@ -128,12 +132,17 @@
 
 #pragma mark - private
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item {
-    UILabel *label = (UILabel *)[cell viewWithTag:1001];
+//    UILabel *label = (UILabel *)[cell viewWithTag:1001];
+    UIImageView *checkMarkImage = (UIImageView *)[cell viewWithTag:1001];
     
     if (item.checked) {
-        label.text = @"👍";
+//        label.text = @"👍";
+//        self.checkMark.hidden = NO;
+        checkMarkImage.hidden = NO;
     } else {
-        label.text = @" ";
+//        label.text = @" ";
+//        self.checkMark.hidden = YES;
+        checkMarkImage.hidden = YES;
     }
 }
 
