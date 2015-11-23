@@ -180,18 +180,6 @@ static NSUInteger const kNavBarChangePoint = 50;
     }
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offsetY = scrollView.contentOffset.y;
-    if (self.stillInThisView) {
-        if (offsetY > kNavBarChangePoint) {
-            CGFloat alpha = MIN(1, 1 - ((kNavBarChangePoint + 64 - offsetY) / 64));
-            [self.navigationController.navigationBar lt_setBackgroundColor:[[self color] colorWithAlphaComponent:alpha]];
-        } else {
-            [self.navigationController.navigationBar lt_setBackgroundColor:[[self color] colorWithAlphaComponent:0]];
-        }
-    }
-}
-
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowChecklist"]) {

@@ -34,17 +34,17 @@
 
     controller.dataModel = _dataModel;
 
-    UINavigationController *myNavigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
     UIColor *color = [UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
-                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(myNavigationController.navigationBar.bounds), 64)
+                                           withFrame:CGRectMake(0, 0, CGRectGetWidth(nav.navigationBar.bounds), 64)
                                            andColors:@[[UIColor flatPinkColor], [UIColor flatPurpleColor]]];
-    myNavigationController.navigationBar.barTintColor = color;
-    [myNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    nav.navigationBar.barTintColor = color;
+    [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
-    UINavigationController *rear = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
+    UINavigationController *left = [storyboard instantiateViewControllerWithIdentifier:@"Rear"];
     
-    RESideMenu *sideViewController = [[RESideMenu alloc] initWithContentViewController:myNavigationController leftMenuViewController:rear rightMenuViewController:nil];
-    self.window.rootViewController = sideViewController;
+    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:nav leftMenuViewController:left rightMenuViewController:nil];
+    self.window.rootViewController = sideMenu;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
