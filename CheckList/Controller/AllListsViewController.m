@@ -28,9 +28,9 @@ static NSUInteger const kNavBarChangePoint = 50;
     UITableViewDataSource,
     UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) ZFModalTransitionAnimator *animator;
-@property (assign, nonatomic) BOOL stillInThisView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
+@property (nonatomic, assign) BOOL stillInThisView;
 
 @end
 

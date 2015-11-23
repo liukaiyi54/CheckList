@@ -14,11 +14,11 @@
 
 @interface ItemDetailViewController ()<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet FUITextField *textField;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (weak, nonatomic) IBOutlet UISwitch *switchControl;
-@property (weak, nonatomic) IBOutlet UILabel *dueDateLabel;
-@property (weak, nonatomic) IBOutlet FUISwitch *swicher;
+@property (nonatomic, weak) IBOutlet FUITextField *textField;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
+@property (nonatomic, weak) IBOutlet UISwitch *switchControl;
+@property (nonatomic, weak) IBOutlet UILabel *dueDateLabel;
+@property (nonatomic, weak) IBOutlet FUISwitch *swicher;
 
 @end
 

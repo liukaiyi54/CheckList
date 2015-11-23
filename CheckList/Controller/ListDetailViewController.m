@@ -14,11 +14,11 @@
 @interface ListDetailViewController ()<UITextFieldDelegate, IconPickerViewControllerDelegate>
 
 
-@property (weak, nonatomic) IBOutlet FUITextField *textField;
-@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (nonatomic, weak) IBOutlet FUITextField *textField;
+@property (nonatomic, weak) IBOutlet UIButton *doneButton;
 
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
-@property (weak, nonatomic) IBOutlet UIView *iconPickView;
+@property (nonatomic, weak) IBOutlet UIView *iconPickView;
 
 @end
 

@@ -15,7 +15,7 @@
 #import <ChameleonFramework/Chameleon.h>
 
 @interface SettingViewController ()
-@property (weak, nonatomic) IBOutlet FUISwitch *switcher;
+@property (nonatomic, weak) IBOutlet FUISwitch *switcher;
 
 @end
 

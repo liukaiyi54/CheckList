@@ -16,7 +16,7 @@
 #import "NSString+Icons.h"
 
 @interface ChecklistViewController ()<ItemDetailViewControllerDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
