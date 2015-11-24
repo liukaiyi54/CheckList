@@ -144,7 +144,7 @@ static NSUInteger const kNavBarChangePoint = 50;
     controller.checkListToEdit = checklist;
     
     self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:navigationController];
-    self.animator.dragable = YES;
+    self.animator.dragable = NO;
     self.animator.direction = ZFModalTransitonDirectionBottom;
     navigationController.transitioningDelegate = self.animator;
     navigationController.modalPresentationStyle = UIModalPresentationCustom;
