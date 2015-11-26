@@ -20,8 +20,6 @@
 #import "ZFModalTransitionAnimator.h"
 #import <ChameleonFramework/Chameleon.h>
 
-static NSUInteger const kNavBarChangePoint = 50;
-
 @interface AllListsViewController ()
     <listDetailViewControllerDelegate,
     UINavigationControllerDelegate,
@@ -191,7 +189,7 @@ static NSUInteger const kNavBarChangePoint = 50;
         
         self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:navigationController];
         self.animator.dragable = NO;
-        self.animator.direction = ZFModalTransitonDirectionRight;
+        self.animator.direction = ZFModalTransitonDirectionBottom;
         navigationController.transitioningDelegate = self.animator;
         navigationController.modalPresentationStyle = UIModalPresentationCustom;
         
