@@ -9,6 +9,7 @@
 #import "IconPickerViewController.h"
 
 @interface IconPickerViewController ()
+@property (weak, nonatomic) IBOutlet UIView *topView;
 
 @end
 
@@ -31,6 +32,11 @@
             @"Photos",
             @"Trips"
             ];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(didTapView:)];
+    
+    [self.topView addGestureRecognizer:tap];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,6 +66,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *iconName = _icons[indexPath.row];
     [self.delegate iconPicker:self didPickIcon:iconName];
+}
+
+#pragma mark - event handler
+- (void)didTapView:(UITapGestureRecognizer *)tap {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

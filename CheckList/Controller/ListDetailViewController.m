@@ -19,6 +19,7 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
 @property (nonatomic, weak) IBOutlet UIView *iconPickView;
+@property (weak, nonatomic) IBOutlet UIView *topView;
 
 @end
 
@@ -49,6 +50,11 @@
         _iconName = self.checkListToEdit.iconName;
     }
     self.iconImageView.image = [UIImage imageNamed:_iconName];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(didTapView:)];
+    
+    [self.topView addGestureRecognizer:tap];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -139,6 +145,10 @@
 
 - (void)didTapIconPickView:(UITapGestureRecognizer *)tap {
     [self performSegueWithIdentifier:@"PickIcon" sender:nil];
+}
+
+- (void)didTapView:(UITapGestureRecognizer *)tap {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
