@@ -60,6 +60,8 @@
     cell.textLabel.text = icon;
     cell.imageView.image = [UIImage imageNamed:icon];
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
