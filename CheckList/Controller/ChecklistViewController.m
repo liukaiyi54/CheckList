@@ -125,8 +125,16 @@
 #pragma mark - private
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item {
     UIImageView *checkMarkImage = (UIImageView *)[cell viewWithTag:1001];
-    
     checkMarkImage.hidden = !item.checked;
+    
+    UILabel *label = (UILabel*)[cell viewWithTag:1000];
+    if (item.checked) {
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:label.text];
+        [string addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlineStyleSingle) range:NSMakeRange(0, string.length)];
+        label.attributedText = string;
+    } else {
+        label.text = label.text;
+    }
 }
 
 - (void)configureTextForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item {
