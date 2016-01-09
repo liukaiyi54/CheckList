@@ -162,6 +162,9 @@
         } else {
             if ([passcode isEqualToString:self.password]) {
                 [self dismissViewControllerAnimated:YES completion:nil];
+            } else {
+                self.messageLabel.hidden = NO;
+                [self changeMessageLabelStyle:@"Wrong" textColr:[UIColor redColor]];
             }
         }
     }
